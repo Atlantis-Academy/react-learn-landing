@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "index.js",
+  "main": "index.tsx",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
+    "start": "webpack-dev-server",
     "lint": "mctl lint",
     "test": "mctl test",
     "commit": "mctl commit",

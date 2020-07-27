@@ -7,7 +7,8 @@ import { Button }      from '../../ui/header/Button'
 import { HeaderStyle } from '../../ui/header/Header'
 import { Box }         from '../../ui/layout/Box'
 import { Row }         from '../../ui/layout/Layout'
-import { Text }        from '../../ui/Text'
+import { Text }        from '../../ui/text/Text'
+import { theme }       from '../../ui/theme'
 
 const Header = ({ intl }: any) => {
   return (
@@ -15,9 +16,16 @@ const Header = ({ intl }: any) => {
       <Box height={40} />
       <Row justifyContent='center'>
         <Logo />
-        <Box maxWidth={875} />
+        <Box maxWidth={870} />
         <Button>
-          <Text themeText='buttonText'>{intl.formatMessage(messages.headerButton)}</Text>
+          <Text
+            color={theme.colors.white}
+            fontFamily={theme.fontFamily.text}
+            fontSize={theme.fontSize.xs}
+            letterSpacing='0.05em'
+          >
+            {intl.formatMessage(messages.headerButton)}
+          </Text>
         </Button>
       </Row>
     </HeaderStyle>

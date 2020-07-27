@@ -7,8 +7,14 @@ export const mode = 'development'
 export const entry = ['./site/index']
 
 export const output = {
-  filename: 'script.js',
   path: path.resolve(__dirname, 'dist'),
+  filename: 'script.js',
+}
+
+export const devServer = {
+  open: true,
+  hot: true,
+  port: 3000,
 }
 
 export const module = {
