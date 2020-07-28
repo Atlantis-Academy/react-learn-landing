@@ -13,6 +13,7 @@ export interface LineHeight extends Array<number> {
   s?: number
   m?: number
   l?: number
+  xl?: number
 }
 
 export interface BorderRadius extends Array<number> {
