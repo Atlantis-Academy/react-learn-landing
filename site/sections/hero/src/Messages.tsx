@@ -40,6 +40,6 @@ export default defineMessages({
   },
   formError: {
     id: 'form.error',
-    defaultMessage: 'Необходимо заполнить поля формы!',
+    defaultMessage: 'Необходимо заполнить все поля формы!',
   },
 })

@@ -1,17 +1,11 @@
-import ReactDOM             from 'react-dom'
-import React, { useEffect } from 'react'
+import React      from 'react'
+import ReactDOM   from 'react-dom'
 
-import ModalBox             from './src/ModalBox'
-import { Layout }           from '../../ui/layout/Layout'
+import ModalBox   from './src/ModalBox'
+import { Layout } from '../../ui/layout/Layout'
 
 const Portal = ({ children }: any) => {
-  const el = document.createElement('div')
-
-  useEffect(() => {
-    document.body.appendChild(el)
-  }, [])
-
-  return ReactDOM.createPortal(children, el)
+  return ReactDOM.createPortal(children, document.body)
 }
 
 const Modal: any = ({ display }: any) => {

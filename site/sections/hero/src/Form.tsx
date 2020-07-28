@@ -1,3 +1,5 @@
+import MaskedInput                    from 'react-text-mask'
+import emailMask                      from 'text-mask-addons/dist/emailMask'
 import React, { useEffect, useState } from 'react'
 import { injectIntl }                 from 'react-intl'
 
@@ -20,6 +22,7 @@ const Form = ({ intl }: any) => {
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
   const [end, setEnd] = useState('')
+  const [isSubmit, setIsSubmit] = useState(false)
 
   const handleForm = (event: any) => {
     event.preventDefault()
@@ -31,6 +34,7 @@ const Form = ({ intl }: any) => {
 
     if (name && job && phone && email) {
       setEnd(`${intl.formatMessage(messages.formEnd)}`)
+      setIsSubmit(true)
 
       console.log(name, job, phone, email)
     } else {
@@ -50,7 +54,7 @@ const Form = ({ intl }: any) => {
       <Box display='flex' justifyContent='center' alignItems='center' width={320}>
         <Text
           fontSize={theme.fontSize.xs}
-          color={theme.colors.white}
+          color={isSubmit ? theme.colors.whiteBlue : theme.colors.error}
           fontFamily={theme.fontFamily.text}
         >
           {end}
@@ -82,22 +86,43 @@ const Form = ({ intl }: any) => {
         <InputText>{intl.formatMessage(messages.formPhone)}</InputText>
       </InputTextBox>
       <BorderInput>
-        <InputForm
-          type='text'
+        <MaskedInput
+          mask={[
+            '+',
+            '7',
+            ' ',
+            '(',
+            /[1-9]/,
+            /\d/,
+            /\d/,
+            ')',
+            ' ',
+            /\d/,
+            /\d/,
+            /\d/,
+            '-',
+            /\d/,
+            /\d/,
+            '-',
+            /\d/,
+            /\d/,
+          ]}
           name='phone'
           onChange={event => setPhone(event.target.value)}
           value={phone}
+          render={(ref, props) => <InputForm ref={ref} {...props} />}
         />
       </BorderInput>
       <InputTextBox>
         <InputText>{intl.formatMessage(messages.formEmail)}</InputText>
       </InputTextBox>
       <BorderInput>
-        <InputForm
-          type='text'
+        <MaskedInput
+          mask={emailMask}
           name='email'
           onChange={event => setEmail(event.target.value)}
           value={email}
+          render={(ref, props) => <InputForm ref={ref} {...props} />}
         />
       </BorderInput>
       <Box height='20px' />
