@@ -8,7 +8,7 @@ import { theme }      from '../../../ui/theme'
 
 const TextHero = ({ intl }) => {
   return (
-    <Box width={600}>
+    <Box maxWidth={600}>
       <Text
         color={theme.colors.white}
         fontSize={theme.fontSize.m}
