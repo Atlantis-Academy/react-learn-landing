@@ -8,12 +8,12 @@ import { Row }                         from '../../../ui/layout/Layout'
 
 const FormLayout = () => {
   return (
-    <BgForm width={677} height={694}>
+    <BgForm maxWidth={677} height={694}>
       <FormWaveTop>
         <FormWaveBottom>
           <Box height={100} />
           <Row>
-            <Box width={79} />
+            <Box maxWidth={65} />
             <FormBox />
           </Row>
         </FormWaveBottom>
