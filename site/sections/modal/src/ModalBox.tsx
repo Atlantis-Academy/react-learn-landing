@@ -13,9 +13,9 @@ const ModalBox = ({ showModal, intl }) => {
   return (
     <Layout
       width={510}
-      height={800}
+      height={700}
       bg={theme.colors.white}
-      position='absolute'
+      position='fixed'
       zIndex={10}
       m='auto'
       top={40}
@@ -30,7 +30,7 @@ const ModalBox = ({ showModal, intl }) => {
               {intl.formatMessage(messages.title)}
             </Text>
             <Box height={50} />
-            <FormModal />
+            <FormModal showModal={showModal} />
           </Column>
         </Layout>
       </Column>

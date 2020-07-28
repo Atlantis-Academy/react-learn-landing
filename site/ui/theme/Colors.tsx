@@ -10,4 +10,5 @@ export const colors: any = {
   beige: '#f2f2f2',
   darkBeige: '#e6e6e6',
   borderInput: '#A7A9AC',
+  error: '#F52811',
 }

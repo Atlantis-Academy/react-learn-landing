@@ -16,10 +16,6 @@
     "landing:dev": "yarn workspace @landing/app dev"
   },
   "devDependencies": {
-    "@monstrs/mctl": "0.1.82",
-    "husky": "4.2.5",
-    "lerna": "3.22.1",
-    "typescript": "3.9.7",
     "@babel/cli": "^7.10.3",
     "@babel/core": "^7.10.3",
     "@babel/node": "^7.10.3",
@@ -29,15 +25,19 @@
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
     "@babel/preset-typescript": "^7.10.1",
+    "@monstrs/mctl": "0.1.82",
     "@types/html-webpack-template": "^6.0.4",
     "babel-loader": "^8.1.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "html-webpack-template": "^6.2.0",
+    "husky": "4.2.5",
+    "lerna": "3.22.1",
+    "source-map-loader": "^1.0.0",
+    "typescript": "3.9.7",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
-    "source-map-loader": "^1.0.0"
+    "webpack-dev-server": "^3.11.0"
   },
   "workspaces": [
     "site/**/*"
@@ -60,8 +60,10 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-intl": "^5.0.2",
+    "react-text-mask": "^5.4.3",
     "styled-components": "^5.1.1",
     "styled-system": "^5.1.5",
-    "styled-tools": "^1.7.2"
+    "styled-tools": "^1.7.2",
+    "text-mask-addons": "^3.8.0"
   }
 }
