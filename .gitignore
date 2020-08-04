@@ -1,6 +1,6 @@
 /node_modules
 /**/**/node_modules
-/site/app/dist
+/landing/app/dist
 /*.log
 **/dist
 /dist-zip

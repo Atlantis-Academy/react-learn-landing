@@ -4,7 +4,7 @@ import htmlTemplate      from 'html-webpack-template'
 
 export const mode = 'development'
 
-export const entry = ['./site/index']
+export const entry = ['./landing/index']
 
 export const output = {
   path: path.resolve(__dirname, 'dist'),
