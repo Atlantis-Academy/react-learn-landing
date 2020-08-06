@@ -5,9 +5,10 @@ import LabelText                      from '../../../ui/LabelText'
 import messages                       from './Messages'
 import { FormEl }                     from '../../../ui/FormEl'
 import { Button }                     from '../../../ui/hero/Button'
-import { InputEmail }                 from '../../../ui/hero/InputEmail'
 import { InputForm }                  from '../../../ui/hero/InputForm'
-import { InputPhone }                 from '../../../ui/hero/InputPhone'
+import { InputMask }                  from '../../../ui/hero/InputMask'
+import { InputEmail }                 from '../../../ui/InputMask/InputEmail'
+import { InputPhone }                 from '../../../ui/InputMask/InputPhone'
 import { Box }                        from '../../../ui/layout/Box'
 import { Column }                     from '../../../ui/layout/Layout'
 import { Text }                       from '../../../ui/text/Text'
@@ -100,13 +101,17 @@ const Form = ({ intl }: any) => {
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formPhone)}
         />
-        <InputPhone onChange={event => setPhone(event.target.value)} value={phone} />
+        <InputMask>
+          <InputPhone onChange={event => setPhone(event.target.value)} value={phone} />
+        </InputMask>
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formEmail)}
         />
-        <InputEmail onChange={event => setEmail(event.target.value)} value={email} />
+        <InputMask>
+          <InputEmail onChange={event => setEmail(event.target.value)} value={email} />
+        </InputMask>
         <Box height='20px' />
         <Button border='none' bg={theme.colors.whiteBlue} onClick={handleForm}>
           <Text

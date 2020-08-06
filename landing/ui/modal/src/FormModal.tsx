@@ -5,11 +5,12 @@ import LabelText                      from '../../LabelText'
 import messages                       from './Messages'
 import { Button }                     from '../../Button'
 import { FormEl }                     from '../../FormEl'
+import { InputEmail }                 from '../../InputMask/InputEmail'
 import { Box }                        from '../../layout/Box'
 import { Column, Row }                from '../../layout/Layout'
 import { Text }                       from '../../text/Text'
 import { Input }                      from './Input'
-import { InputEmail }                 from './InputEmail'
+import { InputMask }                  from './InputMask'
 import { TextArea }                   from './TextArea'
 import { theme }                      from '../../theme'
 
@@ -81,7 +82,9 @@ const FormModal = ({ intl, showModal }) => {
           bg={theme.colors.white}
           text={intl.formatMessage(messages.formEmail)}
         />
-        <InputEmail onChange={event => setEmail(event.target.value)} value={email} />
+        <InputMask>
+          <InputEmail onChange={event => setEmail(event.target.value)} value={email} />
+        </InputMask>
         <Box height={20} />
         <LabelText
           color={theme.colors.black}
