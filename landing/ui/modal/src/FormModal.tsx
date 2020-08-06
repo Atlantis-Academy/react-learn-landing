@@ -1,18 +1,17 @@
-import MaskedInput                    from 'react-text-mask'
-import emailMask                      from 'text-mask-addons/dist/emailMask'
 import React, { useEffect, useState } from 'react'
 import { injectIntl }                 from 'react-intl'
 
-import LabelText                      from '../../ui/LabelText'
+import LabelText                      from '../../LabelText'
 import messages                       from './Messages'
-import { Button }                     from '../../ui/Button'
-import { FormEl }                     from '../../ui/FormEl'
-import { Box }                        from '../../ui/layout/Box'
-import { Column, Row }                from '../../ui/layout/Layout'
-import { Input }                      from '../../ui/modal/Input'
-import { TextArea }                   from '../../ui/modal/TextArea'
-import { Text }                       from '../../ui/text/Text'
-import { theme }                      from '../../ui/theme'
+import { Button }                     from '../../Button'
+import { FormEl }                     from '../../FormEl'
+import { Box }                        from '../../layout/Box'
+import { Column, Row }                from '../../layout/Layout'
+import { Text }                       from '../../text/Text'
+import { Input }                      from './Input'
+import { InputEmail }                 from './InputEmail'
+import { TextArea }                   from './TextArea'
+import { theme }                      from '../../theme'
 
 const FormModal = ({ intl, showModal }) => {
   const [name, setName] = useState('')
@@ -82,13 +81,7 @@ const FormModal = ({ intl, showModal }) => {
           bg={theme.colors.white}
           text={intl.formatMessage(messages.formEmail)}
         />
-        <MaskedInput
-          mask={emailMask}
-          name='email'
-          onChange={event => setEmail(event.target.value)}
-          value={email}
-          render={(ref, props) => <Input ref={ref} {...props} />}
-        />
+        <InputEmail onChange={event => setEmail(event.target.value)} value={email} />
         <Box height={20} />
         <LabelText
           color={theme.colors.black}

@@ -3,11 +3,11 @@ import { injectIntl }     from 'react-intl'
 
 import FormModal          from './FormModal'
 import messages           from './Messages'
-import { Box }            from '../../ui/layout/Box'
-import { Column, Layout } from '../../ui/layout/Layout'
-import { Text }           from '../../ui/text/Text'
+import { Box }            from '../../layout/Box'
+import { Column, Layout } from '../../layout/Layout'
+import { Text }           from '../../text/Text'
 import { CloseModal }     from './CloseModal'
-import { theme }          from '../../ui/theme'
+import { theme }          from '../../theme'
 
 const ModalBox = ({ showModal, intl }) => {
   return (

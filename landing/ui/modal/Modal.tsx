@@ -2,7 +2,7 @@ import React      from 'react'
 import ReactDOM   from 'react-dom'
 
 import ModalBox   from './src/ModalBox'
-import { Layout } from '../ui/layout/Layout'
+import { Layout } from '../layout/Layout'
 
 const Portal = ({ children }: any) => {
   return ReactDOM.createPortal(children, document.body)

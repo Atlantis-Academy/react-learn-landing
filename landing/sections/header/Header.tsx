@@ -1,8 +1,8 @@
 import React, { useState }     from 'react'
 import { injectIntl }          from 'react-intl'
 
-import Modal                   from '../../modal/Modal'
 import Logo                    from '../../ui/icon/Logo'
+import Modal                   from '../../ui/modal/Modal'
 import messages                from './Messages'
 import { Button }              from '../../ui/header/Button'
 import { Box }                 from '../../ui/layout/Box'

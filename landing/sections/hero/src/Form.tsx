@@ -1,5 +1,3 @@
-import MaskedInput                    from 'react-text-mask'
-import emailMask                      from 'text-mask-addons/dist/emailMask'
 import React, { useEffect, useState } from 'react'
 import { injectIntl }                 from 'react-intl'
 
@@ -7,11 +5,12 @@ import LabelText                      from '../../../ui/LabelText'
 import messages                       from './Messages'
 import { FormEl }                     from '../../../ui/FormEl'
 import { Button }                     from '../../../ui/hero/Button'
+import { InputEmail }                 from '../../../ui/hero/InputEmail'
 import { InputForm }                  from '../../../ui/hero/InputForm'
+import { InputPhone }                 from '../../../ui/hero/InputPhone'
 import { Box }                        from '../../../ui/layout/Box'
 import { Column }                     from '../../../ui/layout/Layout'
 import { Text }                       from '../../../ui/text/Text'
-import { phoneMask }                  from '../../../ui/InputPhoneMask'
 import { theme }                      from '../../../ui/theme'
 
 const Form = ({ intl }: any) => {
@@ -101,26 +100,13 @@ const Form = ({ intl }: any) => {
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formPhone)}
         />
-        <MaskedInput
-          mask={phoneMask}
-          name='phone'
-          onChange={event => setPhone(event.target.value)}
-          value={phone}
-          render={(ref, props) => <InputForm ref={ref} {...props} />}
-        />
-
+        <InputPhone onChange={event => setPhone(event.target.value)} value={phone} />
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formEmail)}
         />
-        <MaskedInput
-          mask={emailMask}
-          name='email'
-          onChange={event => setEmail(event.target.value)}
-          value={email}
-          render={(ref, props) => <InputForm ref={ref} {...props} />}
-        />
+        <InputEmail onChange={event => setEmail(event.target.value)} value={email} />
         <Box height='20px' />
         <Button border='none' bg={theme.colors.whiteBlue} onClick={handleForm}>
           <Text
