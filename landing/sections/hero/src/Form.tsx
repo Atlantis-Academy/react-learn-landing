@@ -41,7 +41,7 @@ const Form = ({ intl }: any) => {
         },
       ]
 
-      console.log(message)
+      console.log(message) // todo: delete this after add server
     } else {
       setEnd(`${intl.formatMessage(messages.formError)}`)
     }

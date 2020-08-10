@@ -31,7 +31,7 @@ const FormModal = ({ intl, showModal }) => {
     if (name && email && msg) {
       setEnd(`${intl.formatMessage(messages.formEnd)}`)
       setIsSubmit(true)
-      console.log(form)
+      console.log(form) // todo: delete this after add server
     } else {
       setEnd(`${intl.formatMessage(messages.formErr)}`)
     }
