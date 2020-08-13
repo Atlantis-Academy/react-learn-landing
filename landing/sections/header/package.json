@@ -9,7 +9,8 @@
     "@ui/logo": "1.0.0",
     "@ui/modal": "1.0.0",
     "@ui/layout": "1.0.0",
-    "@fragmets/button-header": "1.0.0",
+    "@ui/header-button": "1.0.0",
+    "@ui/text": "1.0.0",
     "react": "^16.13.1",
     "react-intl": "^5.0.2"
   }

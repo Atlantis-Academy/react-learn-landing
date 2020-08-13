@@ -10,6 +10,7 @@
     "react-dom": "^16.13.1",
     "react-intl": "^5.0.2",
     "@ui/layout": "1.0.0",
+    "@fragmets/form-modal": "1.0.0",
     "@ui/text": "1.0.0",
     "@ui/email-mask": "1.0.0",
     "@ui/form-element": "1.0.0",

@@ -6,13 +6,11 @@ import { InputEmail }                 from '@ui/email-mask'
 import { FormEl }                     from '@ui/form-element'
 import { LabelText }                  from '@ui/label-text'
 import { Box, Column, Row }           from '@ui/layout'
+import { Input, InputMask, TextArea } from '@ui/modal'
 import { Text }                       from '@ui/text'
 import { theme }                      from '@ui/theme'
 
 import messages                       from './Messages'
-import { Input }                      from './Input'
-import { InputMask }                  from './InputMask'
-import { TextArea }                   from './TextArea'
 
 const FormModal = ({ intl, showModal }) => {
   const [name, setName] = useState('')
@@ -31,7 +29,7 @@ const FormModal = ({ intl, showModal }) => {
     if (name && email && msg) {
       setEnd(`${intl.formatMessage(messages.formEnd)}`)
       setIsSubmit(true)
-      console.log(form) // todo: delete this after add server
+      console.log(form) // eslint-disable-line
     } else {
       setEnd(`${intl.formatMessage(messages.formErr)}`)
     }

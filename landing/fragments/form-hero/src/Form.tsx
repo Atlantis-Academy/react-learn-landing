@@ -41,7 +41,7 @@ const Form = ({ intl }: any) => {
         },
       ]
 
-      console.log(message) // todo: delete this after add server
+      console.log(message) // eslint-disable-line
     } else {
       setEnd(`${intl.formatMessage(messages.formError)}`)
     }

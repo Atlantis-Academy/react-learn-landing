@@ -1,3 +1,3 @@
-import FormBg from './FormBg'
+import Form from './Form'
 
-export { FormBg }
+export { Form }

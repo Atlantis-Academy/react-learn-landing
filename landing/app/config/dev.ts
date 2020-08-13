@@ -1,4 +1,3 @@
-import * as path         from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import htmlTemplate      from 'html-webpack-template'
 
@@ -7,7 +6,7 @@ export const mode = 'development'
 export const entry = ['./src/index']
 
 export const output = {
-  path: path.resolve(__dirname, 'build'),
+  path: '/',
   filename: 'bundle.js',
   publicPath: '/',
 }
@@ -16,7 +15,6 @@ export const devServer = {
   open: true,
   hot: true,
   port: 3000,
-  contentBase: path.resolve(__dirname, 'build'),
 }
 
 export const module = {
@@ -38,7 +36,7 @@ export const module = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'fonts/',
+            esModule: false,
           },
         },
       ],
@@ -50,10 +48,20 @@ export const module = {
           loader: 'file-loader',
           options: {
             name: '[name].[ext]',
-            outputPath: 'img/',
+            esModule: false,
           },
         },
       ],
+    },
+    {
+      test: /\.svg/,
+      use: {
+        loader: 'svg-url-loader',
+        options: {
+          name: '[name].[ext]',
+          esModule: false,
+        },
+      },
     },
     {
       test: /\.js$/,

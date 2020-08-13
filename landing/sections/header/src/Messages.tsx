@@ -1,10 +1,10 @@
 import { defineMessages } from 'react-intl'
 
-const namespace: string = 'header'
+import { name as scope }  from '../package.json'
 
 export default defineMessages({
   headerButton: {
-    id: `${namespace}.button`,
+    id: `${scope}.button`,
     defaultMessage: 'Задать вопрос',
   },
 })

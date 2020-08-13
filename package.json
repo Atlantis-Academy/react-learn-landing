@@ -5,7 +5,7 @@
     "lerna": "^3.22.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --config=./src/config/dev.ts",
+    "start": "webpack-dev-server",
     "lint": "mctl lint",
     "test": "mctl test",
     "commit": "mctl commit",

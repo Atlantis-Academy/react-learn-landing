@@ -1,11 +1,11 @@
 import React                   from 'react'
 import { injectIntl }          from 'react-intl'
 
+import { FormModal }           from '@fragmets/form-modal'
 import { Box, Column, Layout } from '@ui/layout'
 import { Text }                from '@ui/text'
 import { theme }               from '@ui/theme'
 
-import FormModal               from './FormModal'
 import messages                from './Messages'
 import { CloseModal }          from './CloseModal'
 

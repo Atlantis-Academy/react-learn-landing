@@ -1,11 +1,12 @@
 import React, { useState }          from 'react'
 import { injectIntl }               from 'react-intl'
 
-import { ButtonHeader }             from '@fragmets/button-header'
 import { Box, Column, Layout, Row } from '@ui/layout'
 import { Logo }                     from '@ui/logo'
 import { Modal }                    from '@ui/modal'
 import { theme }                    from '@ui/theme'
+
+import ShowModal                    from './ShowModal'
 
 const Header = () => {
   const [display, setDisplay] = useState(false)
@@ -21,7 +22,7 @@ const Header = () => {
         <Row justifyContent='center'>
           <Logo />
           <Box maxWidth={870} />
-          <ButtonHeader showModal={showModal} />
+          <ShowModal showModal={showModal} />
         </Row>
         {display ? <Modal display={setDisplay} /> : null}
       </Column>

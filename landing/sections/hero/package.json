@@ -7,11 +7,13 @@
   "dependencies": {
     "@ui/theme": "1.0.0",
     "@ui/layout": "1.0.0",
-    "@fragmets/title-hero": "1.0.0",
-    "@fragments/text-hero": "1.0.0",
-    "@fragmets/subtitle-hero": "1.0.0",
+    "@ui/text": "1.0.0",
     "@fragmets/form-hero": "1.0.0",
     "@icons/wave-l": "1.0.0",
-    "react": "^16.13.1"
+    "@ui/bg-form-hero": "1.0.0",
+    "@ui/form-waves": "1.0.0",
+    "@ui/form-color": "1.0.0",
+    "react": "^16.13.1",
+    "react-intl": "^5.0.2"
   }
 }

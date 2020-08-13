@@ -7,9 +7,6 @@
   "dependencies": {
     "@ui/theme": "1.0.0",
     "@ui/layout": "1.0.0",
-    "@ui/bg-form-hero": "1.0.0",
-    "@ui/form-waves": "1.0.0",
-    "@ui/form-color": "1.0.0",
     "@ui/text": "1.0.0",
     "@ui/label-text": "1.0.0",
     "@ui/button-form-hero": "1.0.0",

@@ -7,7 +7,7 @@ import { theme }      from '@ui/theme'
 
 import messages       from './Messages'
 
-const ButtonHeader = ({ intl, showModal }) => {
+const ShowModal = ({ intl, showModal }) => {
   return (
     <>
       <Button onClick={showModal}>
@@ -24,4 +24,4 @@ const ButtonHeader = ({ intl, showModal }) => {
   )
 }
 
-export default injectIntl(ButtonHeader)
+export default injectIntl(ShowModal)
