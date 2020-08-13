@@ -1,0 +1,11 @@
+{
+  "name": "@ui/bg-form-hero",
+  "version": "1.0.0",
+  "main": "src/index.tsx",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "styled-system": "^5.1.5",
+    "@emotion/styled": "^10.0.27"
+  }
+}

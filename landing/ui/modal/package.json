@@ -1,0 +1,19 @@
+{
+  "name": "@ui/modal",
+  "version": "1.0.0",
+  "main": "src/index.tsx",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@ui/theme": "1.0.0",
+    "react": "^16.13.1",
+    "react-intl": "^5.0.2",
+    "@ui/layout": "1.0.0",
+    "@ui/text": "1.0.0",
+    "@ui/email-mask": "1.0.0",
+    "@ui/form-element": "1.0.0",
+    "@ui/button": "1.0.0",
+    "@ui/label-text": "1.0.0",
+    "@emotion/styled": "^10.0.27"
+  }
+}

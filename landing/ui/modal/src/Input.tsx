@@ -1,6 +1,6 @@
 import styled    from '@emotion/styled'
 
-import { theme } from '../../theme'
+import { theme } from '@ui/theme'
 
 export const Input = styled('input')(() => ({
   height: '55px',

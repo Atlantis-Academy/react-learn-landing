@@ -1,8 +1,7 @@
 import React           from 'react'
 
 import CloseCross      from '../../icon/CloseCross'
-import { Box }         from '../../layout/Box'
-import { Layout, Row } from '../../layout/Layout'
+import { Box, Layout, Row }         from '@ui/layout'
 import { CloseButton } from './CloseButton'
 
 export const CloseModal = ({ showModal }) => {

@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { injectIntl }                 from 'react-intl'
 
-import LabelText                      from '../../LabelText'
+import { LabelText }                      from '@ui/label-text'
 import messages                       from './Messages'
-import { Button }                     from '../../Button'
-import { FormEl }                     from '../../FormEl'
-import { InputEmail }                 from '../../InputMask/InputEmail'
-import { Box }                        from '../../layout/Box'
-import { Column, Row }                from '../../layout/Layout'
-import { Text }                       from '../../text/Text'
+import { Button }                     from '@ui/button'
+import { FormEl }                     from '@ui/form-element'
+import { InputEmail }                 from '@ui/email-mask'
+import { Box, Column, Row}                        from '@ui/layout'
+import { Text }                       from '@ui/text'
 import { Input }                      from './Input'
 import { InputMask }                  from './InputMask'
 import { TextArea }                   from './TextArea'
-import { theme }                      from '../../theme'
+import { theme }                      from '@ui/theme'
 
 const FormModal = ({ intl, showModal }) => {
   const [name, setName] = useState('')
