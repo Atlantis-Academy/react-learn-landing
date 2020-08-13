@@ -4,6 +4,16 @@
   "devDependencies": {
     "lerna": "^3.22.1"
   },
+  "scripts": {
+    "start": "webpack-dev-server --config=./src/config/dev.ts",
+    "lint": "mctl lint",
+    "test": "mctl test",
+    "commit": "mctl commit",
+    "format": "mctl format",
+    "typecheck": "mctl typecheck",
+    "checkcommit": "mctl precommit",
+    "landing:dev": "yarn workspace @landing/app dev"
+  },
   "workspaces": [
     "landing/**/*"
   ]
