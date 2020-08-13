@@ -1,14 +1,15 @@
-import React from 'react'
-import { injectIntl } from 'react-intl'
+import React           from 'react'
+import { injectIntl }  from 'react-intl'
 
-import Form from './Form'
-import { FormBg } from '@ui/form-color'
+import { FormBg }      from '@ui/form-color'
 import { Box, Column } from '@ui/layout'
-import { theme } from '@ui/theme'
-import { Text } from '@ui/text'
-import messages from './Messages'
+import { Text }        from '@ui/text'
+import { theme }       from '@ui/theme'
 
-const FormBox = ({intl}) => {
+import Form            from './Form'
+import messages        from './Messages'
+
+const FormBox = ({ intl }) => {
   return (
     <FormBg width={390}>
       <Column alignItems='center'>

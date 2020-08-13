@@ -1,11 +1,13 @@
-import React from 'react'
+import React          from 'react'
 import { injectIntl } from 'react-intl'
-import { Button } from '@ui/header-button'
-import { Text } from '@ui/text'
-import { theme } from '@ui/theme'
-import messages from './Messages'
 
-const ButtonHeader = ({intl, showModal}) => {
+import { Button }     from '@ui/header-button'
+import { Text }       from '@ui/text'
+import { theme }      from '@ui/theme'
+
+import messages       from './Messages'
+
+const ButtonHeader = ({ intl, showModal }) => {
   return (
     <>
       <Button onClick={showModal}>

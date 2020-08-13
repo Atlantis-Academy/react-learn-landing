@@ -1,6 +1,6 @@
-import * as path from 'path'
+import * as path         from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-import htmlTemplate from 'html-webpack-template'
+import htmlTemplate      from 'html-webpack-template'
 
 export const mode = 'development'
 
@@ -27,7 +27,7 @@ export const module = {
       use: {
         loader: 'babel-loader',
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-typescript', '@babel/preset-react']
+          presets: ['@babel/preset-env', '@babel/preset-typescript', '@babel/preset-react'],
         },
       },
     },

@@ -5,8 +5,6 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-
     "@emotion/styled": "^10.0.27"
-
   }
 }

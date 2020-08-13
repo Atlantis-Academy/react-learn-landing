@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import { injectIntl } from 'react-intl'
+import React, { useState }          from 'react'
+import { injectIntl }               from 'react-intl'
 
-import { Logo } from '@ui/logo'
-import { Modal } from '@ui/modal'
+import { ButtonHeader }             from '@fragmets/button-header'
 import { Box, Column, Layout, Row } from '@ui/layout'
-import { theme } from '@ui/theme'
-import { ButtonHeader } from '@fragmets/button-header'
+import { Logo }                     from '@ui/logo'
+import { Modal }                    from '@ui/modal'
+import { theme }                    from '@ui/theme'
 
 const Header = () => {
   const [display, setDisplay] = useState(false)

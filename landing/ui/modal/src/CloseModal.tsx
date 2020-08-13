@@ -1,19 +1,16 @@
-import React from 'react'
+import React                from 'react'
 
-import { CloseCross } from '@icons/close-cross'
+import { CloseCross }       from '@icons/close-cross'
 import { Box, Layout, Row } from '@ui/layout'
-import { CloseButton } from './CloseButton'
 
-export const CloseModal = ({showModal}) => {
+import { CloseButton }      from './CloseButton'
+
+export const CloseModal = ({ showModal }) => {
   return (
     <>
       <Box height={26} />
       <Row>
-        <Layout
-          width={1}
-          height={23}
-          justifyContent='flex-end'
-        >
+        <Layout width={1} height={23} justifyContent='flex-end'>
           <CloseButton onClick={showModal}>
             <CloseCross />
           </CloseButton>

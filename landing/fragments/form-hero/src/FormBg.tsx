@@ -1,9 +1,10 @@
 import React                           from 'react'
 
-import FormBox                         from './FormBox'
 import { BgForm }                      from '@ui/bg-form-hero'
 import { FormWaveBottom, FormWaveTop } from '@ui/form-waves'
-import { Box, Row }                         from '@ui/layout'
+import { Box, Row }                    from '@ui/layout'
+
+import FormBox                         from './FormBox'
 
 const FormBg = () => {
   return (

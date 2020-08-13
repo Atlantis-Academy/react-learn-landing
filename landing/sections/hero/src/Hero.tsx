@@ -1,12 +1,12 @@
-import React from 'react'
+import React                        from 'react'
 
-import { WaveL } from '@icons/wave-l'
-import { FormBg } from '@fragmets/form-hero'
-import { Subtitle } from '@fragmets/subtitle-hero'
-import { TextHero } from '@fragments/text-hero'
-import { Title } from '@fragmets/title-hero'
+import { TextHero }                 from '@fragments/text-hero'
+import { FormBg }                   from '@fragmets/form-hero'
+import { Subtitle }                 from '@fragmets/subtitle-hero'
+import { Title }                    from '@fragmets/title-hero'
+import { WaveL }                    from '@icons/wave-l'
 import { Box, Column, Layout, Row } from '@ui/layout'
-import { theme } from '@ui/theme'
+import { theme }                    from '@ui/theme'
 
 const Hero = () => {
   return (

@@ -1,26 +1,27 @@
 import React, { useEffect, useState } from 'react'
-import { injectIntl } from 'react-intl'
+import { injectIntl }                 from 'react-intl'
 
-import { Box, Column, Row } from '@ui/layout'
-import { Button } from '@ui/button'
-import { FormEl } from '@ui/form-element'
-import { LabelText } from '@ui/label-text'
-import { InputEmail } from '@ui/email-mask'
-import { Text } from '@ui/text'
-import { theme } from '@ui/theme'
-import { InputMask } from './InputMask'
-import { TextArea } from './TextArea'
-import { Input } from './Input'
-import messages from './Messages'
+import { Button }                     from '@ui/button'
+import { InputEmail }                 from '@ui/email-mask'
+import { FormEl }                     from '@ui/form-element'
+import { LabelText }                  from '@ui/label-text'
+import { Box, Column, Row }           from '@ui/layout'
+import { Text }                       from '@ui/text'
+import { theme }                      from '@ui/theme'
 
-const FormModal = ({intl, showModal}) => {
+import messages                       from './Messages'
+import { Input }                      from './Input'
+import { InputMask }                  from './InputMask'
+import { TextArea }                   from './TextArea'
+
+const FormModal = ({ intl, showModal }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [msg, setMsg] = useState('')
   const [end, setEnd] = useState('')
   const [isSubmit, setIsSubmit] = useState(false)
 
-  const form = [{name}, {email}, {msg}]
+  const form = [{ name }, { email }, { msg }]
 
   const handleForm = () => {
     setName('')
@@ -82,10 +83,7 @@ const FormModal = ({intl, showModal}) => {
           text={intl.formatMessage(messages.formEmail)}
         />
         <InputMask>
-          <InputEmail
-            onChange={event => setEmail(event.target.value)}
-            value={email}
-          />
+          <InputEmail onChange={event => setEmail(event.target.value)} value={email} />
         </InputMask>
         <Box height={20} />
         <LabelText
@@ -93,11 +91,7 @@ const FormModal = ({intl, showModal}) => {
           bg={theme.colors.white}
           text={intl.formatMessage(messages.formMsg)}
         />
-        <TextArea
-          name='message'
-          onChange={event => setMsg(event.target.value)}
-          value={msg}
-        />
+        <TextArea name='message' onChange={event => setMsg(event.target.value)} value={msg} />
         <Box height={20} />
         <Row>
           <Button onClick={handleForm}>

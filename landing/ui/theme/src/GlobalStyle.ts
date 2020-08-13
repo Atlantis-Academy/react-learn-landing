@@ -6,7 +6,7 @@ const fontFace = (family, type) => {
   return `@font-face {
     font-family: ${family};
     src: local(${family}),
-      url('${require(`../fonts/${family}-${type}.woff2`)}')
+      url('../fonts/${family}-${type}.woff2')
         format('woff2'); 
   }`
 }

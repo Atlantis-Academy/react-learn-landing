@@ -6,5 +6,5 @@ export default defineMessages({
   subTitle: {
     id: `${namespace}.subtitle`,
     defaultMessage: 'Система управления документами и задачами',
-  }
+  },
 })
