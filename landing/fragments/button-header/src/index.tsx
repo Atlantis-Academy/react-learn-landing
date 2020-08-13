@@ -1,3 +1,3 @@
 import ButtonHeader from './ButtonHeader'
 
-export {ButtonHeader}
+export { ButtonHeader }

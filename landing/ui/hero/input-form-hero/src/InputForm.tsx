@@ -1,5 +1,4 @@
-import styled    from '@emotion/styled'
-
+import styled from '@emotion/styled'
 import { theme } from '@ui/theme/src'
 
 export const InputForm = styled.input(() => ({

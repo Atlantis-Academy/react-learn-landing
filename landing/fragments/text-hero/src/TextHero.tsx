@@ -1,12 +1,12 @@
-import React          from 'react'
+import React from 'react'
 import { injectIntl } from 'react-intl'
 
-import messages       from './Messages'
-import { Box }        from '@ui/layout'
-import { Text }       from '@ui/text'
-import { theme }      from '@ui/theme'
+import { Box } from '@ui/layout'
+import { Text } from '@ui/text'
+import { theme } from '@ui/theme'
+import messages from './Messages'
 
-const TextHero = ({ intl }) => {
+const TextHero = ({intl}) => {
   return (
     <Box maxWidth={600}>
       <Text

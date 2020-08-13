@@ -1,3 +1,3 @@
 import Subtitle from './Subtitle'
 
-export {Subtitle}
+export { Subtitle }

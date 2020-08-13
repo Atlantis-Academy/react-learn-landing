@@ -6,5 +6,5 @@ export default defineMessages({
   title: {
     id: `${namespace}.title`,
     defaultMessage: 'Riverdoc',
-  }
+  },
 })

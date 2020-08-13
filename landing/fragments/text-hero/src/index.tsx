@@ -1,3 +1,3 @@
 import TextHero from './TextHero'
 
-export {TextHero}
+export { TextHero }

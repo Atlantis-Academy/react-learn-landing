@@ -18,6 +18,7 @@
     "@ui/email-mask": "1.0.0",
     "@ui/form-element": "1.0.0",
     "@ui/phone-mask": "1.0.0",
+    "react-intl": "^5.0.2",
     "react": "^16.13.1"
   }
 }

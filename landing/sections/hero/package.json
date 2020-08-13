@@ -10,6 +10,7 @@
     "@fragmets/title-hero": "1.0.0",
     "@fragments/text-hero": "1.0.0",
     "@fragmets/subtitle-hero": "1.0.0",
+    "@fragmets/form-hero": "1.0.0",
     "@icons/wave-l": "1.0.0",
     "react": "^16.13.1"
   }

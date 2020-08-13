@@ -1,5 +1,5 @@
-import React         from 'react'
-import MaskedInput   from 'react-text-mask'
+import React from 'react'
+import MaskedInput from 'react-text-mask'
 
 export const InputPhone: any = () => {
   return (

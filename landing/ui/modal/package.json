@@ -14,6 +14,7 @@
     "@ui/form-element": "1.0.0",
     "@ui/button": "1.0.0",
     "@ui/label-text": "1.0.0",
+    "@icons/close-cross": "1.0.0",
     "@emotion/styled": "^10.0.27"
   }
 }

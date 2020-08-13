@@ -1,11 +1,11 @@
-import React          from 'react'
+import React from 'react'
 import { injectIntl } from 'react-intl'
 
-import messages       from './Messages'
-import { Text }       from '@ui/text'
-import { theme }      from '@ui/theme'
+import { Text } from '@ui/text'
+import { theme } from '@ui/theme'
+import messages from './Messages'
 
-const Title = ({ intl }) => {
+const Title = ({intl}) => {
   return (
     <>
       <Text

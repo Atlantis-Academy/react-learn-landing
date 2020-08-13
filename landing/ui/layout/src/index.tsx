@@ -1,6 +1,4 @@
-import {Box} from './Box'
-import {Layout} from './Layout'
-import {Row} from './Layout'
-import {Column} from './Layout'
+import { Box } from './Box'
+import { Column, Layout, Row } from './Layout'
 
-export {Box, Layout, Column, Row}
+export { Box, Layout, Column, Row }
