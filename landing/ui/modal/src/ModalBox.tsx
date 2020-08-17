@@ -1,7 +1,7 @@
 import React                   from 'react'
 import { injectIntl }          from 'react-intl'
 
-import { FormModal }           from '@fragmets/form-modal'
+import { FormModal }           from '@fragments/form-modal'
 import { Box, Column, Layout } from '@ui/layout'
 import { Text }                from '@ui/text'
 import { theme }               from '@ui/theme'
