@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { injectIntl }                 from 'react-intl'
 
-import { Button }                     from '@ui/button-form-hero'
+import { Button }                     from '@ui/button'
 import { InputEmail }                 from '@ui/email-mask'
 import { FormEl }                     from '@ui/form-element'
-import { InputForm }                  from '@ui/input-form-hero'
-import { InputMask }                  from '@ui/input-form-mask'
+import { InputForm }                  from '@ui/input-hero'
+import { InputMask }                  from '@ui/input-mask'
 import { LabelText }                  from '@ui/label-text'
 import { Box, Column }                from '@ui/layout'
 import { InputPhone }                 from '@ui/phone-mask'
@@ -113,7 +113,13 @@ const Form = ({ intl }: any) => {
           <InputEmail onChange={event => setEmail(event.target.value)} value={email} />
         </InputMask>
         <Box height='20px' />
-        <Button border='none' bg={theme.colors.whiteBlue} onClick={handleForm}>
+        <Button
+          width={310}
+          height={50}
+          border='none'
+          bg={theme.colors.whiteBlue}
+          onClick={handleForm}
+        >
           <Text
             color={theme.colors.white}
             fontFamily={theme.fontFamily.text}

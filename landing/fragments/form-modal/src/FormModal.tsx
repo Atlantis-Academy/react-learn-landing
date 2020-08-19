@@ -92,7 +92,7 @@ const FormModal = ({ intl, showModal }) => {
         <TextArea name='message' onChange={event => setMsg(event.target.value)} value={msg} />
         <Box height={20} />
         <Row>
-          <Button onClick={handleForm}>
+          <Button width={210} height={50} onClick={handleForm}>
             <Text
               color={theme.colors.white}
               fontFamily={theme.fontFamily.text}
