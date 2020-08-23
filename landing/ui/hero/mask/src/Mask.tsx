@@ -2,7 +2,7 @@ import styled    from '@emotion/styled'
 
 import { theme } from '@ui/theme'
 
-export const InputMask = styled.div(() => ({
+export const Mask = styled.div(() => ({
   width: '310px',
   height: '55px',
   background: theme.colors.dark,

@@ -5,9 +5,9 @@ import { Button }                     from '@ui/button'
 import { InputEmail }                 from '@ui/email-mask'
 import { FormEl }                     from '@ui/form-element'
 import { InputForm }                  from '@ui/input-hero'
-import { InputMask }                  from '@ui/input-mask'
 import { LabelText }                  from '@ui/label-text'
 import { Box, Column }                from '@ui/layout'
+import { Mask }                       from '@ui/mask'
 import { InputPhone }                 from '@ui/phone-mask'
 import { Text }                       from '@ui/text'
 import { theme }                      from '@ui/theme'
@@ -101,17 +101,17 @@ const Form = ({ intl }: any) => {
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formPhone)}
         />
-        <InputMask>
+        <Mask>
           <InputPhone onChange={event => setPhone(event.target.value)} value={phone} />
-        </InputMask>
+        </Mask>
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formEmail)}
         />
-        <InputMask>
+        <Mask>
           <InputEmail onChange={event => setEmail(event.target.value)} value={email} />
-        </InputMask>
+        </Mask>
         <Box height='20px' />
         <Button
           width={310}

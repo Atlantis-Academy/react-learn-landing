@@ -9,7 +9,7 @@
     "@ui/email-mask": "^0.0.1",
     "@ui/form-element": "^0.0.1",
     "@ui/input-hero": "^0.0.1",
-    "@ui/input-mask": "^0.0.1",
+    "@ui/mask": "^0.0.1",
     "@ui/label-text": "^0.0.1",
     "@ui/layout": "^0.0.1",
     "@ui/phone-mask": "^0.0.1",
