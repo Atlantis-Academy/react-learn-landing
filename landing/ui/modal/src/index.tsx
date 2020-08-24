@@ -1,6 +1,3 @@
-import Modal         from './Modal'
-import { Input }     from './Input'
-import { InputMask } from './InputMask'
-import { TextArea }  from './TextArea'
+import Modal from './Modal'
 
-export { Modal, Input, InputMask, TextArea }
+export { Modal }

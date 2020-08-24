@@ -1,30 +1,12 @@
 import React       from 'react'
 import MaskedInput from 'react-text-mask'
+import emailMask   from 'text-mask-addons/dist/emailMask'
 
-export const InputPhone: any = () => {
+export const MaskEmail: any = () => {
   return (
     <MaskedInput
-      mask={[
-        '+',
-        '7',
-        ' ',
-        '(',
-        /[1-9]/,
-        /\d/,
-        /\d/,
-        ')',
-        ' ',
-        /\d/,
-        /\d/,
-        /\d/,
-        '-',
-        /\d/,
-        /\d/,
-        '-',
-        /\d/,
-        /\d/,
-      ]}
-      name='phone'
+      mask={emailMask}
+      name='email'
       style={{
         width: 'inherit',
         height: 'inherit',
