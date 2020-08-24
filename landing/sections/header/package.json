@@ -1,16 +1,16 @@
 {
   "name": "@sections/header",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/index.tsx",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@ui/header-button": "^0.0.1",
-    "@ui/layout": "^0.0.1",
-    "@ui/logo": "^0.0.1",
-    "@ui/modal": "^0.0.1",
-    "@ui/text": "^0.0.1",
-    "@ui/theme": "^0.0.1",
+    "@ui/header-button": "^0.0.2",
+    "@ui/layout": "^0.0.2",
+    "@ui/logo": "^0.0.2",
+    "@ui/modal": "^0.0.2",
+    "@ui/text": "^0.0.2",
+    "@ui/theme": "^0.0.2",
     "react": "^16.13.1",
     "react-intl": "^5.0.2"
   }

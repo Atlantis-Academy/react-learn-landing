@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.2 (2020-08-24)
+
+### Bug Fixes
+
+- **hero:** rename module close-cross and fragments ([6a5f803](https://github.com/Atlantis-Academy/react-learn-landing/commit/6a5f803041966ea03e00db1db21d049549c9a0ec))
+
 ## 0.0.1 (2020-08-14)
 
 ### Bug Fixes
