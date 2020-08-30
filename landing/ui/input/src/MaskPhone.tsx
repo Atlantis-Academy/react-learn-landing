@@ -1,7 +1,7 @@
 import React       from 'react'
 import MaskedInput from 'react-text-mask'
 
-export const MaskPhone: any = () => {
+export const MaskPhone: any = props => {
   return (
     <MaskedInput
       mask={[
@@ -24,16 +24,7 @@ export const MaskPhone: any = () => {
         /\d/,
         /\d/,
       ]}
-      name='phone'
-      style={{
-        width: 'inherit',
-        height: 'inherit',
-        background: 'inherit',
-        color: 'inherit',
-        fontSize: 'inherit',
-        fontFamily: 'inherit',
-        border: 'none',
-      }}
+      style={props}
     />
   )
 }

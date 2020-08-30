@@ -1,11 +1,7 @@
-import styled from '@emotion/styled'
+import React           from 'react'
 
-export const Input = styled('input')(() => ({
-  width: 'inherit',
-  height: 'inherit',
-  background: 'inherit',
-  color: 'inherit',
-  fontSize: 'inherit',
-  fontFamily: 'inherit',
-  border: 'none',
-}))
+import { StyledInput } from './StyleInput'
+
+export const Input = props => {
+  return <StyledInput {...props} />
+}

@@ -11,6 +11,7 @@
     "@ui/theme": "^0.0.2",
     "react": "^16.13.1",
     "react-text-mask": "^5.4.3",
-    "text-mask-addons": "^3.8.0"
+    "text-mask-addons": "^3.8.0",
+    "styled-system": "^5.1.5"
   }
 }

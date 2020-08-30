@@ -1,14 +1,14 @@
-import React, { useEffect, useState }                             from 'react'
-import { injectIntl }                                             from 'react-intl'
+import React, { useEffect, useState }             from 'react'
+import { injectIntl }                             from 'react-intl'
 
-import { Button }                                                 from '@ui/button'
-import { FormEl }                                                 from '@ui/form-element'
-import { Input, LabelText, MaskEmail, MaskPhone, StyleInputHero } from '@ui/input'
-import { Box, Column }                                            from '@ui/layout'
-import { Text }                                                   from '@ui/text'
-import { theme }                                                  from '@ui/theme'
+import { Button }                                 from '@ui/button'
+import { FormEl }                                 from '@ui/form-element'
+import { Input, LabelText, MaskEmail, MaskPhone } from '@ui/input'
+import { Box, Column }                            from '@ui/layout'
+import { Text }                                   from '@ui/text'
+import { theme }                                  from '@ui/theme'
 
-import messages                                                   from './Messages'
+import messages                                   from './Messages'
 
 const Form = ({ intl }: any) => {
   const [name, setName] = useState('')
@@ -73,45 +73,81 @@ const Form = ({ intl }: any) => {
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formName)}
         />
-        <StyleInputHero>
-          <Input
-            type='text'
-            name='name'
-            onChange={event => setName(event.target.value)}
-            value={name}
-          />
-        </StyleInputHero>
+
+        <Input
+          type='text'
+          name='name'
+          onChange={event => setName(event.target.value)}
+          value={name}
+          width={310}
+          height={55}
+          border={`${theme.border.s}px solid ${theme.colors.whiteBlue}`}
+          borderRadius={theme.borderRadius.s}
+          bg={theme.colors.dark}
+          color={theme.colors.white}
+          fontFamily={theme.fontFamily.text}
+          fontSize={theme.fontSize.xs}
+        />
 
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formJob)}
         />
-        <StyleInputHero>
-          <Input
-            type='text'
-            name='job'
-            onChange={event => setJob(event.target.value)}
-            value={job}
-          />
-        </StyleInputHero>
+        <Input
+          type='text'
+          name='job'
+          onChange={event => setJob(event.target.value)}
+          value={job}
+          width={310}
+          height={55}
+          border={`${theme.border.s}px solid ${theme.colors.whiteBlue}`}
+          borderRadius={theme.borderRadius.s}
+          bg={theme.colors.dark}
+          color={theme.colors.white}
+          fontFamily={theme.fontFamily.text}
+          fontSize={theme.fontSize.xs}
+        />
 
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formPhone)}
         />
-        <StyleInputHero>
-          <MaskPhone onChange={event => setPhone(event.target.value)} value={phone} />
-        </StyleInputHero>
+        <MaskPhone
+          type='text'
+          name='phone'
+          onChange={event => setPhone(event.target.value)}
+          value={phone}
+          width={310}
+          height={55}
+          border={`${theme.border.s}px solid ${theme.colors.whiteBlue}`}
+          borderRadius={theme.borderRadius.s}
+          background={theme.colors.dark}
+          color={theme.colors.white}
+          fontFamily={theme.fontFamily.text}
+          fontSize={theme.fontSize.xs}
+        />
+
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formEmail)}
         />
-        <StyleInputHero>
-          <MaskEmail onChange={event => setEmail(event.target.value)} value={email} />
-        </StyleInputHero>
+        <MaskEmail
+          type='text'
+          name='email'
+          onChange={event => setEmail(event.target.value)}
+          value={email}
+          width={310}
+          height={55}
+          border={`${theme.border.s}px solid ${theme.colors.whiteBlue}`}
+          borderRadius={theme.borderRadius.s}
+          background={theme.colors.dark}
+          color={theme.colors.white}
+          fontFamily={theme.fontFamily.text}
+          fontSize={theme.fontSize.xs}
+        />
         <Box height='20px' />
         <Button
           width={310}
