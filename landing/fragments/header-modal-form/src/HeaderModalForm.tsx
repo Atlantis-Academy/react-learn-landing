@@ -1,16 +1,16 @@
-import React, { useEffect, useState }                             from 'react'
-import { injectIntl }                                             from 'react-intl'
+import React, { useEffect, useState }            from 'react'
+import { injectIntl }                            from 'react-intl'
 
-import { Button }                                                 from '@ui/button'
-import { FormEl }                                                 from '@ui/form-element'
-import { Input, LabelText, MaskEmail, StyleInputModal, TextArea } from '@ui/input'
-import { Box, Column, Row }                                       from '@ui/layout'
-import { Text }                                                   from '@ui/text'
-import { theme }                                                  from '@ui/theme'
+import { Button }                                from '@ui/button'
+import { FormEl }                                from '@ui/form-element'
+import { Input, LabelText, TextArea, emailMask } from '@ui/input'
+import { Box, Column, Row }                      from '@ui/layout'
+import { Text }                                  from '@ui/text'
+import { theme }                                 from '@ui/theme'
 
-import messages                                                   from './Messages'
+import messages                                  from './Messages'
 
-const FormModal = ({ intl, showModal }) => {
+const HeaderModalForm = ({ intl, showModal }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [msg, setMsg] = useState('')
@@ -66,23 +66,31 @@ const FormModal = ({ intl, showModal }) => {
           bg={theme.colors.white}
           text={intl.formatMessage(messages.formName)}
         />
-        <StyleInputModal>
-          <Input
-            type='text'
-            name='name'
-            onChange={event => setName(event.target.value)}
-            value={name}
-          />
-        </StyleInputModal>
+        <Input
+          type='text'
+          name='name'
+          onChange={event => setName(event.target.value)}
+          value={name}
+          height={55}
+          border={`${theme.border.s}px solid ${theme.colors.borderInput}`}
+          style={{ borderRadius: theme.borderRadius.s }}
+        />
         <Box height={20} />
         <LabelText
           color={theme.colors.black}
           bg={theme.colors.white}
           text={intl.formatMessage(messages.formEmail)}
         />
-        <StyleInputModal>
-          <MaskEmail onChange={event => setEmail(event.target.value)} value={email} />
-        </StyleInputModal>
+
+        <Input
+          onChange={event => setEmail(event.target.value)}
+          value={email}
+          mask={emailMask}
+          height={55}
+          border={`${theme.border.s}px solid ${theme.colors.borderInput}`}
+          style={{ borderRadius: theme.borderRadius.s }}
+        />
+
         <Box height={20} />
         <LabelText
           color={theme.colors.black}
@@ -108,4 +116,4 @@ const FormModal = ({ intl, showModal }) => {
   )
 }
 
-export default injectIntl(FormModal)
+export default injectIntl(HeaderModalForm)

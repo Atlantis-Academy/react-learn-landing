@@ -1,5 +1,5 @@
 {
-  "name": "@fragments/form-modal",
+  "name": "@fragments/header-modal-form",
   "version": "0.0.2",
   "main": "src/index.tsx",
   "license": "MIT",

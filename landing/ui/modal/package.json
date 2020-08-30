@@ -6,7 +6,7 @@
   "private": true,
   "dependencies": {
     "@emotion/styled": "^10.0.27",
-    "@fragments/form-modal": "^0.0.2",
+    "@fragments/header-modal-form": "^0.0.2",
     "@icons/close-cross": "^0.0.2",
     "@ui/button": "^0.0.2",
     "@ui/form-element": "^0.0.2",

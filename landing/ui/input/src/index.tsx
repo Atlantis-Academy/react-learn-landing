@@ -1,8 +1,8 @@
-import LabelText           from './LabelText'
-import { Input }           from './Input'
-import { MaskEmail }       from './MaskEmail'
-import { MaskPhone }       from './MaskPhone'
-import { StyleInputModal } from './StyleInputModal'
-import { TextArea }        from './TextArea'
+import emailMask     from 'text-mask-addons/dist/emailMask'
 
-export { LabelText, MaskEmail, MaskPhone, StyleInputModal, Input, TextArea }
+import LabelText     from './LabelText'
+import { Input }     from './Input'
+import { TextArea }  from './TextArea'
+import { maskPhone } from './MaskPhone'
+
+export { LabelText, emailMask, maskPhone, Input, TextArea }

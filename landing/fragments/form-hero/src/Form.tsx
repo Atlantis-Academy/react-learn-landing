@@ -3,7 +3,7 @@ import { injectIntl }                             from 'react-intl'
 
 import { Button }                                 from '@ui/button'
 import { FormEl }                                 from '@ui/form-element'
-import { Input, LabelText, MaskEmail, MaskPhone } from '@ui/input'
+import { Input, LabelText, emailMask, maskPhone } from '@ui/input'
 import { Box, Column }                            from '@ui/layout'
 import { Text }                                   from '@ui/text'
 import { theme }                                  from '@ui/theme'
@@ -114,16 +114,17 @@ const Form = ({ intl }: any) => {
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formPhone)}
         />
-        <MaskPhone
+        <Input
           type='text'
+          mask={maskPhone}
           name='phone'
           onChange={event => setPhone(event.target.value)}
           value={phone}
           width={310}
           height={55}
           border={`${theme.border.s}px solid ${theme.colors.whiteBlue}`}
-          borderRadius={theme.borderRadius.s}
-          background={theme.colors.dark}
+          style={{ borderRadius: theme.borderRadius.s }}
+          bg={theme.colors.dark}
           color={theme.colors.white}
           fontFamily={theme.fontFamily.text}
           fontSize={theme.fontSize.xs}
@@ -134,16 +135,17 @@ const Form = ({ intl }: any) => {
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formEmail)}
         />
-        <MaskEmail
+        <Input
           type='text'
           name='email'
           onChange={event => setEmail(event.target.value)}
           value={email}
+          mask={emailMask}
           width={310}
           height={55}
           border={`${theme.border.s}px solid ${theme.colors.whiteBlue}`}
-          borderRadius={theme.borderRadius.s}
-          background={theme.colors.dark}
+          style={{ borderRadius: theme.borderRadius.s }}
+          bg={theme.colors.dark}
           color={theme.colors.white}
           fontFamily={theme.fontFamily.text}
           fontSize={theme.fontSize.xs}

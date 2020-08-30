@@ -1,7 +1,7 @@
 import React                   from 'react'
 import { injectIntl }          from 'react-intl'
 
-import { FormModal }           from '@fragments/form-modal'
+import { HeaderModalForm }     from '@fragments/header-modal-form'
 import { Box, Column, Layout } from '@ui/layout'
 import { Text }                from '@ui/text'
 import { theme }               from '@ui/theme'
@@ -30,7 +30,7 @@ const ModalBox = ({ showModal, intl }) => {
               {intl.formatMessage(messages.title)}
             </Text>
             <Box height={50} />
-            <FormModal showModal={showModal} />
+            <HeaderModalForm showModal={showModal} />
           </Column>
         </Layout>
       </Column>
