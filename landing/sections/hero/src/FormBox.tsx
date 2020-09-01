@@ -1,7 +1,7 @@
 import React           from 'react'
 import { injectIntl }  from 'react-intl'
 
-import { Form }        from '@fragmets/form-hero'
+import { Form }        from '@fragments/form-hero'
 import { FormBg }      from '@ui/form-color'
 import { Box, Column } from '@ui/layout'
 import { Text }        from '@ui/text'

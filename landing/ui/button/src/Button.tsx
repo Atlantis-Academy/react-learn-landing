@@ -1,7 +1,7 @@
-import styled                    from '@emotion/styled'
-import { borders, color, space } from 'styled-system'
+import styled                            from '@emotion/styled'
+import { borders, color, layout, space } from 'styled-system'
 
-import { theme }                 from '@ui/theme'
+import { theme }                         from '@ui/theme'
 
 export const Button = styled('div')(
   {
@@ -19,5 +19,6 @@ export const Button = styled('div')(
   },
   space,
   color,
-  borders
+  borders,
+  layout
 )

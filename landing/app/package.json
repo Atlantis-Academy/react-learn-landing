@@ -1,6 +1,6 @@
 {
   "name": "react-learn-landing",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "",
   "main": "src/index.tsx",
   "private": true,
@@ -33,11 +33,11 @@
     "husky": "4.2.5",
     "lerna": "^3.22.1",
     "source-map-loader": "^1.0.0",
+    "svg-url-loader": "^6.0.0",
     "typescript": "3.9.7",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
-    "svg-url-loader": "^6.0.0"
+    "webpack-dev-server": "^3.11.0"
   },
   "workspaces": [
     "landing/**/*"
@@ -51,10 +51,14 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@sections/header": "^0.0.2",
+    "@sections/hero": "^0.0.2",
     "@types/react": "^16.9.38",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.0",
     "@types/styled-system": "^5.1.9",
+    "@ui/layout": "^0.0.2",
+    "@ui/theme": "^0.0.2",
     "emotion-theming": "^10.0.27",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -63,10 +67,6 @@
     "styled-components": "^5.1.1",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2",
-    "text-mask-addons": "^3.8.0",
-    "@sections/hero": "1.0.0",
-    "@sections/header": "1.0.0",
-    "@ui/theme": "1.0.0",
-    "@ui/layout": "1.0.0"
+    "text-mask-addons": "^3.8.0"
   }
 }

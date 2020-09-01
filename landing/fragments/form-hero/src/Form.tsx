@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import { injectIntl }                 from 'react-intl'
+import React, { useEffect, useState }             from 'react'
+import { injectIntl }                             from 'react-intl'
 
-import { Button }                     from '@ui/button-form-hero'
-import { InputEmail }                 from '@ui/email-mask'
-import { FormEl }                     from '@ui/form-element'
-import { InputForm }                  from '@ui/input-form-hero'
-import { InputMask }                  from '@ui/input-form-mask'
-import { LabelText }                  from '@ui/label-text'
-import { Box, Column }                from '@ui/layout'
-import { InputPhone }                 from '@ui/phone-mask'
-import { Text }                       from '@ui/text'
-import { theme }                      from '@ui/theme'
+import { Button }                                 from '@ui/button'
+import { Input, LabelText, emailMask, maskPhone } from '@ui/input'
+import { Box, Column }                            from '@ui/layout'
+import { Text }                                   from '@ui/text'
+import { theme }                                  from '@ui/theme'
 
-import messages                       from './Messages'
+import messages                                   from './Messages'
+import { Layout }                                 from '../../../ui/layout/src'
 
 const Form = ({ intl }: any) => {
   const [name, setName] = useState('')
@@ -61,7 +57,7 @@ const Form = ({ intl }: any) => {
   }, [end])
 
   return (
-    <FormEl onKeyPress={handleKeyPress}>
+    <Layout onKeyPress={handleKeyPress}>
       <Column>
         <Box display='flex' justifyContent='center' alignItems='center' width={320}>
           <Text
@@ -77,11 +73,13 @@ const Form = ({ intl }: any) => {
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formName)}
         />
-        <InputForm
+
+        <Input
           type='text'
           name='name'
           onChange={event => setName(event.target.value)}
           value={name}
+          theme='hero'
         />
 
         <LabelText
@@ -89,11 +87,12 @@ const Form = ({ intl }: any) => {
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formJob)}
         />
-        <InputForm
+        <Input
           type='text'
           name='job'
           onChange={event => setJob(event.target.value)}
           value={job}
+          theme='hero'
         />
 
         <LabelText
@@ -101,19 +100,36 @@ const Form = ({ intl }: any) => {
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formPhone)}
         />
-        <InputMask>
-          <InputPhone onChange={event => setPhone(event.target.value)} value={phone} />
-        </InputMask>
+        <Input
+          type='text'
+          mask={maskPhone}
+          name='phone'
+          onChange={event => setPhone(event.target.value)}
+          value={phone}
+          theme='hero'
+        />
+
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}
           text={intl.formatMessage(messages.formEmail)}
         />
-        <InputMask>
-          <InputEmail onChange={event => setEmail(event.target.value)} value={email} />
-        </InputMask>
+        <Input
+          type='text'
+          name='email'
+          onChange={event => setEmail(event.target.value)}
+          value={email}
+          mask={emailMask}
+          theme='hero'
+        />
         <Box height='20px' />
-        <Button border='none' bg={theme.colors.whiteBlue} onClick={handleForm}>
+        <Button
+          width={310}
+          height={50}
+          border='none'
+          bg={theme.colors.whiteBlue}
+          onClick={handleForm}
+        >
           <Text
             color={theme.colors.white}
             fontFamily={theme.fontFamily.text}
@@ -123,7 +139,7 @@ const Form = ({ intl }: any) => {
           </Text>
         </Button>
       </Column>
-    </FormEl>
+    </Layout>
   )
 }
 
