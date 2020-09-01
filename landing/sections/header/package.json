@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@ui/header-button": "^0.0.2",
+    "@ui/button": "^0.0.2",
     "@ui/layout": "^0.0.2",
     "@ui/logo": "^0.0.2",
     "@ui/modal": "^0.0.2",

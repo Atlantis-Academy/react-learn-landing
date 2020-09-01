@@ -2,13 +2,13 @@ import React, { useEffect, useState }             from 'react'
 import { injectIntl }                             from 'react-intl'
 
 import { Button }                                 from '@ui/button'
-import { FormEl }                                 from '@ui/form-element'
 import { Input, LabelText, emailMask, maskPhone } from '@ui/input'
 import { Box, Column }                            from '@ui/layout'
 import { Text }                                   from '@ui/text'
 import { theme }                                  from '@ui/theme'
 
 import messages                                   from './Messages'
+import { Layout }                                 from '../../../ui/layout/src'
 
 const Form = ({ intl }: any) => {
   const [name, setName] = useState('')
@@ -57,7 +57,7 @@ const Form = ({ intl }: any) => {
   }, [end])
 
   return (
-    <FormEl onKeyPress={handleKeyPress}>
+    <Layout onKeyPress={handleKeyPress}>
       <Column>
         <Box display='flex' justifyContent='center' alignItems='center' width={320}>
           <Text
@@ -79,14 +79,7 @@ const Form = ({ intl }: any) => {
           name='name'
           onChange={event => setName(event.target.value)}
           value={name}
-          width={310}
-          height={55}
-          border={`${theme.border.s}px solid ${theme.colors.whiteBlue}`}
-          borderRadius={theme.borderRadius.s}
-          bg={theme.colors.dark}
-          color={theme.colors.white}
-          fontFamily={theme.fontFamily.text}
-          fontSize={theme.fontSize.xs}
+          theme='hero'
         />
 
         <LabelText
@@ -99,14 +92,7 @@ const Form = ({ intl }: any) => {
           name='job'
           onChange={event => setJob(event.target.value)}
           value={job}
-          width={310}
-          height={55}
-          border={`${theme.border.s}px solid ${theme.colors.whiteBlue}`}
-          borderRadius={theme.borderRadius.s}
-          bg={theme.colors.dark}
-          color={theme.colors.white}
-          fontFamily={theme.fontFamily.text}
-          fontSize={theme.fontSize.xs}
+          theme='hero'
         />
 
         <LabelText
@@ -120,14 +106,7 @@ const Form = ({ intl }: any) => {
           name='phone'
           onChange={event => setPhone(event.target.value)}
           value={phone}
-          width={310}
-          height={55}
-          border={`${theme.border.s}px solid ${theme.colors.whiteBlue}`}
-          style={{ borderRadius: theme.borderRadius.s }}
-          bg={theme.colors.dark}
-          color={theme.colors.white}
-          fontFamily={theme.fontFamily.text}
-          fontSize={theme.fontSize.xs}
+          theme='hero'
         />
 
         <LabelText
@@ -141,14 +120,7 @@ const Form = ({ intl }: any) => {
           onChange={event => setEmail(event.target.value)}
           value={email}
           mask={emailMask}
-          width={310}
-          height={55}
-          border={`${theme.border.s}px solid ${theme.colors.whiteBlue}`}
-          style={{ borderRadius: theme.borderRadius.s }}
-          bg={theme.colors.dark}
-          color={theme.colors.white}
-          fontFamily={theme.fontFamily.text}
-          fontSize={theme.fontSize.xs}
+          theme='hero'
         />
         <Box height='20px' />
         <Button
@@ -167,7 +139,7 @@ const Form = ({ intl }: any) => {
           </Text>
         </Button>
       </Column>
-    </FormEl>
+    </Layout>
   )
 }
 

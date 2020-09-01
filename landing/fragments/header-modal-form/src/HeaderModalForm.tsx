@@ -2,13 +2,13 @@ import React, { useEffect, useState }            from 'react'
 import { injectIntl }                            from 'react-intl'
 
 import { Button }                                from '@ui/button'
-import { FormEl }                                from '@ui/form-element'
 import { Input, LabelText, TextArea, emailMask } from '@ui/input'
 import { Box, Column, Row }                      from '@ui/layout'
 import { Text }                                  from '@ui/text'
 import { theme }                                 from '@ui/theme'
 
 import messages                                  from './Messages'
+import { Layout }                                from '../../../ui/layout/src'
 
 const HeaderModalForm = ({ intl, showModal }) => {
   const [name, setName] = useState('')
@@ -50,7 +50,7 @@ const HeaderModalForm = ({ intl, showModal }) => {
   }, [end, setEnd, showModal])
 
   return (
-    <FormEl onKeyPress={handleKeyPress}>
+    <Layout onKeyPress={handleKeyPress}>
       <Column>
         <Row justifyContent='center'>
           <Text
@@ -71,9 +71,7 @@ const HeaderModalForm = ({ intl, showModal }) => {
           name='name'
           onChange={event => setName(event.target.value)}
           value={name}
-          height={55}
-          border={`${theme.border.s}px solid ${theme.colors.borderInput}`}
-          style={{ borderRadius: theme.borderRadius.s }}
+          theme='modal'
         />
         <Box height={20} />
         <LabelText
@@ -86,9 +84,7 @@ const HeaderModalForm = ({ intl, showModal }) => {
           onChange={event => setEmail(event.target.value)}
           value={email}
           mask={emailMask}
-          height={55}
-          border={`${theme.border.s}px solid ${theme.colors.borderInput}`}
-          style={{ borderRadius: theme.borderRadius.s }}
+          theme='modal'
         />
 
         <Box height={20} />
@@ -112,7 +108,7 @@ const HeaderModalForm = ({ intl, showModal }) => {
           </Button>
         </Row>
       </Column>
-    </FormEl>
+    </Layout>
   )
 }
 

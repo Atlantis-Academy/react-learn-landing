@@ -6,7 +6,6 @@
   "private": true,
   "dependencies": {
     "@ui/button": "^0.0.2",
-    "@ui/form-element": "^0.0.2",
     "@ui/input": "^0.0.1",
     "@ui/layout": "^0.0.2",
     "@ui/text": "^0.0.2",
