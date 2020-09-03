@@ -1,4 +1,4 @@
-export const maskPhone = [
+export const MaskPhone = [
   '+',
   '7',
   ' ',

@@ -2,13 +2,12 @@ import React, { useEffect, useState }            from 'react'
 import { injectIntl }                            from 'react-intl'
 
 import { Button }                                from '@ui/button'
-import { Input, LabelText, TextArea, emailMask } from '@ui/input'
-import { Box, Column, Row }                      from '@ui/layout'
+import { Input, LabelText, MaskEmail, TextArea } from '@ui/input'
+import { Box, Column, Layout, Row }              from '@ui/layout'
 import { Text }                                  from '@ui/text'
 import { theme }                                 from '@ui/theme'
 
 import messages                                  from './Messages'
-import { Layout }                                from '../../../ui/layout/src'
 
 const HeaderModalForm = ({ intl, showModal }) => {
   const [name, setName] = useState('')
@@ -24,12 +23,13 @@ const HeaderModalForm = ({ intl, showModal }) => {
     setEmail('')
     setMsg('')
 
-    if (name && email && msg) {
-      setEnd(`${intl.formatMessage(messages.formEnd)}`)
+    if (!name && !email && !msg) {
+      setEnd(`${intl.formatMessage(messages.declined)}`)
+    } else {
+      setEnd(`${intl.formatMessage(messages.success)}`)
       setIsSubmit(true)
       console.log(form) // eslint-disable-line
-    } else {
-      setEnd(`${intl.formatMessage(messages.formErr)}`)
+      // todo: remove when the server is added
     }
   }
 
@@ -64,7 +64,7 @@ const HeaderModalForm = ({ intl, showModal }) => {
         <LabelText
           color={theme.colors.black}
           bg={theme.colors.white}
-          text={intl.formatMessage(messages.formName)}
+          text={intl.formatMessage(messages.name)}
         />
         <Input
           type='text'
@@ -77,13 +77,13 @@ const HeaderModalForm = ({ intl, showModal }) => {
         <LabelText
           color={theme.colors.black}
           bg={theme.colors.white}
-          text={intl.formatMessage(messages.formEmail)}
+          text={intl.formatMessage(messages.email)}
         />
 
         <Input
           onChange={event => setEmail(event.target.value)}
           value={email}
-          mask={emailMask}
+          mask={MaskEmail}
           theme='modal'
         />
 
@@ -91,7 +91,7 @@ const HeaderModalForm = ({ intl, showModal }) => {
         <LabelText
           color={theme.colors.black}
           bg={theme.colors.white}
-          text={intl.formatMessage(messages.formMsg)}
+          text={intl.formatMessage(messages.msg)}
         />
         <TextArea name='message' onChange={event => setMsg(event.target.value)} value={msg} />
         <Box height={20} />

@@ -2,20 +2,20 @@ import React, { useEffect, useState }             from 'react'
 import { injectIntl }                             from 'react-intl'
 
 import { Button }                                 from '@ui/button'
-import { Input, LabelText, emailMask, maskPhone } from '@ui/input'
-import { Box, Column }                            from '@ui/layout'
+import { Input, LabelText, MaskEmail, MaskPhone } from '@ui/input'
+import { Box, Column, Layout }                    from '@ui/layout'
 import { Text }                                   from '@ui/text'
 import { theme }                                  from '@ui/theme'
+import { onEnter }                                from '@utils/on-enter'
 
 import messages                                   from './Messages'
-import { Layout }                                 from '../../../ui/layout/src'
 
 const Form = ({ intl }: any) => {
   const [name, setName] = useState('')
   const [job, setJob] = useState('')
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
-  const [end, setEnd] = useState('')
+  const [success, setSuccess] = useState('')
   const [isSubmit, setIsSubmit] = useState(false)
 
   const handleForm = () => {
@@ -25,7 +25,7 @@ const Form = ({ intl }: any) => {
     setEmail('')
 
     if (name && job && phone && email) {
-      setEnd(`${intl.formatMessage(messages.formEnd)}`)
+      setSuccess(`${intl.formatMessage(messages.success)}`)
       setIsSubmit(true)
 
       const message = [
@@ -38,40 +38,35 @@ const Form = ({ intl }: any) => {
       ]
 
       console.log(message) // eslint-disable-line
+      // todo: remove when the server is added
     } else {
-      setEnd(`${intl.formatMessage(messages.formError)}`)
-    }
-  }
-
-  const handleKeyPress = event => {
-    if (event.key === 'Enter') {
-      handleForm()
+      setSuccess(`${intl.formatMessage(messages.declined)}`)
     }
   }
 
   useEffect(() => {
     const timeOut = setTimeout(() => {
-      setEnd('')
+      setSuccess('')
     }, 3000)
     return () => clearTimeout(timeOut)
-  }, [end])
+  }, [success])
 
   return (
-    <Layout onKeyPress={handleKeyPress}>
+    <Layout onKeyPress={onEnter}>
       <Column>
-        <Box display='flex' justifyContent='center' alignItems='center' width={320}>
+        <Layout justifyContent='center' alignItems='center' width={320}>
           <Text
             fontSize={theme.fontSize.xs}
             color={isSubmit ? theme.colors.whiteBlue : theme.colors.error}
             fontFamily={theme.fontFamily.text}
           >
-            {end}
+            {success}
           </Text>
-        </Box>
+        </Layout>
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}
-          text={intl.formatMessage(messages.formName)}
+          text={intl.formatMessage(messages.name)}
         />
 
         <Input
@@ -85,7 +80,7 @@ const Form = ({ intl }: any) => {
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}
-          text={intl.formatMessage(messages.formJob)}
+          text={intl.formatMessage(messages.job)}
         />
         <Input
           type='text'
@@ -98,11 +93,11 @@ const Form = ({ intl }: any) => {
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}
-          text={intl.formatMessage(messages.formPhone)}
+          text={intl.formatMessage(messages.phone)}
         />
         <Input
           type='text'
-          mask={maskPhone}
+          mask={MaskPhone}
           name='phone'
           onChange={event => setPhone(event.target.value)}
           value={phone}
@@ -112,17 +107,17 @@ const Form = ({ intl }: any) => {
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}
-          text={intl.formatMessage(messages.formEmail)}
+          text={intl.formatMessage(messages.email)}
         />
         <Input
           type='text'
           name='email'
           onChange={event => setEmail(event.target.value)}
           value={email}
-          mask={emailMask}
+          mask={MaskEmail}
           theme='hero'
         />
-        <Box height='20px' />
+        <Box height={20} />
         <Button
           width={310}
           height={50}
@@ -135,7 +130,7 @@ const Form = ({ intl }: any) => {
             fontFamily={theme.fontFamily.text}
             fontSize={theme.fontSize.xs}
           >
-            {intl.formatMessage(messages.formButton)}
+            {intl.formatMessage(messages.button)}
           </Text>
         </Button>
       </Column>

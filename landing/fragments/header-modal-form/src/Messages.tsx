@@ -7,24 +7,24 @@ export default defineMessages({
     id: `${scope}.button`,
     defaultMessage: 'отправить заявку',
   },
-  formName: {
-    id: `${scope}.formName`,
+  name: {
+    id: `${scope}.name`,
     defaultMessage: 'Имя',
   },
-  formEmail: {
-    id: `${scope}.formEmail`,
+  email: {
+    id: `${scope}.email`,
     defaultMessage: 'Email',
   },
-  formMsg: {
-    id: `${scope}.formMsg`,
+  msg: {
+    id: `${scope}.msg`,
     defaultMessage: 'Сообщение',
   },
-  formEnd: {
-    id: `${scope}.formEnd`,
+  success: {
+    id: `${scope}.success`,
     defaultMessage: 'Спасибо! Мы скоро с вами свяжемся!',
   },
-  formErr: {
-    id: `${scope}.formErr`,
+  declined: {
+    id: `${scope}.declined`,
     defaultMessage: 'Заполните все поля формы.',
   },
 })

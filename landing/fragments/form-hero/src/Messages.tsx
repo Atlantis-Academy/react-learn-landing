@@ -3,32 +3,32 @@ import { defineMessages } from 'react-intl'
 import { name as scope }  from '../package.json'
 
 export default defineMessages({
-  formButton: {
-    id: `${scope}form.button`,
+  button: {
+    id: `${scope}.button`,
     defaultMessage: 'Отправить',
   },
-  formName: {
-    id: `${scope}form.name`,
+  name: {
+    id: `${scope}.name`,
     defaultMessage: 'Имя',
   },
-  formEmail: {
-    id: `${scope}form.email`,
+  email: {
+    id: `${scope}.email`,
     defaultMessage: 'Email',
   },
-  formJob: {
-    id: `${scope}form.job`,
+  job: {
+    id: `${scope}.job`,
     defaultMessage: 'Организация',
   },
-  formPhone: {
-    id: `${scope}form.phone`,
+  phone: {
+    id: `${scope}.phone`,
     defaultMessage: 'Телефон',
   },
-  formEnd: {
-    id: `${scope}form.end`,
+  success: {
+    id: `${scope}.success`,
     defaultMessage: 'Спасибо! Мы скоро с вами свяжемся!',
   },
-  formError: {
-    id: `${scope}form.error`,
+  declined: {
+    id: `${scope}.declined`,
     defaultMessage: 'Необходимо заполнить все поля формы!',
   },
 })
