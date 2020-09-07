@@ -6,7 +6,6 @@ import { Input, LabelText, MaskEmail, MaskPhone } from '@ui/input'
 import { Box, Column, Layout }                    from '@ui/layout'
 import { Text }                                   from '@ui/text'
 import { theme }                                  from '@ui/theme'
-import { onEnter }                                from '@utils/on-enter'
 
 import messages                                   from './Messages'
 
@@ -44,6 +43,12 @@ const Form = ({ intl }: any) => {
     }
   }
 
+  const handleKeyPress = event => {
+    if (event.key === 'Enter') {
+      handleForm()
+    }
+  }
+
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setSuccess('')
@@ -52,7 +57,7 @@ const Form = ({ intl }: any) => {
   }, [success])
 
   return (
-    <Layout onKeyPress={onEnter}>
+    <Layout onKeyPress={handleKeyPress}>
       <Column>
         <Layout justifyContent='center' alignItems='center' width={320}>
           <Text

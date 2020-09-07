@@ -1,7 +1,0 @@
-{
-  "name": "@utils/on-enter",
-  "main": "src/index.tsx",
-  "version": "0.0.0",
-  "license": "MIT",
-  "private": true
-}

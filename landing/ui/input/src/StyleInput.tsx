@@ -1,7 +1,7 @@
 import styled         from '@emotion/styled'
 import { switchProp } from 'styled-tools'
 
-import { theme }      from '../../theme/src'
+import { theme }      from '@ui/theme'
 
 export const StyledInput = styled.input(
   {
