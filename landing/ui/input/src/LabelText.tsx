@@ -1,6 +1,6 @@
 import React      from 'react'
+import { Layout } from '@atlantis-lab/layout'
 
-import { Layout } from '@ui/layout'
 import { Text }   from '@ui/text'
 import { theme }  from '@ui/theme'
 

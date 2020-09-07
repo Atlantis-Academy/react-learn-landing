@@ -1,7 +1,7 @@
 import React                        from 'react'
+import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
 
 import { WaveL }                    from '@icons/wave-l'
-import { Box, Column, Layout, Row } from '@ui/layout'
 import { theme }                    from '@ui/theme'
 
 import FormBg                       from './FormBg'
@@ -12,7 +12,7 @@ import Title                        from './Title'
 const Hero = () => {
   return (
     <Layout bg={theme.colors.darkBlue}>
-      <Box maxWidth={112} />
+      <Box width={112} />
       <Row alignItems='center'>
         <Column>
           <Title />

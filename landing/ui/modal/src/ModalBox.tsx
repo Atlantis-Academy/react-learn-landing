@@ -1,8 +1,8 @@
 import React                   from 'react'
+import { Box, Column, Layout } from '@atlantis-lab/layout'
 import { injectIntl }          from 'react-intl'
 
 import { HeaderModalForm }     from '@fragments/header-modal-form'
-import { Box, Column, Layout } from '@ui/layout'
 import { Text }                from '@ui/text'
 import { theme }               from '@ui/theme'
 

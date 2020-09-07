@@ -1,7 +1,7 @@
 import React, { useState }          from 'react'
+import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
 import { injectIntl }               from 'react-intl'
 
-import { Box, Column, Layout, Row } from '@ui/layout'
 import { Logo }                     from '@ui/logo'
 import { Modal }                    from '@ui/modal'
 import { theme }                    from '@ui/theme'
@@ -21,7 +21,7 @@ const Header = () => {
         <Box height={40} />
         <Row justifyContent='center'>
           <Logo />
-          <Box maxWidth={870} />
+          <Box width={870} />
           <ShowModal showModal={showModal} />
         </Row>
         {display ? <Modal display={setDisplay} /> : null}

@@ -1,7 +1,7 @@
 import React          from 'react'
+import { Box }        from '@atlantis-lab/layout'
 import { injectIntl } from 'react-intl'
 
-import { Box }        from '@ui/layout'
 import { Text }       from '@ui/text'
 import { theme }      from '@ui/theme'
 

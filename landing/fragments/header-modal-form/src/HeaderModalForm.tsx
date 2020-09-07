@@ -1,9 +1,9 @@
 import React, { useEffect, useState }            from 'react'
+import { Box, Column, Layout, Row }              from '@atlantis-lab/layout'
 import { injectIntl }                            from 'react-intl'
 
 import { Button }                                from '@ui/button'
 import { Input, LabelText, MaskEmail, TextArea } from '@ui/input'
-import { Box, Column, Layout, Row }              from '@ui/layout'
 import { Text }                                  from '@ui/text'
 import { theme }                                 from '@ui/theme'
 

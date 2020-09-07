@@ -1,7 +1,6 @@
 import React      from 'react'
 import ReactDOM   from 'react-dom'
-
-import { Layout } from '@ui/layout'
+import { Layout } from '@atlantis-lab/layout'
 
 import ModalBox   from './ModalBox'
 

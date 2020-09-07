@@ -1,11 +1,11 @@
 import React              from 'react'
+import { Column, Layout } from '@atlantis-lab/layout'
 import { ThemeProvider }  from 'emotion-theming'
 import { IntlProvider }   from 'react-intl'
 import { render }         from 'react-dom'
 
 import { Header }         from '@sections/header'
 import { Hero }           from '@sections/hero'
-import { Column, Layout } from '@ui/layout'
 import { theme }          from '@ui/theme'
 
 render(
