@@ -10,7 +10,6 @@
     "@ui/layout": "^0.0.2",
     "@ui/text": "^0.0.2",
     "@ui/theme": "^0.0.2",
-    "@utils/on-enter": "0.0.0",
     "react": "^16.13.1",
     "react-intl": "^5.0.2"
   }
