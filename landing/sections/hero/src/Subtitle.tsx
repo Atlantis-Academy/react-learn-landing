@@ -11,6 +11,7 @@ const Subtitle = ({ intl }) => {
   return (
     <Box width={570}>
       <Text
+        as='h2' // it works! can I save it?
         color={theme.colors.white}
         fontFamily={theme.fontFamily.title}
         fontSize={theme.fontSize.l}

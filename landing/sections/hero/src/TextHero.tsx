@@ -12,6 +12,7 @@ const TextHero = ({ intl }) => {
     <Row>
       <Layout flexBasis={600}>
         <Text
+          as='p' // it works! can I save it?
           color={theme.colors.white}
           fontSize={theme.fontSize.m}
           fontFamily={theme.fontFamily.text}

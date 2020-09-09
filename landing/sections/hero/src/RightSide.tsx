@@ -1,14 +1,14 @@
 import React                           from 'react'
 import { Box, Row }                    from '@atlantis-lab/layout'
 
-import { BgForm }                      from '@ui/bg-form-hero'
 import { FormWaveBottom, FormWaveTop } from '@ui/form-waves'
+import { RightSideBg }                 from '@ui/right-side-bg'
 
 import FormBox                         from './FormBox'
 
-const FormBg = () => {
+const RightSide = () => {
   return (
-    <BgForm width={677} height={694}>
+    <RightSideBg maxWidth={677} width='100%' height={694}>
       <FormWaveTop>
         <FormWaveBottom>
           <Box height={100} />
@@ -18,8 +18,8 @@ const FormBg = () => {
           </Row>
         </FormWaveBottom>
       </FormWaveTop>
-    </BgForm>
+    </RightSideBg>
   )
 }
 
-export default FormBg
+export default RightSide

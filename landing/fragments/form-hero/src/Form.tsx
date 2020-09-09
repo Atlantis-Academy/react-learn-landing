@@ -57,7 +57,7 @@ const Form = ({ intl }: any) => {
   }, [success])
 
   return (
-    <Layout onKeyPress={handleKeyPress}>
+    <Layout as='form' onKeyPress={handleKeyPress}>
       <Column>
         <Layout justifyContent='center' alignItems='center' width={320}>
           <Text

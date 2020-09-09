@@ -6,8 +6,8 @@
   "private": true,
   "dependencies": {
     "@fragments/form-hero": "^0.0.2",
-    "@icons/wave-l": "^0.0.2",
-    "@ui/bg-form-hero": "^0.0.2",
+    "@icons/wave-small": "^0.0.2",
+    "@ui/right-side-bg": "^0.0.2",
     "@ui/form-color": "^0.0.2",
     "@ui/form-waves": "^0.0.2",
     "@atlantis-lab/layout": "^0.3.0",

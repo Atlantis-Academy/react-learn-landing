@@ -1,10 +1,10 @@
 import React                        from 'react'
 import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
 
-import { WaveL }                    from '@icons/wave-l'
+import { WaveSmall }                from '@icons/wave-small'
 import { theme }                    from '@ui/theme'
 
-import FormBg                       from './FormBg'
+import RightSide                    from './RightSide'
 import Subtitle                     from './Subtitle'
 import TextHero                     from './TextHero'
 import Title                        from './Title'
@@ -12,18 +12,19 @@ import Title                        from './Title'
 const Hero = () => {
   return (
     <Layout bg={theme.colors.darkBlue}>
-      <Box width={112} />
+      <Box maxWidth={112} width='100%' />
       <Row alignItems='center'>
         <Column>
           <Title />
           <Subtitle />
           <Box height={36} />
-          <WaveL />
+          <WaveSmall />
           <Box height={19} />
           <TextHero />
         </Column>
+        <Box maxWidth={70} />
         <Column>
-          <FormBg />
+          <RightSide />
         </Column>
       </Row>
     </Layout>

@@ -21,7 +21,7 @@ const Header = () => {
         <Box height={40} />
         <Row justifyContent='center'>
           <Logo />
-          <Box width={870} />
+          <Box maxWidth={870} width='100%' />
           <ShowModal showModal={showModal} />
         </Row>
         {display ? <Modal display={setDisplay} /> : null}

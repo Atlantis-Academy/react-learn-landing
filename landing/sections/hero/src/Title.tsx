@@ -10,6 +10,7 @@ const Title = ({ intl }) => {
   return (
     <>
       <Text
+        as='h1' // it works! can I save it?
         color={theme.colors.whiteBlue}
         fontFamily={theme.fontFamily.title}
         fontSize={theme.fontSize.xxl}

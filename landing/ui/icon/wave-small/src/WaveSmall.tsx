@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WaveL = props => {
+const WaveSmall = props => {
   return (
     <svg width={82} height={12} viewBox='0 0 82 12' fill='none' {...props}>
       <path
@@ -14,4 +14,4 @@ const WaveL = props => {
   )
 }
 
-export default WaveL
+export default WaveSmall
