@@ -1,30 +1,21 @@
 import React                        from 'react'
 import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
 
-import { WaveSmall }                from '@icons/wave-small'
 import { theme }                    from '@ui/theme'
 
-import RightSide                    from './RightSide'
-import Subtitle                     from './Subtitle'
-import TextHero                     from './TextHero'
-import Title                        from './Title'
+import Background                   from './Background'
+import TextBlock                    from './TextBlock'
 
 const Hero = () => {
   return (
     <Layout bg={theme.colors.darkBlue}>
-      <Box maxWidth={112} width='100%' />
       <Row alignItems='center'>
         <Column>
-          <Title />
-          <Subtitle />
-          <Box height={36} />
-          <WaveSmall />
-          <Box height={19} />
-          <TextHero />
+          <TextBlock />
         </Column>
-        <Box maxWidth={70} />
+        <Box maxWidth={70} width='100%' />
         <Column>
-          <RightSide />
+          <Background />
         </Column>
       </Row>
     </Layout>

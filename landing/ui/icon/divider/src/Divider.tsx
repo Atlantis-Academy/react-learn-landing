@@ -1,6 +1,6 @@
 import React from 'react'
 
-const WaveSmall = props => {
+const Divider = props => {
   return (
     <svg width={82} height={12} viewBox='0 0 82 12' fill='none' {...props}>
       <path
@@ -14,4 +14,4 @@ const WaveSmall = props => {
   )
 }
 
-export default WaveSmall
+export default Divider

@@ -3,7 +3,6 @@ import { Box, Column } from '@atlantis-lab/layout'
 import { injectIntl }  from 'react-intl'
 
 import { Form }        from '@fragments/form-hero'
-import { FormBg }      from '@ui/form-color'
 import { Text }        from '@ui/text'
 import { theme }       from '@ui/theme'
 
@@ -11,7 +10,7 @@ import messages        from './Messages'
 
 const FormBox = ({ intl }) => {
   return (
-    <FormBg width={390}>
+    <Box width={390} bg={theme.colors.dark} borderRadius={theme.borderRadius.m}>
       <Column alignItems='center'>
         <Box height={36} />
         <Text
@@ -25,7 +24,7 @@ const FormBox = ({ intl }) => {
         <Form />
         <Box height={40} />
       </Column>
-    </FormBg>
+    </Box>
   )
 }
 

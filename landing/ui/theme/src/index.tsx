@@ -3,7 +3,7 @@ import borderRadius    from './BorderRadius'
 import fontSize        from './FontSize'
 import globalStyle     from './GlobalStyle'
 import lineHeight      from './LineHeight'
-import { breakpoints } from './Breackpoints'
+import { breakpoints } from './Breakpoints'
 import { colors }      from './Colors'
 import { fontFamily }  from './FontFamily'
 

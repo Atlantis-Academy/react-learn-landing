@@ -11,4 +11,5 @@ export const colors: any = {
   darkBeige: '#e6e6e6',
   borderInput: '#A7A9AC',
   error: '#F52811',
+  gradient: 'radial-gradient(50.75% 50.75% at 50% 49.25%, #006D8D 0%, #0A4759 100%)',
 }
