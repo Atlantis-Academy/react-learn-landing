@@ -1,5 +1,5 @@
 {
-  "name": "react-learn-landing",
+  "name": "@landing/app",
   "version": "0.0.2",
   "description": "",
   "main": "src/index.tsx",

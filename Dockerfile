@@ -1,5 +1,11 @@
-FROM node:13.12.0-alpine
+FROM node:14-alpine
+
 WORKDIR /app
-COPY landing/app/package.json yarn.lock ./
+
+COPY package.json yarn.lock ./
+
+COPY . .
+
 RUN yarn install
+
 COPY . .

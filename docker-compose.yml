@@ -3,12 +3,11 @@ version: '3'
 services:
   app:
     build: ./
-    container_name: react-learn-landing
-    command: yarn start
+    command: yarn landing:dev
     ports:
       - '3000:3000'
     restart: unless-stopped
     stdin_open: true
     tty: true
     volumes:
-      - .:/app/dist
+      - .:/app

@@ -1,6 +1,6 @@
 import styled   from '@emotion/styled'
 
-import { Wave } from '../../icon/Wave'
+import { Wave } from '@ui/icons'
 
 export const WaveTop = styled('div')(() => ({
   width: '100%',

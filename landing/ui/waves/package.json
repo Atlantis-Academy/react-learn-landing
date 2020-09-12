@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@emotion/styled": "^10.0.27"
+    "@emotion/styled": "^10.0.27",
+    "@ui/icons": "0.0.0"
   }
 }

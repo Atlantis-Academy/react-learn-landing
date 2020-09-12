@@ -19,8 +19,9 @@ const Header = () => {
     <Layout bg={theme.colors.darkBlue}>
       <Column>
         <Box height={40} />
-        <Row justifyContent='space-between'>
+        <Row justifyContent='center'>
           <Logo />
+          <Box maxWidth={870} width='100%' />
           <ShowModal showModal={showModal} />
         </Row>
         {display ? <Modal display={setDisplay} /> : null}

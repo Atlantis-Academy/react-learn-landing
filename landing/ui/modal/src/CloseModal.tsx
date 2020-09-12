@@ -1,7 +1,7 @@
 import React                from 'react'
 import { Box, Layout, Row } from '@atlantis-lab/layout'
 
-import { CloseCross }       from '@icons/close-cross'
+import { CloseCross }       from '@ui/icons'
 
 import { CloseButton }      from './CloseButton'
 
