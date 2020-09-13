@@ -1,17 +1,17 @@
-import React                   from 'react'
-import { Box, Column, Layout } from '@atlantis-lab/layout'
-import { injectIntl }          from 'react-intl'
+import React                        from 'react'
+import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
+import { injectIntl }               from 'react-intl'
 
-import { HeaderModalForm }     from '@fragments/header-modal-form'
-import { Text }                from '@ui/text'
-import { theme }               from '@ui/theme'
+import { HeaderModalForm }          from '@fragments/header-modal-form'
+import { Text }                     from '@ui/text'
+import { theme }                    from '@ui/theme'
 
-import messages                from './Messages'
-import { CloseModal }          from './CloseModal'
+import messages                     from './Messages'
+import { CloseModal }               from './CloseModal'
 
 const ModalBox = ({ showModal, intl }) => {
   return (
-    <Layout
+    <Box
       width={510}
       height={700}
       bg={theme.colors.white}
@@ -23,18 +23,19 @@ const ModalBox = ({ showModal, intl }) => {
     >
       <Column>
         <CloseModal showModal={showModal} />
-        <Box height={10} />
-        <Layout width={390} m='0 auto'>
-          <Column>
+        <Layout flexBasis={10} />
+        <Column alignItems='center'>
+          <Row>
+            <Layout flexBasis={60} />
             <Text fontFamily={theme.fontFamily.title} fontSize={theme.fontSize.l}>
               {intl.formatMessage(messages.title)}
             </Text>
-            <Box height={50} />
-            <HeaderModalForm showModal={showModal} />
-          </Column>
-        </Layout>
+          </Row>
+          <Layout flexBasis={50} />
+          <HeaderModalForm showModal={showModal} />
+        </Column>
       </Column>
-    </Layout>
+    </Box>
   )
 }
 

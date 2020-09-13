@@ -1,5 +1,5 @@
 import React, { useEffect, useState }            from 'react'
-import { Box, Column, Layout, Row }              from '@atlantis-lab/layout'
+import { Column, Layout, Row }                   from '@atlantis-lab/layout'
 import { injectIntl }                            from 'react-intl'
 
 import { Button }                                from '@ui/button'
@@ -52,15 +52,13 @@ const HeaderModalForm = ({ intl, showModal }) => {
   return (
     <Layout onKeyPress={handleKeyPress}>
       <Column>
-        <Row justifyContent='center'>
-          <Text
-            fontSize={theme.fontSize.m}
-            color={isSubmit ? theme.colors.whiteBlue : theme.colors.error}
-            fontFamily={theme.fontFamily.text}
-          >
-            {end}
-          </Text>
-        </Row>
+        <Text
+          fontSize={theme.fontSize.m}
+          color={isSubmit ? theme.colors.whiteBlue : theme.colors.error}
+          fontFamily={theme.fontFamily.text}
+        >
+          {end}
+        </Text>
         <LabelText
           color={theme.colors.black}
           bg={theme.colors.white}
@@ -73,7 +71,7 @@ const HeaderModalForm = ({ intl, showModal }) => {
           value={name}
           theme='modal'
         />
-        <Box height={20} />
+        <Layout flexBasis={20} />
         <LabelText
           color={theme.colors.black}
           bg={theme.colors.white}
@@ -87,14 +85,14 @@ const HeaderModalForm = ({ intl, showModal }) => {
           theme='modal'
         />
 
-        <Box height={20} />
+        <Layout flexBasis={20} />
         <LabelText
           color={theme.colors.black}
           bg={theme.colors.white}
           text={intl.formatMessage(messages.msg)}
         />
         <TextArea name='message' onChange={event => setMsg(event.target.value)} value={msg} />
-        <Box height={20} />
+        <Layout flexBasis={20} />
         <Row>
           <Button width={210} height={50} onClick={handleForm}>
             <Text

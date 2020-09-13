@@ -16,17 +16,17 @@ const Header = () => {
   }
 
   return (
-    <Layout bg={theme.colors.darkBlue}>
+    <Box bg={theme.colors.darkBlue}>
       <Column>
-        <Box height={40} />
+        <Layout flexBasis={40} />
         <Row justifyContent='center'>
           <Logo />
-          <Box maxWidth={870} width='100%' />
+          <Layout flexBasis={870} />
           <ShowModal showModal={showModal} />
         </Row>
         {display ? <Modal display={setDisplay} /> : null}
       </Column>
-    </Layout>
+    </Box>
   )
 }
 

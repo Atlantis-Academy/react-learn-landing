@@ -59,15 +59,13 @@ const Form = ({ intl }: any) => {
   return (
     <Layout as='form' onKeyPress={handleKeyPress}>
       <Column>
-        <Layout justifyContent='center' alignItems='center' maxWidth={320} width='100%'>
-          <Text
-            fontSize={theme.fontSize.xs}
-            color={isSubmit ? theme.colors.whiteBlue : theme.colors.error}
-            fontFamily={theme.fontFamily.text}
-          >
-            {success}
-          </Text>
-        </Layout>
+        <Text
+          fontSize={theme.fontSize.xs}
+          color={isSubmit ? theme.colors.whiteBlue : theme.colors.error}
+          fontFamily={theme.fontFamily.text}
+        >
+          {success}
+        </Text>
         <LabelText
           color={theme.colors.white}
           bg={theme.colors.dark}

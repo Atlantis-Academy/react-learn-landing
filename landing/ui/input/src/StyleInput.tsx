@@ -22,6 +22,7 @@ export const StyledInput = styled.input(
     },
     modal: {
       border: `${theme.border.s}px solid ${theme.colors.borderInput}`,
+      width: '390px',
     },
   })
 )
