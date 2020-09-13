@@ -45,7 +45,7 @@ const Form = ({ intl }: any) => {
       setSuccess('')
     }, 3000)
     return () => clearTimeout(timeOut)
-  }, [success])
+  }, [success, setSuccess])
 
   return (
     <Layout as='form' onKeyPress={handleKeyPress}>
