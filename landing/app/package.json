@@ -12,7 +12,8 @@
     "format": "mctl format",
     "typecheck": "mctl typecheck",
     "checkcommit": "mctl precommit",
-    "landing:dev": "yarn workspace @landing/app dev"
+    "landing:dev": "yarn workspace @landing/app dev",
+    "dev": "next dev"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.3",
@@ -49,6 +50,8 @@
     }
   },
   "dependencies": {
+    "next": "^9.5.3",
+    "next-fonts": "^1.4.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@sections/header": "^0.0.2",
