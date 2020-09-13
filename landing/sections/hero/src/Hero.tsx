@@ -1,15 +1,15 @@
-import React                        from 'react'
-import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
-import { injectIntl }               from 'react-intl'
+import React                               from 'react'
+import { Box, Column, Layout, Row }        from '@atlantis-lab/layout'
+import { injectIntl }                      from 'react-intl'
 
-import { Form }                     from '@fragments/form-hero'
-import { Background }               from '@ui/background'
-import { Divider }                  from '@ui/icons'
-import { Text }                     from '@ui/text'
-import { WaveBottom, WaveTop }      from '@ui/waves'
-import { theme }                    from '@ui/theme'
+import { Form }                            from '@fragments/form-hero'
+import { Background }                      from '@ui/background'
+import { BackgroundBottom, BackgroundTop } from '@ui/background'
+import { Divider }                         from '@ui/icons'
+import { Text }                            from '@ui/text'
+import { theme }                           from '@ui/theme'
 
-import messages                     from './Messages'
+import messages                            from './Messages'
 
 const Hero = ({ intl }) => {
   return (
@@ -59,8 +59,8 @@ const Hero = ({ intl }) => {
         </Layout>
         <Box maxWidth={70} width='100%' />
         <Background maxWidth={573} width='100%' height={694} background={theme.colors.gradient}>
-          <WaveTop>
-            <WaveBottom>
+          <BackgroundTop>
+            <BackgroundBottom>
               <Column>
                 <Layout flexBasis={100} />
                 <Row>
@@ -82,8 +82,8 @@ const Hero = ({ intl }) => {
                   </Box>
                 </Row>
               </Column>
-            </WaveBottom>
-          </WaveTop>
+            </BackgroundBottom>
+          </BackgroundTop>
         </Background>
       </Row>
     </Box>

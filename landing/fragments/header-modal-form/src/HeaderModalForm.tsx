@@ -16,8 +16,6 @@ const HeaderModalForm = ({ intl, showModal }) => {
   const [end, setEnd] = useState('')
   const [isSubmit, setIsSubmit] = useState(false)
 
-  const form = [{ name }, { email }, { msg }]
-
   const handleForm = () => {
     setName('')
     setEmail('')
@@ -28,7 +26,7 @@ const HeaderModalForm = ({ intl, showModal }) => {
     } else {
       setEnd(`${intl.formatMessage(messages.success)}`)
       setIsSubmit(true)
-      console.log(form) // eslint-disable-line
+      alert(`Имя: ${name}, email: ${email}, сообщение: ${msg}`) // eslint-disable-line
       // todo: remove when the server is added
     }
   }

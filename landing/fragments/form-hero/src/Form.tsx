@@ -27,16 +27,7 @@ const Form = ({ intl }: any) => {
       setSuccess(`${intl.formatMessage(messages.success)}`)
       setIsSubmit(true)
 
-      const message = [
-        {
-          name,
-          job,
-          phone,
-          email,
-        },
-      ]
-
-      console.log(message) // eslint-disable-line
+      alert(`Имя: ${name}, организация: ${job}, телефон: ${phone}, email: ${email}`) // eslint-disable-line
       // todo: remove when the server is added
     } else {
       setSuccess(`${intl.formatMessage(messages.declined)}`)
