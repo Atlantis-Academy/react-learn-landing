@@ -11,15 +11,7 @@ import { CloseModal }          from './CloseModal'
 
 const ModalBox = ({ showModal, intl }) => {
   return (
-    <Box
-      width={510}
-      height={700}
-      bg={theme.colors.white}
-      position='absolute'
-      zIndex={10}
-      top={40}
-      left='37%'
-    >
+    <Box width={510} height={700} bg={theme.colors.white} mx='auto'>
       <Column>
         <CloseModal showModal={showModal} />
         <Layout flexBasis={390} mx='auto'>

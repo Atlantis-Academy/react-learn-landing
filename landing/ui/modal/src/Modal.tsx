@@ -1,33 +1,34 @@
-import React      from 'react'
-import ReactDOM   from 'react-dom'
-import { Layout } from '@atlantis-lab/layout'
+import React, { useRef } from 'react'
+import { Box }           from '@atlantis-lab/layout'
+import { createPortal }  from 'react-dom'
 
-import ModalBox   from './ModalBox'
+import ModalBox          from './ModalBox'
 
-const Portal = ({ children }: any) => {
-  return ReactDOM.createPortal(children, document.body)
-}
+export const Modal = ({ display }: any) => {
+  const node = useRef(null)
 
-const Modal: any = ({ display }: any) => {
-  const showModal = () => {
-    display(false)
+  const handleClick = event => {
+    if (!(node.current && node.current.children[0].contains(event.target))) {
+      display()
+    }
   }
 
-  return (
-    <Portal>
-      <Layout
-        width={1}
-        height='100%'
-        position='fixed'
-        zIndex={5}
-        top={0}
-        left={0}
-        bg='rgba(0, 0, 0, 0.4)'
-        onClick={showModal}
-      />
-      <ModalBox showModal={showModal} />
-    </Portal>
+  return createPortal(
+    <Box
+      width={1}
+      height='100%'
+      position='fixed'
+      zIndex={5}
+      top={0}
+      left={0}
+      bg='rgba(0, 0, 0, 0.8)'
+      justifyContent='center'
+      alignItems='center'
+      onClick={handleClick}
+      ref={node}
+    >
+      <ModalBox showModal={display} />
+    </Box>,
+    document.body
   )
 }
-
-export default Modal

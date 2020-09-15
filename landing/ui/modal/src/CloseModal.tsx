@@ -6,9 +6,13 @@ import { CloseCross }  from '@ui/icons'
 import { CloseButton } from './CloseButton'
 
 export const CloseModal = ({ showModal }) => {
+  const handleClick = () => {
+    showModal()
+  }
+
   return (
     <Layout flexBasis={60} alignItems='center' justifyContent='flex-end'>
-      <CloseButton onClick={showModal}>
+      <CloseButton onClick={handleClick}>
         <CloseCross />
       </CloseButton>
       <Layout flexBasis={20} />
