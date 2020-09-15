@@ -2,10 +2,9 @@ FROM node:14-alpine
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
-
-COPY . .
-
+COPY . /app
 RUN yarn install
+RUN yarn run lerna:link
 
-COPY . .
+
+CMD "yarn" "run" "landing:dev"

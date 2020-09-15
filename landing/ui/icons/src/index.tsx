@@ -1,5 +1,5 @@
-import CloseCross from './CloseCross'
-import Divider    from './Divider'
-import { Wave }   from './Wave'
+import CloseCross            from './CloseCross'
+import Divider               from './Divider'
+import { BackgroundPattern } from './BackgroundPattern'
 
-export { CloseCross, Divider, Wave }
+export { CloseCross, Divider, BackgroundPattern }

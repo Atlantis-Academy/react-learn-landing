@@ -29,4 +29,13 @@ module.exports = withFonts({
 
     return config
   },
+  /* eslint-disable */
+  webpackDevMiddleware: config => {
+    config.watchOptions = {
+      poll: 1000,
+      aggregateTimeout: 300,
+    }
+    return config
+  },
+  /* eslint-enable */
 })

@@ -1,8 +1,6 @@
-import React         from 'react'
+import React from 'react'
 
-import { PropsType } from '../../PropTypes'
-
-const Logo = (props: PropsType) => {
+const Logo = props => {
   return (
     <svg width={156} height={40} viewBox='0 0 156 26' fill='none' {...props}>
       <path

@@ -12,7 +12,8 @@
     "format": "mctl format",
     "typecheck": "mctl typecheck",
     "checkcommit": "mctl precommit",
-    "landing:dev": "yarn workspace @landing/app start"
+    "landing:dev": "yarn workspace @landing/app dev",
+    "lerna:link": "lerna link"
   },
   "husky": {
     "hooks": {
