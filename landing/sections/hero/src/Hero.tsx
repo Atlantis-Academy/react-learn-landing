@@ -12,9 +12,9 @@ import messages                                        from './Messages'
 
 const Hero = ({ intl }) => {
   return (
-    <Box bg={theme.colors.darkBlue}>
+    <Box bg={theme.colors.darkBlue} justifyContent='center'>
       <Row alignItems='center' justifyContent='center'>
-        <Layout flexBasis='45%'>
+        <Layout flexBasis='43%'>
           <Column>
             <Text
               as='h1'
@@ -50,7 +50,7 @@ const Hero = ({ intl }) => {
             </Text>
           </Column>
         </Layout>
-        <Layout flexBasis='40%'>
+        <Layout flexBasis='43%'>
           <Background width='100%' background={theme.colors.gradient}>
             <BackgroundTop>
               <BackgroundBottom>

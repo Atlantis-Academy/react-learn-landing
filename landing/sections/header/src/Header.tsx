@@ -3,7 +3,7 @@ import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
 import { injectIntl }               from 'react-intl'
 
 import { Logo }                     from '@ui/logo'
-import { Modal }                    from '@ui/modal'
+import { HeaderModal }              from '@ui/modal'
 import { theme }                    from '@ui/theme'
 
 import ShowModal                    from './ShowModal'
@@ -24,7 +24,7 @@ const Header = () => {
           <Layout flexBasis={870} />
           <ShowModal showModal={showModal} />
         </Row>
-        {display ? <Modal display={setDisplay} /> : null}
+        {display ? <HeaderModal display={setDisplay} /> : null}
       </Column>
     </Box>
   )

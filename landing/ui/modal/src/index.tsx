@@ -1,3 +1,3 @@
-import { Modal } from './Modal'
+import HeaderModal from './HeaderModal'
 
-export { Modal }
+export { HeaderModal }
