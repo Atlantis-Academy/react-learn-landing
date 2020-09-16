@@ -51,6 +51,7 @@
   "dependencies": {
     "next": "^9.5.3",
     "next-fonts": "^1.4.0",
+    "react-helmet": "^6.1.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@sections/header": "^0.0.2",
