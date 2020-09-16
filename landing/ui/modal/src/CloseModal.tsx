@@ -5,9 +5,9 @@ import { CloseCross }  from '@ui/icons'
 
 import { CloseButton } from './CloseButton'
 
-export const CloseModal = ({ showModal }) => {
+export const CloseModal = ({ onClose }) => {
   const handleClick = () => {
-    showModal()
+    onClose()
   }
 
   return (

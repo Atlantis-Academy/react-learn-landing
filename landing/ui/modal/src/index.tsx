@@ -1,3 +1,3 @@
-import HeaderModal from './HeaderModal'
+import ModalLanding from './ModalLanding'
 
-export { HeaderModal }
+export { ModalLanding }

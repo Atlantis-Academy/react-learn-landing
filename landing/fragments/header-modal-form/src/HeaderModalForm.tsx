@@ -9,7 +9,7 @@ import { theme }                                 from '@ui/theme'
 
 import messages                                  from './Messages'
 
-const HeaderModalForm = ({ intl, showModal }) => {
+const HeaderModalForm = ({ intl, onClose }) => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [msg, setMsg] = useState('')
@@ -41,11 +41,11 @@ const HeaderModalForm = ({ intl, showModal }) => {
     const timeOut = setTimeout(() => {
       setEnd('')
       if (isSubmit) {
-        showModal(false)
+        onClose(false)
       }
     }, 3000)
     return () => clearTimeout(timeOut)
-  }, [end, setEnd, showModal])
+  }, [end, setEnd, onClose])
 
   return (
     <Layout onKeyPress={handleKeyPress}>

@@ -18,12 +18,12 @@ const StyledContainer = styled.div({
   zIndex: 10,
 })
 
-export const Modal = ({ display, children }: any) => {
+export const Modal = ({ onClose, children }: any) => {
   const node = useRef(null)
 
   const handleClick = event => {
     if (!(node.current && node.current.children[0].contains(event.target))) {
-      display()
+      onClose()
     }
   }
 

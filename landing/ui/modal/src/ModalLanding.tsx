@@ -10,19 +10,19 @@ import messages                from './Messages'
 import { CloseModal }          from './CloseModal'
 import { Modal }               from './Modal'
 
-const HeaderModal = ({ display, intl }) => {
+const ModalLanding = ({ onClose, intl }) => {
   return (
-    <Modal display={display}>
+    <Modal onClose={onClose}>
       <Box width={510} height={700} bg={theme.colors.white} mx='auto'>
         <Column>
-          <CloseModal showModal={display} />
+          <CloseModal onClose={onClose} />
           <Layout flexBasis={390} mx='auto'>
             <Column>
               <Text fontFamily={theme.fontFamily.title} fontSize={theme.fontSize.l}>
                 {intl.formatMessage(messages.title)}
               </Text>
               <Layout flexBasis={50} />
-              <HeaderModalForm showModal={display} />
+              <HeaderModalForm onClose={onClose} />
             </Column>
           </Layout>
         </Column>
@@ -31,4 +31,4 @@ const HeaderModal = ({ display, intl }) => {
   )
 }
 
-export default injectIntl(HeaderModal)
+export default injectIntl(ModalLanding)
