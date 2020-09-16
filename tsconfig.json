@@ -2,6 +2,7 @@
   "extends": "@monstrs/tsconfig/tsconfig.base.json",
   "include": ["landing/**/**/*"],
   "compilerOptions": {
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true
   }
 }
