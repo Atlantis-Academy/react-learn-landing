@@ -7,6 +7,10 @@
   "dependencies": {
     "@atlantis-lab/layout": "^0.3.0",
     "@ui/theme": "^0.0.2",
+    "@emotion/styled": "^10.0.27",
+    "@ui/icons": "0.0.0",
+    "styled-tools": "^1.7.2",
+    "styled-components": "^5.1.1",
     "react": "^16.13.1"
   }
 }

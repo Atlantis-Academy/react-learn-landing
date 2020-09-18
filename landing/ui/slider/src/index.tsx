@@ -1,4 +1,5 @@
-import Slider     from './Slider'
-import { slides } from './Slider'
+import Slider           from './Slider'
+import { SliderButton } from './SliderButton'
+import { slides }       from './Slider'
 
-export { Slider, slides }
+export { Slider, slides, SliderButton }

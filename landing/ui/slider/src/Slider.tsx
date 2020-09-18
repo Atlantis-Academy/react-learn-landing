@@ -1,21 +1,37 @@
-import React        from 'react'
-import { Box, Row } from '@atlantis-lab/layout'
+import React                from 'react'
+import styled               from '@emotion/styled'
+import { Box, Layout, Row } from '@atlantis-lab/layout'
 
-import { theme }    from '@ui/theme'
+import { SliderIcon }       from '@ui/icons'
+import { theme }            from '@ui/theme'
 
 export const slides = [
-  { name: 'Slide1', id: 1 },
-  { name: 'Slide2', id: 2 },
-  { name: 'Slide3', id: 3 },
+  { name: <SliderIcon />, id: 1 },
+  { name: <SliderIcon />, id: 2 },
+  { name: <SliderIcon />, id: 3 },
 ]
+
+const Container = styled('div')(({ show }: any) => ({
+  display: show ? 'flex' : 'none',
+  position: 'relative',
+  overflow: 'hidden',
+}))
+
+const StyledSlider = styled.div(({ transX }: any) => ({
+  position: 'relative',
+  display: 'flex',
+  transform: `translateX(${transX}%)`,
+  transition: '0.5s',
+}))
 
 const Slider = ({ transX, children }) => {
   return (
-    <Row position='relative' overflow='hidden'>
+    <Container show={children.length !== 0}>
       {slides.map(item => {
         return (
-          <Box key={item.id} style={{ transform: `translateX(${transX}%)`, transition: '0.5s' }}>
+          <StyledSlider key={item.id} transX={transX}>
             <Row width={1050}>
+              <Layout flexBasis={135} />
               <Box
                 width='495px'
                 height='370px'
@@ -28,10 +44,10 @@ const Slider = ({ transX, children }) => {
               </Box>
               {children}
             </Row>
-          </Box>
+          </StyledSlider>
         )
       })}
-    </Row>
+    </Container>
   )
 }
 

@@ -1,21 +1,27 @@
-import React, { useState }                   from 'react'
-import { Column, Layout, Row }               from '@atlantis-lab/layout'
-import { injectIntl }                        from 'react-intl'
+import React, { useState }                                   from 'react'
+import { Column, Layout, Row }                               from '@atlantis-lab/layout'
+import { injectIntl }                                        from 'react-intl'
 
-import { Button }                            from '@ui/button'
-import { ArroRight, ArrowLeft, DividerDark } from '@ui/icons'
-import { Slider, slides }                    from '@ui/slider'
-import { Text }                              from '@ui/text'
-import { theme }                             from '@ui/theme'
+import { Button }                                            from '@ui/button'
+import { ArrowLeft, ArrowRight, BackgroundPattern, Divider } from '@ui/icons'
+import { Slider, slides }                                    from '@ui/slider'
+import { Text }                                              from '@ui/text'
+import { theme }                                             from '@ui/theme'
 
-import messages                              from './Messages'
+import messages                                              from './Messages'
+import { Background }                                        from '../../../ui/background/src'
+import { SliderButton }                                      from '../../../ui/slider/src'
 
 const Automatization = ({ intl }) => {
   const [transX, setTransX] = useState(0)
+  const [goLeft, setGoLeft] = useState(false)
+  const [goRight, setGoRight] = useState(true)
 
   const sliderShowLeft = () => {
     if (transX === 0) {
       setTransX(-100 * (slides.length - 1))
+      setGoLeft(true)
+      setGoRight(false)
     } else {
       setTransX(transX + 100)
     }
@@ -24,21 +30,27 @@ const Automatization = ({ intl }) => {
   const sliderShowRight = () => {
     if (transX === -100 * (slides.length - 1)) {
       setTransX(0)
+      setGoLeft(false)
+      setGoRight(true)
     } else {
       setTransX(transX - 100)
     }
   }
 
   return (
-    <Column alignItems='center'>
+    <Column alignItems='center' position='relative'>
       <Layout flexBasis={96} />
-      <DividerDark />
+      <Divider stroke={theme.colors.dark} />
       <Layout flexBasis={30} />
       <Row alignItems='center'>
         <Layout flexBasis={105} />
-        <ArrowLeft onClick={sliderShowLeft} />
+        <SliderButton disabled={goLeft} onClick={sliderShowLeft}>
+          <ArrowLeft />
+        </SliderButton>
         <Layout flexBasis={10} />
-        <ArroRight onClick={sliderShowRight} />
+        <SliderButton disabled={goRight} onClick={sliderShowRight}>
+          <ArrowRight />
+        </SliderButton>
         <Layout flexBasis={448} />
         <Layout flexBasis={390}>
           <Text
@@ -54,7 +66,6 @@ const Automatization = ({ intl }) => {
       </Row>
       <Layout flexBasis={80} />
       <Row>
-        <Layout width={210} />
         <Slider transX={transX}>
           <Layout flexBasis={30} />
           <Layout flexBasis={390}>
@@ -80,9 +91,16 @@ const Automatization = ({ intl }) => {
               </Button>
             </Column>
           </Layout>
-          <Layout flexBasis={135} />
         </Slider>
       </Row>
+      <Background
+        width={285}
+        height={118}
+        backgroundImage={`url("${BackgroundPattern}")`}
+        position='absolute'
+        left='5%'
+        top='67%'
+      />
       <Layout flexBasis={234} />
     </Column>
   )
