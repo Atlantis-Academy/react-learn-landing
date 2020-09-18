@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const RightButton = props => {
+const ArroRight = props => {
   return (
     <svg width={70} height={70} viewBox='0 0 70 70' fill='none' {...props}>
       <circle cx={35} cy={35} r={34.5} stroke='#3BB3C4' />
@@ -12,4 +12,4 @@ const RightButton = props => {
   )
 }
 
-export default RightButton
+export default ArroRight

@@ -1,0 +1,12 @@
+{
+  "name": "@ui/slider",
+  "version": "0.0.0",
+  "main": "src/index.tsx",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@atlantis-lab/layout": "^0.3.0",
+    "@ui/theme": "^0.0.2",
+    "react": "^16.13.1"
+  }
+}

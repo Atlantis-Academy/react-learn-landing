@@ -1,13 +1,14 @@
-import React, { useState }                      from 'react'
-import { Column, Layout, Row }                  from '@atlantis-lab/layout'
-import { injectIntl }                           from 'react-intl'
+import React, { useState }                   from 'react'
+import { Column, Layout, Row }               from '@atlantis-lab/layout'
+import { injectIntl }                        from 'react-intl'
 
-import { DividerDark, LeftButton, RightButton } from '@ui/icons'
-import { Text }                                 from '@ui/text'
-import { theme }                                from '@ui/theme'
+import { Button }                            from '@ui/button'
+import { ArroRight, ArrowLeft, DividerDark } from '@ui/icons'
+import { Slider, slides }                    from '@ui/slider'
+import { Text }                              from '@ui/text'
+import { theme }                             from '@ui/theme'
 
-import messages                                 from './Messages'
-import Slider, { slides }                       from './Slider'
+import messages                              from './Messages'
 
 const Automatization = ({ intl }) => {
   const [transX, setTransX] = useState(0)
@@ -35,9 +36,9 @@ const Automatization = ({ intl }) => {
       <Layout flexBasis={30} />
       <Row alignItems='center'>
         <Layout flexBasis={105} />
-        <LeftButton onClick={sliderShowLeft} />
+        <ArrowLeft onClick={sliderShowLeft} />
         <Layout flexBasis={10} />
-        <RightButton onClick={sliderShowRight} />
+        <ArroRight onClick={sliderShowRight} />
         <Layout flexBasis={448} />
         <Layout flexBasis={390}>
           <Text
@@ -53,8 +54,34 @@ const Automatization = ({ intl }) => {
       </Row>
       <Layout flexBasis={80} />
       <Row>
-        <Layout flexBasis={210} />
-        <Slider transX={transX} />
+        <Layout width={210} />
+        <Slider transX={transX}>
+          <Layout flexBasis={30} />
+          <Layout flexBasis={390}>
+            <Column>
+              <Text
+                color={theme.colors.dark}
+                fontFamily={theme.fontFamily.text}
+                fontSize={theme.fontSize.s}
+                lineHeight={`${theme.lineHeight.xs}px`}
+              >
+                {intl.formatMessage(messages.description)}
+              </Text>
+              <Layout flexBasis={71} />
+              <Button width={210} height={50} border='none' bg={theme.colors.whiteBlue}>
+                <Text
+                  color={theme.colors.white}
+                  fontFamily={theme.fontFamily.text}
+                  fontSize={theme.fontSize.xs}
+                  letterSpacing='0.05em'
+                >
+                  {intl.formatMessage(messages.button)}
+                </Text>
+              </Button>
+            </Column>
+          </Layout>
+          <Layout flexBasis={135} />
+        </Slider>
       </Row>
       <Layout flexBasis={234} />
     </Column>
