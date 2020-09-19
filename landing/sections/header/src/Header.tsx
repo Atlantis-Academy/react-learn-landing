@@ -21,7 +21,7 @@ const Header = () => {
         <Layout flexBasis={40} />
         <Row justifyContent='center'>
           <Logo />
-          <Layout flexBasis={870} />
+          <Layout flexBasis={['100px', '500px', '870px']} />
           <ShowModal showModal={showModal} />
         </Row>
         {display ? <ModalLanding onClose={setDisplay} /> : null}
