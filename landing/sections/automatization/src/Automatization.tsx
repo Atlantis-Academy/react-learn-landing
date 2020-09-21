@@ -5,8 +5,8 @@ import { injectIntl }                                        from 'react-intl'
 import { Background }                                        from '@ui/background'
 import { Button }                                            from '@ui/button'
 import { ArrowLeft, ArrowRight, BackgroundPattern, Divider } from '@ui/icons'
-import { Slider, slides }                                    from '@ui/slider'
-import { SliderButton }                                      from '@ui/slider'
+import { ModalLanding }                                      from '@ui/modal'
+import { Slider, SliderButton, slides }                      from '@ui/slider'
 import { Text }                                              from '@ui/text'
 import { theme }                                             from '@ui/theme'
 
@@ -16,6 +16,11 @@ const Automatization = ({ intl }) => {
   const [transX, setTransX] = useState(0)
   const [goLeft, setGoLeft] = useState(false)
   const [goRight, setGoRight] = useState(true)
+  const [display, setDisplay] = useState(false)
+
+  const showModal = () => {
+    setDisplay(true)
+  }
 
   const sliderShowLeft = () => {
     if (transX === 0) {
@@ -91,7 +96,13 @@ const Automatization = ({ intl }) => {
                 {intl.formatMessage(messages.description)}
               </Text>
               <Layout flexBasis={71} />
-              <Button width={210} height={50} border='none' bg={theme.colors.whiteBlue}>
+              <Button
+                onClick={showModal}
+                width={210}
+                height={50}
+                border='none'
+                bg={theme.colors.whiteBlue}
+              >
                 <Text
                   color={theme.colors.white}
                   fontFamily={theme.fontFamily.text}
@@ -114,6 +125,7 @@ const Automatization = ({ intl }) => {
         top='67%'
       />
       <Layout flexBasis={234} />
+      {display ? <ModalLanding onClose={setDisplay} /> : null}
     </Column>
   )
 }
