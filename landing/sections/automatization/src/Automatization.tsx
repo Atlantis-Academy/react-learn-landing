@@ -1,4 +1,4 @@
-import React, { useState }                                   from 'react'
+import React, { useEffect, useState }                        from 'react'
 import { Column, Layout, Row }                               from '@atlantis-lab/layout'
 import { injectIntl }                                        from 'react-intl'
 
@@ -25,34 +25,32 @@ const Automatization = ({ intl }) => {
   const sliderShowLeft = () => {
     if (transX === 0) {
       setTransX(-100 * (slides.length - 1))
-      setGoLeft(false)
-      setGoRight(true)
     } else {
       setTransX(transX + 100)
-    }
-    if (transX !== 0) {
-      setGoLeft(true)
-    }
-    if (transX === -100 * (slides.length - 1)) {
-      setGoRight(false)
     }
   }
 
   const sliderShowRight = () => {
     if (transX === -100 * (slides.length - 1)) {
       setTransX(0)
-      setGoRight(false)
     } else {
       setTransX(transX - 100)
     }
-    if (transX !== 0) {
-      setGoLeft(true)
-    }
+  }
+
+  useEffect(() => {
     if (transX === 0) {
       setGoLeft(false)
       setGoRight(true)
     }
-  }
+    if (transX !== 0) {
+      setGoLeft(true)
+      setGoRight(true)
+    }
+    if (transX === -100 * (slides.length - 1)) {
+      setGoRight(false)
+    }
+  }, [transX, setGoRight, setGoLeft])
 
   return (
     <Column alignItems='center' position='relative'>
