@@ -2,15 +2,15 @@ import React, { useState }                                   from 'react'
 import { Column, Layout, Row }                               from '@atlantis-lab/layout'
 import { injectIntl }                                        from 'react-intl'
 
+import { Background }                                        from '@ui/background'
 import { Button }                                            from '@ui/button'
 import { ArrowLeft, ArrowRight, BackgroundPattern, Divider } from '@ui/icons'
 import { Slider, slides }                                    from '@ui/slider'
+import { SliderButton }                                      from '@ui/slider'
 import { Text }                                              from '@ui/text'
 import { theme }                                             from '@ui/theme'
 
 import messages                                              from './Messages'
-import { Background }                                        from '../../../ui/background/src'
-import { SliderButton }                                      from '../../../ui/slider/src'
 
 const Automatization = ({ intl }) => {
   const [transX, setTransX] = useState(0)
@@ -20,20 +20,32 @@ const Automatization = ({ intl }) => {
   const sliderShowLeft = () => {
     if (transX === 0) {
       setTransX(-100 * (slides.length - 1))
-      setGoLeft(true)
-      setGoRight(false)
+      setGoLeft(false)
+      setGoRight(true)
     } else {
       setTransX(transX + 100)
+    }
+    if (transX !== 0) {
+      setGoLeft(true)
+    }
+    if (transX === -100 * (slides.length - 1)) {
+      setGoRight(false)
     }
   }
 
   const sliderShowRight = () => {
     if (transX === -100 * (slides.length - 1)) {
       setTransX(0)
-      setGoLeft(false)
-      setGoRight(true)
+      setGoRight(false)
     } else {
       setTransX(transX - 100)
+    }
+    if (transX !== 0) {
+      setGoLeft(true)
+    }
+    if (transX === 0) {
+      setGoLeft(false)
+      setGoRight(true)
     }
   }
 

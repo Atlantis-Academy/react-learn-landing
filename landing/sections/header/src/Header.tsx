@@ -18,10 +18,10 @@ const Header = () => {
   return (
     <Box bg={theme.colors.darkBlue}>
       <Column>
-        <Layout flexBasis={40} />
+        <Layout flexBasis={['8px', '8px', '40px']} />
         <Row justifyContent='center'>
           <Logo />
-          <Layout flexBasis={['100px', '500px', '870px']} />
+          <Layout flexBasis={['100px', '340px', '870px']} />
           <ShowModal showModal={showModal} />
         </Row>
         {display ? <ModalLanding onClose={setDisplay} /> : null}
