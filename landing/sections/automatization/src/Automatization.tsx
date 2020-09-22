@@ -1,19 +1,19 @@
 import React, { useState }            from 'react'
-import { Column, Layout, Row }        from '@atlantis-lab/layout'
+import { Box, Column, Layout, Row }   from '@atlantis-lab/layout'
 import { injectIntl }                 from 'react-intl'
 
 import { Background }                 from '@ui/background'
-import { Button }                     from '@ui/button'
 import { BackgroundPattern, Divider } from '@ui/icons'
 import { Modal }                      from '@ui/modal'
 import { Slider }                     from '@ui/slider'
 import { Text }                       from '@ui/text'
 import { theme }                      from '@ui/theme'
 
+import SliderItems                    from './SliderItems'
 import messages                       from './Messages'
 import { slides }                     from './Slides'
 
-const Automatization = ({ intl }) => {
+const Automatization = ({ intl, length = 1050 }) => {
   const [visible, setVisible] = useState(false)
 
   const showModal = () => {
@@ -41,37 +41,12 @@ const Automatization = ({ intl }) => {
       </Row>
       <Layout flexBasis={80} />
       <Row position='relative'>
-        <Slider slides={slides}>
-          <Layout flexBasis={30} />
-          <Layout flexBasis={390}>
-            <Column>
-              <Text
-                color={theme.colors.dark}
-                fontFamily={theme.fontFamily.text}
-                fontSize={theme.fontSize.s}
-                lineHeight={`${theme.lineHeight.xs}px`}
-              >
-                {intl.formatMessage(messages.description)}
-              </Text>
-              <Layout flexBasis={71} />
-              <Button
-                onClick={showModal}
-                width={210}
-                height={50}
-                border='none'
-                bg={theme.colors.whiteBlue}
-              >
-                <Text
-                  color={theme.colors.white}
-                  fontFamily={theme.fontFamily.text}
-                  fontSize={theme.fontSize.xs}
-                  letterSpacing='0.05em'
-                >
-                  {intl.formatMessage(messages.button)}
-                </Text>
-              </Button>
-            </Column>
-          </Layout>
+        <Slider step={length} slides={slides}>
+          {slides.map(slide => (
+            <Box key={slide.id} width={length}>
+              <SliderItems slide={slide} showModal={showModal} />
+            </Box>
+          ))}
         </Slider>
       </Row>
       <Background
