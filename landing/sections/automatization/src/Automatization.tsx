@@ -1,56 +1,24 @@
-import React, { useEffect, useState }                        from 'react'
-import { Column, Layout, Row }                               from '@atlantis-lab/layout'
-import { injectIntl }                                        from 'react-intl'
+import React, { useState }            from 'react'
+import { Column, Layout, Row }        from '@atlantis-lab/layout'
+import { injectIntl }                 from 'react-intl'
 
-import { Background }                                        from '@ui/background'
-import { Button }                                            from '@ui/button'
-import { ArrowLeft, ArrowRight, BackgroundPattern, Divider } from '@ui/icons'
-import { ModalLanding }                                      from '@ui/modal'
-import { Slider, SliderButton, slides }                      from '@ui/slider'
-import { Text }                                              from '@ui/text'
-import { theme }                                             from '@ui/theme'
+import { Background }                 from '@ui/background'
+import { Button }                     from '@ui/button'
+import { BackgroundPattern, Divider } from '@ui/icons'
+import { Modal }                      from '@ui/modal'
+import { Slider }                     from '@ui/slider'
+import { Text }                       from '@ui/text'
+import { theme }                      from '@ui/theme'
 
-import messages                                              from './Messages'
+import messages                       from './Messages'
+import { slides }                     from './Slides'
 
 const Automatization = ({ intl }) => {
-  const [transX, setTransX] = useState(0)
-  const [goLeft, setGoLeft] = useState(false)
-  const [goRight, setGoRight] = useState(true)
-  const [display, setDisplay] = useState(false)
+  const [visible, setVisible] = useState(false)
 
   const showModal = () => {
-    setDisplay(true)
+    setVisible(!visible)
   }
-
-  const sliderShowLeft = () => {
-    if (transX === 0) {
-      setTransX(-100 * (slides.length - 1))
-    } else {
-      setTransX(transX + 100)
-    }
-  }
-
-  const sliderShowRight = () => {
-    if (transX === -100 * (slides.length - 1)) {
-      setTransX(0)
-    } else {
-      setTransX(transX - 100)
-    }
-  }
-
-  useEffect(() => {
-    if (transX === 0) {
-      setGoLeft(false)
-      setGoRight(true)
-    }
-    if (transX !== 0) {
-      setGoLeft(true)
-      setGoRight(true)
-    }
-    if (transX === -100 * (slides.length - 1)) {
-      setGoRight(false)
-    }
-  }, [transX, setGoRight, setGoLeft])
 
   return (
     <Column alignItems='center' position='relative'>
@@ -58,15 +26,7 @@ const Automatization = ({ intl }) => {
       <Divider stroke={theme.colors.dark} />
       <Layout flexBasis={30} />
       <Row alignItems='center'>
-        <Layout flexBasis={105} />
-        <SliderButton disabled={goLeft} onClick={sliderShowLeft}>
-          <ArrowLeft />
-        </SliderButton>
-        <Layout flexBasis={10} />
-        <SliderButton disabled={goRight} onClick={sliderShowRight}>
-          <ArrowRight />
-        </SliderButton>
-        <Layout flexBasis={448} />
+        <Layout flexBasis={656} />
         <Layout flexBasis={390}>
           <Text
             as='h2'
@@ -80,8 +40,8 @@ const Automatization = ({ intl }) => {
         </Layout>
       </Row>
       <Layout flexBasis={80} />
-      <Row>
-        <Slider transX={transX}>
+      <Row position='relative'>
+        <Slider slides={slides}>
           <Layout flexBasis={30} />
           <Layout flexBasis={390}>
             <Column>
@@ -123,7 +83,7 @@ const Automatization = ({ intl }) => {
         top='67%'
       />
       <Layout flexBasis={234} />
-      {display ? <ModalLanding onClose={setDisplay} /> : null}
+      {visible ? <Modal onClose={setVisible} /> : null}
     </Column>
   )
 }

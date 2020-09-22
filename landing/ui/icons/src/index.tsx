@@ -1,8 +1,7 @@
-import ArrowLeft             from './ArrowLeft'
-import ArrowRight            from './ArrowRight'
+import ArrowBackwardIcon     from './ArrowBackwardIcon'
+import ArrowForwardIcon      from './ArrowForwardIcon'
 import CloseCross            from './CloseCross'
 import Divider               from './Divider'
-import SliderIcon            from './SliderIcon'
 import { BackgroundPattern } from './BackgroundPattern'
 
-export { CloseCross, Divider, BackgroundPattern, ArrowLeft, ArrowRight, SliderIcon }
+export { CloseCross, Divider, BackgroundPattern, ArrowBackwardIcon, ArrowForwardIcon }

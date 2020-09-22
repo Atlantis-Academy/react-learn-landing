@@ -1,3 +1,3 @@
-import ModalLanding from './ModalLanding'
+import Modal from './Modal'
 
-export { ModalLanding }
+export { Modal }

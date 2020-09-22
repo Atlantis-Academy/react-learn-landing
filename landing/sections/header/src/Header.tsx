@@ -3,16 +3,16 @@ import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
 import { injectIntl }               from 'react-intl'
 
 import { Logo }                     from '@ui/logo'
-import { ModalLanding }             from '@ui/modal'
+import { Modal }                    from '@ui/modal'
 import { theme }                    from '@ui/theme'
 
 import ShowModal                    from './ShowModal'
 
 const Header = () => {
-  const [display, setDisplay] = useState(false)
+  const [visible, setVisible] = useState(false)
 
   const showModal = () => {
-    setDisplay(true)
+    setVisible(!visible)
   }
 
   return (
@@ -24,7 +24,7 @@ const Header = () => {
           <Layout flexBasis={['100px', '340px', '870px']} />
           <ShowModal showModal={showModal} />
         </Row>
-        {display ? <ModalLanding onClose={setDisplay} /> : null}
+        {visible ? <Modal onClose={setVisible} /> : null}
       </Column>
     </Box>
   )

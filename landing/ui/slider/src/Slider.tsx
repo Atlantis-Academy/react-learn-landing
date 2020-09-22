@@ -1,15 +1,12 @@
-import React                from 'react'
-import styled               from '@emotion/styled'
-import { Box, Layout, Row } from '@atlantis-lab/layout'
+import styled                         from '@emotion/styled'
+import React, { useEffect, useState } from 'react'
+import { Box, Layout, Row }           from '@atlantis-lab/layout'
 
-import { SliderIcon }       from '@ui/icons'
-import { theme }            from '@ui/theme'
+import { ArrowBackwardIcon }          from '@ui/icons'
+import { ArrowForwardIcon }           from '@ui/icons'
+import { theme }                      from '@ui/theme'
 
-export const slides = [
-  { name: <SliderIcon />, id: 1 },
-  { name: <SliderIcon />, id: 2 },
-  { name: <SliderIcon />, id: 3 },
-]
+import { SliderButton }               from './SliderButton'
 
 const Container = styled('div')(({ show }: any) => ({
   display: show ? 'flex' : 'none',
@@ -24,12 +21,54 @@ const StyledSlider = styled.div(({ transX }: any) => ({
   transition: '0.5s',
 }))
 
-const Slider = ({ transX, children }) => {
+const Slider = ({ children, slides }) => {
+  const [transX, setTransX] = useState(0)
+  const [goLeft, setGoLeft] = useState(false)
+  const [goRight, setGoRight] = useState(true)
+
+  const handleClick = direction => {
+    if (direction === 'left') {
+      if (transX === 0) {
+        setTransX(-100 * (slides.length - 1))
+      } else {
+        setTransX(transX + 100)
+      }
+    }
+
+    if (direction === 'right') {
+      if (transX === -100 * (slides.length - 1)) {
+        setTransX(0)
+      } else {
+        setTransX(transX - 100)
+      }
+    }
+  }
+
+  useEffect(() => {
+    if (transX === 0) {
+      setGoLeft(false)
+      setGoRight(true)
+    }
+    if (transX !== 0) {
+      setGoLeft(true)
+      setGoRight(true)
+    }
+    if (transX === -100 * (slides.length - 1)) {
+      setGoRight(false)
+    }
+  }, [transX, setGoRight, setGoLeft])
+
   return (
-    <Container show={children.length !== 0}>
-      {slides.map(item => {
-        return (
-          <StyledSlider key={item.id} transX={transX}>
+    <>
+      <SliderButton left disabled={goLeft} onClick={() => handleClick('left')}>
+        <ArrowBackwardIcon />
+      </SliderButton>
+      <SliderButton left={false} disabled={goRight} onClick={() => handleClick('right')}>
+        <ArrowForwardIcon />
+      </SliderButton>
+      <Container show={children.length !== 0}>
+        {slides.map(items => (
+          <StyledSlider key={items.id} transX={transX}>
             <Row width={1050}>
               <Layout flexBasis={135} />
               <Box
@@ -40,14 +79,14 @@ const Slider = ({ transX, children }) => {
                 alignItems='center'
                 justifyContent='center'
               >
-                {item.name}
+                {items.name}
               </Box>
               {children}
             </Row>
           </StyledSlider>
-        )
-      })}
-    </Container>
+        ))}
+      </Container>
+    </>
   )
 }
 

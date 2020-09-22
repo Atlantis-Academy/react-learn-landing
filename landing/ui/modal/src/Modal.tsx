@@ -1,6 +1,15 @@
-import styled            from '@emotion/styled'
-import React, { useRef } from 'react'
-import { createPortal }  from 'react-dom'
+import styled                  from '@emotion/styled'
+import React, { useRef }       from 'react'
+import { Box, Column, Layout } from '@atlantis-lab/layout'
+import { createPortal }        from 'react-dom'
+import { injectIntl }          from 'react-intl'
+
+import { HeaderModalForm }     from '@fragments/header-modal-form'
+import { Text }                from '@ui/text'
+import { theme }               from '@ui/theme'
+
+import messages                from './Messages'
+import { CloseModal }          from './CloseModal'
 
 const StyledContainer = styled.div({
   width: '100%',
@@ -18,7 +27,7 @@ const StyledContainer = styled.div({
   zIndex: 10,
 })
 
-export const Modal = ({ onClose, children }: any) => {
+const Modal = ({ onClose, intl }: any) => {
   const node = useRef(null)
 
   const handleClick = event => {
@@ -29,8 +38,23 @@ export const Modal = ({ onClose, children }: any) => {
 
   return createPortal(
     <StyledContainer onClick={handleClick} ref={node}>
-      {children}
+      <Box width={510} height={700} bg={theme.colors.white} mx='auto'>
+        <Column>
+          <CloseModal onClose={onClose} />
+          <Layout flexBasis={390} mx='auto'>
+            <Column>
+              <Text fontFamily={theme.fontFamily.title} fontSize={theme.fontSize.l}>
+                {intl.formatMessage(messages.title)}
+              </Text>
+              <Layout flexBasis={50} />
+              <HeaderModalForm onClose={onClose} />
+            </Column>
+          </Layout>
+        </Column>
+      </Box>
     </StyledContainer>,
     document.body
   )
 }
+
+export default injectIntl(Modal)
