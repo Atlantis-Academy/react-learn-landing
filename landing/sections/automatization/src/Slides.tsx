@@ -1,7 +1,5 @@
-import React from 'react'
-
 export const slides = [
-  { name: <img src='/img/SliderItem.png' alt='slider' />, id: 1 },
-  { name: <img src='/img/SliderItem.png' alt='slider' />, id: 2 },
-  { name: <img src='/img/SliderItem.png' alt='slider' />, id: 3 },
+  { name: 'SliderItem.png', id: 1 },
+  { name: 'SliderItem.png', id: 2 },
+  { name: 'SliderItem.png', id: 3 },
 ]

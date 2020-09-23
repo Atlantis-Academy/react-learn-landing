@@ -2,6 +2,7 @@ import React                   from 'react'
 import { Box, Column, Layout } from '@atlantis-lab/layout'
 import { injectIntl }          from 'react-intl'
 
+import { Background }          from '@ui/background'
 import { Button }              from '@ui/button'
 import { Text }                from '@ui/text'
 import { theme }               from '@ui/theme'
@@ -19,7 +20,13 @@ const SliderItems = ({ intl, slide, showModal }) => (
       alignItems='center'
       justifyContent='center'
     >
-      {slide.name}
+      <Background
+        width='100%'
+        height='100%'
+        backgroundRepeat='no-repeat'
+        backgroundPosition='center'
+        backgroundImage={`url(/img/${slide.name})`}
+      />
     </Box>
     <Layout flexBasis={30} />
     <Layout flexBasis={390}>

@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const ArrowBackwardIcon = props => {
+const ArrowLeftIcon = props => {
   return (
     <svg width={70} height={70} viewBox='0 0 70 70' fill='none' {...props}>
       <g>
@@ -14,4 +14,4 @@ const ArrowBackwardIcon = props => {
   )
 }
 
-export default ArrowBackwardIcon
+export default ArrowLeftIcon

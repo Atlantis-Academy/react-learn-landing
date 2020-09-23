@@ -1,10 +1,9 @@
-import styled                         from '@emotion/styled'
-import React, { useEffect, useState } from 'react'
+import styled                            from '@emotion/styled'
+import React, { useEffect, useState }    from 'react'
 
-import { ArrowBackwardIcon }          from '@ui/icons'
-import { ArrowForwardIcon }           from '@ui/icons'
+import { ArrowLeftIcon, ArrowRightIcon } from '@ui/icons'
 
-import { SliderButton }               from './SliderButton'
+import { SliderButton }                  from './SliderButton'
 
 const Container = styled('div')(({ show }: any) => ({
   display: show ? 'flex' : 'none',
@@ -59,10 +58,10 @@ const Slider = ({ children, slides, step }) => {
   return (
     <>
       <SliderButton left disabled={goLeft} onClick={() => handleClick('left')}>
-        <ArrowBackwardIcon />
+        <ArrowLeftIcon />
       </SliderButton>
-      <SliderButton left={false} disabled={goRight} onClick={() => handleClick('right')}>
-        <ArrowForwardIcon />
+      <SliderButton disabled={goRight} onClick={() => handleClick('right')}>
+        <ArrowRightIcon />
       </SliderButton>
       <Container show={children.length !== 0}>
         <StyledSlider transX={transX}>{children}</StyledSlider>

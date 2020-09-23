@@ -1,20 +1,26 @@
-import React      from 'react'
-import styled     from '@emotion/styled'
-import { ifProp } from 'styled-tools'
+import styled        from '@emotion/styled'
+import React, { FC } from 'react'
+import { ifProp }    from 'styled-tools'
 
-const StyledButton: any = styled.div`
+interface Props {
+  left?: boolean
+  disabled: boolean
+  onClick: () => void
+}
+
+const StyledButton = styled.div`
   width: 70px;
   height: 70px;
   position: absolute;
   z-index: 9;
   cursor: pointer;
-  top: -38%;
+  top: calc(50% - 333px);
   opacity: ${ifProp('disabled', '1', '0.5')};
   left: ${ifProp('left', '105px', '188px')};
 `
 
-export const SliderButton = ({ children, onClick, disabled, left }) => (
-  <StyledButton left={left} disabled={disabled} onClick={onClick}>
+export const SliderButton: FC<Props> = ({ children, onClick, disabled, left }) => (
+  <StyledButton left={left} disabled={disabled} onClick={onClick} {...left}>
     {children}
   </StyledButton>
 )
