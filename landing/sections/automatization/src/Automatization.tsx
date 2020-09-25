@@ -1,17 +1,15 @@
-import React, { useState }            from 'react'
-import { Box, Column, Layout, Row }   from '@atlantis-lab/layout'
-import { injectIntl }                 from 'react-intl'
+import React, { useState }             from 'react'
+import { Box, Column, Layout, Row }    from '@atlantis-lab/layout'
+import { injectIntl }                  from 'react-intl'
 
-import { Background }                 from '@ui/background'
-import { BackgroundPattern, Divider } from '@ui/icons'
-import { Modal }                      from '@ui/modal'
-import { Slider }                     from '@ui/slider'
-import { Text }                       from '@ui/text'
-import { theme }                      from '@ui/theme'
+import { Background }                  from '@ui/background'
+import { BackgroundPattern, Divider }  from '@ui/icons'
+import { Modal }                       from '@ui/modal'
+import { Slider, SliderItems, slides } from '@ui/slider'
+import { Text }                        from '@ui/text'
+import { theme }                       from '@ui/theme'
 
-import SliderItems                    from './SliderItems'
-import messages                       from './Messages'
-import { slides }                     from './SliderItems'
+import messages                        from './Messages'
 
 const Automatization = ({ intl, length = 1050 }) => {
   const [visible, setVisible] = useState(false)
