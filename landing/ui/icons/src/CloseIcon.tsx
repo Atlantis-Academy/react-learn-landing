@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CloseCross = props => {
+const CloseIcon = props => {
   return (
     <svg width={25} height={25} viewBox='0 0 25 25' fill='none' {...props}>
       <path
@@ -11,4 +11,4 @@ const CloseCross = props => {
   )
 }
 
-export default CloseCross
+export default CloseIcon

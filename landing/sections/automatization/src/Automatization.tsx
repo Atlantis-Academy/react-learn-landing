@@ -11,7 +11,7 @@ import { theme }                      from '@ui/theme'
 
 import SliderItems                    from './SliderItems'
 import messages                       from './Messages'
-import { slides }                     from './Slides'
+import { slides }                     from './SliderItems'
 
 const Automatization = ({ intl, length = 1050 }) => {
   const [visible, setVisible] = useState(false)
