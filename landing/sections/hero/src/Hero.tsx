@@ -4,7 +4,7 @@ import { injectIntl }                                  from 'react-intl'
 
 import { Form }                                        from '@fragments/form-hero'
 import { Background, BackgroundBottom, BackgroundTop } from '@ui/background'
-import { Divider }                                     from '@ui/icons'
+import { DividerIcon }                                 from '@ui/icons'
 import { Text }                                        from '@ui/text'
 import { theme }                                       from '@ui/theme'
 
@@ -38,7 +38,7 @@ const Hero = ({ intl }) => {
               </Text>
             </Box>
             <Layout flexBasis={36} />
-            <Divider />
+            <DividerIcon width={80} height={10} />
             <Layout flexBasis={19} />
             <Text
               color={theme.colors.white}

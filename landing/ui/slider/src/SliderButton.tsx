@@ -14,7 +14,7 @@ const StyledButton = styled.div`
   position: absolute;
   z-index: 9;
   cursor: pointer;
-  top: calc(50% - 335px);
+  top: calc(0px - 150px);
   opacity: ${ifProp('disabled', '1', '0.5')};
   left: ${ifProp('left', '105px', '188px')};
 `

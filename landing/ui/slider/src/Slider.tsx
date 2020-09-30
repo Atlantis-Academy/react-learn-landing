@@ -5,10 +5,17 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@ui/icons'
 
 import { SliderButton }                  from './SliderButton'
 
-const Container = styled('div')(({ show }: any) => ({
-  display: show ? 'flex' : 'none',
+const Container = styled('div')(() => ({
+  display: 'flex',
   position: 'relative',
   overflow: 'hidden',
+}))
+
+const SliderContainer = styled('div')(({ show }: any) => ({
+  display: show ? 'flex' : 'none',
+  position: 'relative',
+  flexDirection: 'row',
+  width: '100%',
 }))
 
 const StyledSlider = styled.div(({ transX }: any) => ({
@@ -56,17 +63,17 @@ const Slider = ({ children, slides, step }) => {
   }, [transX, setGoRight, setGoLeft])
 
   return (
-    <>
+    <SliderContainer show={children.length !== 0}>
       <SliderButton left disabled={goLeft} onClick={() => handleClick('left')}>
-        <ArrowLeftIcon />
+        <ArrowLeftIcon width={70} height={70} />
       </SliderButton>
       <SliderButton disabled={goRight} onClick={() => handleClick('right')}>
-        <ArrowRightIcon />
+        <ArrowRightIcon width={70} height={70} />
       </SliderButton>
-      <Container show={children.length !== 0}>
+      <Container>
         <StyledSlider transX={transX}>{children}</StyledSlider>
       </Container>
-    </>
+    </SliderContainer>
   )
 }
 
