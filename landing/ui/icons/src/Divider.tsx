@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from 'react'
-export const DividerIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const Divider = (props: React.SVGProps<SVGSVGElement>) => (
   <svg width='1em' height='1em' viewBox='0 0 82 12' fill='none' stroke='white' {...props}>
     <path
       d='M1 1C12.3834 1 10.6306 11 20.5669 11C30.5032 11 30.493 1 41 1'

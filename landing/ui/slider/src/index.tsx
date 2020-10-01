@@ -1,6 +1,5 @@
-import Slider           from './Slider'
-import SliderItems      from './SliderItems'
-import { SliderButton } from './SliderButton'
-import { slides }       from './BackgroundImage'
+import Slider                  from './Slider'
+import SliderItems, { slides } from './SliderItems'
+import { SliderButton }        from './SliderButton'
 
 export { Slider, SliderButton, SliderItems, slides }

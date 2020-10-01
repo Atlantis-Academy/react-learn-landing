@@ -9,6 +9,10 @@ import { theme }               from '@ui/theme'
 
 import messages                from './Messages'
 
+const importAll = r => r.keys().map(r)
+// @ts-ignore
+export const slides = importAll(require.context('./img/', true, /\.jpg/))
+
 const SliderItems = ({ intl, slide, showModal }) => (
   <>
     <Layout flexBasis={135} />
@@ -25,7 +29,7 @@ const SliderItems = ({ intl, slide, showModal }) => (
         height='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center'
-        backgroundImage={`url(/img/${slide.name})`}
+        backgroundImage={`url('/img/${slide.replace('/_next/', '')}')`}
       />
     </Box>
     <Layout flexBasis={30} />

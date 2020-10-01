@@ -1,15 +1,15 @@
-import React, { useState }                from 'react'
-import { Box, Column, Layout, Row }       from '@atlantis-lab/layout'
-import { injectIntl }                     from 'react-intl'
+import React, { useState }             from 'react'
+import { Box, Column, Layout, Row }    from '@atlantis-lab/layout'
+import { injectIntl }                  from 'react-intl'
 
-import { Background }                     from '@ui/background'
-import { BackgroundPattern, DividerIcon } from '@ui/icons'
-import { Modal }                          from '@ui/modal'
-import { Slider, SliderItems, slides }    from '@ui/slider'
-import { Text }                           from '@ui/text'
-import { theme }                          from '@ui/theme'
+import { Background }                  from '@ui/background'
+import { BackgroundPattern, Divider }  from '@ui/icons'
+import { Modal }                       from '@ui/modal'
+import { Slider, SliderItems, slides } from '@ui/slider'
+import { Text }                        from '@ui/text'
+import { theme }                       from '@ui/theme'
 
-import messages                           from './Messages'
+import messages                        from './Messages'
 
 const Automatization = ({ intl, length = 1050 }) => {
   const [visible, setVisible] = useState(false)
@@ -21,7 +21,7 @@ const Automatization = ({ intl, length = 1050 }) => {
   return (
     <Column alignItems='center' position='relative'>
       <Layout flexBasis={96} />
-      <DividerIcon width={80} height={10} stroke={theme.colors.dark} />
+      <Divider width={80} height={10} stroke={theme.colors.dark} />
       <Layout flexBasis={30} />
       <Row alignItems='center'>
         <Layout flexBasis={656} />

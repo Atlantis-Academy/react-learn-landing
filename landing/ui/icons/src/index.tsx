@@ -2,6 +2,6 @@ import { ArrowLeftIcon }     from './ArrowLeftIcon'
 import { ArrowRightIcon }    from './ArrowRightIcon'
 import { BackgroundPattern } from './BackgroundPattern'
 import { CloseIcon }         from './CloseIcon'
-import { DividerIcon }       from './DividerIcon'
+import { Divider }           from './Divider'
 
-export { CloseIcon, DividerIcon, BackgroundPattern, ArrowLeftIcon, ArrowRightIcon }
+export { CloseIcon, Divider, BackgroundPattern, ArrowLeftIcon, ArrowRightIcon }
