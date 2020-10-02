@@ -1,5 +1,7 @@
-import CloseCross            from './CloseCross'
-import Divider               from './Divider'
+import { ArrowLeftIcon }     from './ArrowLeftIcon'
+import { ArrowRightIcon }    from './ArrowRightIcon'
 import { BackgroundPattern } from './BackgroundPattern'
+import { CloseIcon }         from './CloseIcon'
+import { Divider }           from './Divider'
 
-export { CloseCross, Divider, BackgroundPattern }
+export { CloseIcon, Divider, BackgroundPattern, ArrowLeftIcon, ArrowRightIcon }

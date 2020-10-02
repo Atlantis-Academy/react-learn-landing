@@ -38,7 +38,7 @@ const Hero = ({ intl }) => {
               </Text>
             </Box>
             <Layout flexBasis={36} />
-            <Divider />
+            <Divider width={80} height={10} />
             <Layout flexBasis={19} />
             <Text
               color={theme.colors.white}

@@ -1,9 +1,9 @@
-import styled                 from '@emotion/styled'
-import { background, layout } from 'styled-system'
+import styled                           from '@emotion/styled'
+import { background, layout, position } from 'styled-system'
 
-import { BackgroundPattern }  from '@ui/icons'
+import { BackgroundPattern }            from '@ui/icons'
 
-export const Background = styled.div(layout, background)
+export const Background = styled.div(layout, background, position)
 
 export const BackgroundTop = styled('div')(() => ({
   width: '100%',

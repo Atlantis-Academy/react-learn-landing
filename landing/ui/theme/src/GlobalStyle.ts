@@ -20,6 +20,5 @@ fontFaces.map(({ family, type }) => {
 export default injectGlobal(`
   * {box-sizing: border-box;}
   button, input, textarea {outline: none;}
-  body, h1, h2, p{margin: 0}
-  img {object-fit: cover; width: 100%; height: 100%;}
+  body, h1, h2, p{margin: 0} 
   `)
