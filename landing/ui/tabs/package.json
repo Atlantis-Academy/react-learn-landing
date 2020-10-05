@@ -1,13 +1,13 @@
 {
   "name": "@ui/tabs",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "src/index.tsx",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "react": "^16.13.1",
     "@emotion/styled": "^10.0.27",
-    "styled-tools": "^1.7.2",
-    "@ui/theme": "0.0.3"
+    "@ui/theme": "^0.1.0",
+    "react": "^16.13.1",
+    "styled-tools": "^1.7.2"
   }
 }

@@ -1,17 +1,17 @@
 {
   "name": "@ui/modal",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "src/index.tsx",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "@atlantis-lab/layout": "^0.3.0",
     "@emotion/styled": "^10.0.27",
-    "@fragments/header-modal-form": "^0.0.3",
-    "@ui/button": "^0.0.3",
-    "@ui/icons": "^0.0.1",
-    "@ui/text": "^0.0.3",
-    "@ui/theme": "^0.0.3",
+    "@fragments/header-modal-form": "^0.0.4",
+    "@ui/button": "^0.0.4",
+    "@ui/icons": "^0.1.0",
+    "@ui/text": "^0.0.4",
+    "@ui/theme": "^0.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-intl": "^5.0.2"

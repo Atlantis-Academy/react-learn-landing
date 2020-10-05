@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.4 (2020-10-05)
+
+### Bug Fixes
+
+- **hero:** change layout and box ([4bdf1ca](https://github.com/Atlantis-Academy/react-learn-landing/commit/4bdf1caea3bd0aecf863ff04d0926624ea644db2))
+- **hero:** change layouts, add docker ([86d4eff](https://github.com/Atlantis-Academy/react-learn-landing/commit/86d4eff0254c4e07cd31705cfc40a85b7e24b143))
+- **hero:** delete console.log, waves ([ce86fef](https://github.com/Atlantis-Academy/react-learn-landing/commit/ce86fef8afde6947f1e2d3ac9cfbce2072f6e9d7))
+- **input:** inputs working ([f830d30](https://github.com/Atlantis-Academy/react-learn-landing/commit/f830d30f11ff862a790d1b8a5d8829818da781ad))
+- **input:** theme for input, delete header-button ([a19a546](https://github.com/Atlantis-Academy/react-learn-landing/commit/a19a54617e06cd90a8afb66d00ce54100b6608d8))
+- **messages, name components:** fix all but not press Enter ([65131d8](https://github.com/Atlantis-Academy/react-learn-landing/commit/65131d8d5c6517db911f1eb4d5a347114d2183a5))
+- **modal:** rename onClose modal ([0e3436c](https://github.com/Atlantis-Academy/react-learn-landing/commit/0e3436c60a0091270ce878f688ba6e556ddc9be5))
+- **version:** update versions packages ([7110f03](https://github.com/Atlantis-Academy/react-learn-landing/commit/7110f034c05cef804ef32c0a4e943dba33b763c3))
+
 ## 0.0.3 (2020-09-22)
 
 ### Bug Fixes

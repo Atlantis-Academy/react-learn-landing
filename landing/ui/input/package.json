@@ -1,14 +1,14 @@
 {
   "name": "@ui/input",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "src/index.tsx",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "@atlantis-lab/layout": "^0.3.0",
     "@emotion/styled": "^10.0.27",
-    "@ui/text": "^0.0.3",
-    "@ui/theme": "^0.0.3",
+    "@ui/text": "^0.0.4",
+    "@ui/theme": "^0.1.0",
     "react": "^16.13.1",
     "react-text-mask": "^5.4.3",
     "styled-system": "^5.1.5",
