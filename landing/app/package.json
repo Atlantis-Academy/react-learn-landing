@@ -54,6 +54,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@sections/automatization": "^0.1.0",
+    "@sections/pointers": "0.0.0",
     "@sections/header": "^0.0.3",
     "@sections/hero": "^0.0.3",
     "@types/react": "^16.9.38",

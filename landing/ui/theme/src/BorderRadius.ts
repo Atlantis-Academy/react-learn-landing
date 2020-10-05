@@ -1,7 +1,7 @@
 import { BorderRadius } from './Types'
 
-const borderRadius: BorderRadius = [5, 10]
+const borderRadius: BorderRadius = [5, 10, 20]
 
-const [s, m] = borderRadius
+const [s, m, l] = borderRadius
 
-export default { s, m }
+export default { s, m, l }
