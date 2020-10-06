@@ -2,9 +2,9 @@ import React              from 'react'
 import { Column, Layout } from '@atlantis-lab/layout'
 
 import { Automatization } from '@sections/automatization'
+import { Bullets }        from '@sections/bullets'
 import { Header }         from '@sections/header'
 import { Hero }           from '@sections/hero'
-import { Pointers }       from '@sections/pointers'
 
 export const App = () => (
   <Layout maxWidth={1440} width='100%' mx='auto'>
@@ -12,7 +12,7 @@ export const App = () => (
       <Header />
       <Hero />
       <Automatization />
-      <Pointers />
+      <Bullets />
     </Column>
   </Layout>
 )

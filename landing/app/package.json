@@ -56,7 +56,7 @@
     "@sections/automatization": "^0.2.0",
     "@sections/header": "^0.0.4",
     "@sections/hero": "^0.0.4",
-    "@sections/pointers": "^0.1.0",
+    "@sections/bullets": "^0.1.0",
     "@types/react": "^16.9.38",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.0",

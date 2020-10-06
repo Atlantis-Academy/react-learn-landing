@@ -3,15 +3,15 @@ import { defineMessages } from 'react-intl'
 import { name as scope }  from '../package.json'
 
 export default defineMessages({
-  leftTab: {
-    id: `${scope}.leftTab`,
+  beginnersTab: {
+    id: `${scope}.beginnersTab`,
     defaultMessage: 'Начинающим',
   },
-  centerTab: {
-    id: `${scope}.centerTab`,
+  businessTab: {
+    id: `${scope}.businessTab`,
     defaultMessage: 'Малому бизнесу',
   },
-  rightTab: {
+  enterpriseTab: {
     id: `${scope}.rightTab`,
     defaultMessage: 'Предприятиям',
   },
