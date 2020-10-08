@@ -28,12 +28,12 @@ const Form = ({ intl, context, textButton, onClose }: any) => {
     if (name && email) {
       setSuccess(`${intl.formatMessage(messages.success)}`)
       setIsSubmit(true)
-
+      /* eslint-disable */
       alert(
-        // eslint-disable-line
         `Имя: ${name}, организация: ${job}, телефон: ${phone}, email: ${email}, сообщение: ${msg}`
       )
       // todo: remove when the server is added
+      /* eslint-enable */
     } else {
       setSuccess(`${intl.formatMessage(messages.declined)}`)
     }
