@@ -1,3 +1,3 @@
-import { TabsStyle } from './TabsStyle'
+import { Tabs } from './Tabs'
 
-export { TabsStyle }
+export { Tabs }

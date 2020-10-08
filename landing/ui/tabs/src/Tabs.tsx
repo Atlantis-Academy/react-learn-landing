@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Layout, Row }     from '@atlantis-lab/layout'
 
-import { TabsStyle }       from '@ui/tabs'
 import { Text }            from '@ui/text'
 import { theme }           from '@ui/theme'
+
+import { TabsStyle }       from './TabsStyle'
 
 export const Tabs = ({ children }) => {
   const [activeTabIndex, setActiveTabIndex] = useState(0)

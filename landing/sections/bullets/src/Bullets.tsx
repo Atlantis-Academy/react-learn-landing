@@ -4,11 +4,11 @@ import { injectIntl }               from 'react-intl'
 
 import { SpeedIcon }                from '@ui/icons'
 import { CostIcon, PlusesIcon }     from '@ui/icons'
+import { Tabs }                     from '@ui/tabs'
 import { Text }                     from '@ui/text'
 import { theme }                    from '@ui/theme'
 
 import messages                     from './Messages'
-import { Tabs }                     from './Tabs'
 
 const Bullets = ({ intl }) => {
   return (
