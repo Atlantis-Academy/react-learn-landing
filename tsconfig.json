@@ -3,7 +3,6 @@
   "include": ["landing/**/**/*"],
   "compilerOptions": {
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "jsx": "react"
+    "esModuleInterop": true
   }
 }

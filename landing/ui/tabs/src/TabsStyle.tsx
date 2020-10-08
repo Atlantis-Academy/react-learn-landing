@@ -4,7 +4,7 @@ import { switchProp } from 'styled-tools'
 
 import { theme }      from '@ui/theme'
 
-export const TabsButtons: any = styled.div(
+export const TabsStyle: any = styled.div(
   {
     border: `1px solid ${theme.colors.gray}`,
     color: theme.colors.colorDark,

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Layout, Row }     from '@atlantis-lab/layout'
 
-import { TabsButtons }     from '@ui/tabs-buttons'
+import { TabsStyle }       from '@ui/tabs'
 import { Text }            from '@ui/text'
 import { theme }           from '@ui/theme'
 
@@ -11,7 +11,7 @@ export const Tabs = ({ children }) => {
     <>
       <Row justifyContent='center'>
         {children.map((tab, i) => (
-          <TabsButtons
+          <TabsStyle
             width={200}
             height={40}
             theme={activeTabIndex === i ? 'active' : null}
@@ -24,7 +24,7 @@ export const Tabs = ({ children }) => {
             <Text fontFamily={theme.fontFamily.text} fontSize={theme.fontSize.xs}>
               {tab.props.title}
             </Text>
-          </TabsButtons>
+          </TabsStyle>
         ))}
       </Row>
       <Layout flexBasis={80} />

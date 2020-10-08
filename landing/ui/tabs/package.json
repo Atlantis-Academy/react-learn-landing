@@ -1,5 +1,5 @@
 {
-  "name": "@ui/tabs-buttons",
+  "name": "@ui/tabs",
   "version": "0.1.0",
   "main": "src/index.tsx",
   "license": "MIT",
