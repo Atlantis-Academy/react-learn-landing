@@ -9,7 +9,7 @@ const fontFace = (family, type) => ({
   '@font-face': {
     fontFamily: family,
     src: `local('${family}-${type}'),
-          url('/fonts/${family}-${type}.woff2') format('woff2')`,
+          url('/static/fonts/${family}-${type}.woff2') format('woff2')`,
   },
 })
 

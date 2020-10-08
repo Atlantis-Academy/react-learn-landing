@@ -1,6 +1,6 @@
 {
   "name": "@landing/app",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "main": "src/index.tsx",
   "private": true,
   "scripts": {
@@ -15,7 +15,6 @@
     "dev": "next dev"
   },
   "devDependencies": {
-    "@types/webpack-env": "^1.15.3",
     "@babel/cli": "^7.10.3",
     "@babel/core": "^7.10.3",
     "@babel/node": "^7.10.3",
@@ -27,6 +26,7 @@
     "@babel/preset-typescript": "^7.10.1",
     "@monstrs/mctl": "0.1.82",
     "@types/html-webpack-template": "^6.0.4",
+    "@types/webpack-env": "^1.15.3",
     "babel-loader": "^8.1.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
@@ -53,14 +53,15 @@
     "@atlantis-lab/layout": "^0.3.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-    "@sections/automatization": "^0.1.0",
-    "@sections/header": "^0.0.3",
-    "@sections/hero": "^0.0.3",
+    "@sections/automatization": "^0.2.0",
+    "@sections/header": "^0.0.4",
+    "@sections/hero": "^0.0.4",
+    "@sections/bullets": "^0.1.0",
     "@types/react": "^16.9.38",
     "@types/react-dom": "^16.9.8",
     "@types/styled-components": "^5.1.0",
     "@types/styled-system": "^5.1.9",
-    "@ui/theme": "^0.0.3",
+    "@ui/theme": "^0.1.0",
     "emotion-theming": "^10.0.27",
     "next": "^9.5.3",
     "next-fonts": "^1.4.0",

@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.4 (2020-10-05)
+
+### Bug Fixes
+
+- **hero:** change dependencies button and input ([908b87f](https://github.com/Atlantis-Academy/react-learn-landing/commit/908b87fbac89a80c8012bc187c657400ee1fa723))
+- **version:** change version 0.0.0 ([5812a9c](https://github.com/Atlantis-Academy/react-learn-landing/commit/5812a9cc39d1c17a3de4e75eb7a06b68bd387789))
+- **version:** change version 0.0.1 ([dc59a12](https://github.com/Atlantis-Academy/react-learn-landing/commit/dc59a120ac423e2d0d557f282be696d93a832cf7))
+- **version:** update versions packages ([7110f03](https://github.com/Atlantis-Academy/react-learn-landing/commit/7110f034c05cef804ef32c0a4e943dba33b763c3))
+
 ## 0.0.3 (2020-09-22)
 
 ### Bug Fixes

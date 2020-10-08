@@ -29,7 +29,7 @@ const SliderItems = ({ intl, slide, showModal }) => (
         height='100%'
         backgroundRepeat='no-repeat'
         backgroundPosition='center'
-        backgroundImage={`url('/img/${slide}')`}
+        backgroundImage={`url('/static/img/${slide}')`}
       />
     </Box>
     <Layout flexBasis={30} />

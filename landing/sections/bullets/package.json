@@ -1,14 +1,12 @@
 {
-  "name": "@sections/header",
-  "version": "0.0.4",
+  "name": "@sections/bullets",
+  "version": "0.1.0",
   "main": "src/index.tsx",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "@atlantis-lab/layout": "^0.3.0",
-    "@ui/button": "^0.0.4",
-    "@ui/logo": "^0.0.4",
-    "@ui/modal": "^0.0.4",
+    "@ui/icons": "^0.1.0",
     "@ui/text": "^0.0.4",
     "@ui/theme": "^0.1.0",
     "react": "^16.13.1",

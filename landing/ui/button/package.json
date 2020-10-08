@@ -1,12 +1,12 @@
 {
   "name": "@ui/button",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "src/index.tsx",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "@emotion/styled": "^10.0.27",
-    "@ui/theme": "^0.0.3",
+    "@ui/theme": "^0.1.0",
     "styled-system": "^5.1.5"
   }
 }
