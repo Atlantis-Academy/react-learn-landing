@@ -20,4 +20,8 @@ export default defineMessages({
     id: `${scope}.formTitle`,
     defaultMessage: 'Заявка на демо-доступ',
   },
+  button: {
+    id: `${scope}.button`,
+    defaultMessage: 'отправить',
+  },
 })

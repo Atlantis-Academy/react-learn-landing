@@ -1,16 +1,37 @@
-import React      from 'react'
-import { Layout } from '@atlantis-lab/layout'
+import React          from 'react'
+import styled         from '@emotion/styled'
+import { switchProp } from 'styled-tools'
 
-import { Text }   from '@ui/text'
-import { theme }  from '@ui/theme'
+import { Text }       from '@ui/text'
+import { theme }      from '@ui/theme'
 
-const LabelText = ({ text, bg, color }) => {
+const LabelBackground: any = styled.div(
+  {
+    position: 'relative',
+    top: 8,
+    left: 16,
+    width: 'fit-content',
+    padding: '0 8px',
+  },
+  switchProp('context', {
+    hero: {
+      backgroundColor: theme.colors.dark,
+      color: theme.colors.white,
+    },
+    modal: {
+      backgroundColor: theme.colors.white,
+      color: theme.colors.dark,
+    },
+  })
+)
+
+const LabelText = ({ text, context }) => {
   return (
-    <Layout position='relative' top={2} left={3} bg={bg} width='fit-content' px={2}>
-      <Text color={color} fontFamily={theme.fontFamily.text} fontSize={theme.fontSize.xs}>
+    <LabelBackground context={context}>
+      <Text fontFamily={theme.fontFamily.text} fontSize={theme.fontSize.xs}>
         {text}
       </Text>
-    </Layout>
+    </LabelBackground>
   )
 }
 

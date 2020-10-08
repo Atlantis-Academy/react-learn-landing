@@ -7,4 +7,8 @@ export default defineMessages({
     id: `${scope}.title`,
     defaultMessage: 'Обратная связь',
   },
+  button: {
+    id: `${scope}.button`,
+    defaultMessage: 'отправить заявку',
+  },
 })

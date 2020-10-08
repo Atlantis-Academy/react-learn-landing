@@ -2,8 +2,8 @@ import React                                           from 'react'
 import { Box, Column, Layout, Row }                    from '@atlantis-lab/layout'
 import { injectIntl }                                  from 'react-intl'
 
-import { Form }                                        from '@fragments/form-hero'
 import { Background, BackgroundBottom, BackgroundTop } from '@ui/background'
+import { Form }                                        from '@ui/form'
 import { Divider }                                     from '@ui/icons'
 import { Text }                                        from '@ui/text'
 import { theme }                                       from '@ui/theme'
@@ -67,7 +67,7 @@ const Hero = ({ intl }) => {
                         {intl.formatMessage(messages.formTitle)}
                       </Text>
                       <Layout flexBasis={19} />
-                      <Form />
+                      <Form context='hero' textButton={intl.formatMessage(messages.button)} />
                       <Layout flexBasis={40} />
                     </Column>
                   </Box>
