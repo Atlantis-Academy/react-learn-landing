@@ -19,6 +19,7 @@
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "@sections/automatization": "^0.2.0",
+    "@sections/compatibility": "0.0.0",
     "@sections/bullets": "^0.1.0",
     "@sections/header": "^0.0.4",
     "@sections/hero": "^0.0.4",
