@@ -1,9 +1,5 @@
 {
-  "name": "react-learn-landing",
   "private": true,
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  },
   "scripts": {
     "start": "lerna run start",
     "lint": "mctl lint",
@@ -12,8 +8,13 @@
     "format": "mctl format",
     "typecheck": "mctl typecheck",
     "checkcommit": "mctl precommit",
-    "landing:dev": "yarn workspace @landing/app dev",
-    "lerna:link": "lerna link"
+    "landing:dev": "yarn workspace @landing/app dev"
+  },
+  "devDependencies": {
+    "@monstrs/mctl": "0.1.82",
+    "husky": "4.2.5",
+    "lerna": "3.22.1",
+    "typescript": "3.9.5"
   },
   "husky": {
     "hooks": {
@@ -22,6 +23,6 @@
     }
   },
   "workspaces": [
-    "landing/**/*"
+    "frontend/**/*"
   ]
 }

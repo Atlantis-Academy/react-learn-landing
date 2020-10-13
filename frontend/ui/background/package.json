@@ -1,0 +1,12 @@
+{
+  "name": "@ui/background",
+  "version": "0.0.2",
+  "main": "src/index.tsx",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/styled": "^10.0.27",
+    "@ui/icons": "^0.1.0",
+    "@ui/theme": "^0.1.0",
+    "styled-system": "^5.1.5"
+  }
+}
