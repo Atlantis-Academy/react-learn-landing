@@ -1,0 +1,44 @@
+{
+  "name": "@landing/app",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "src/index.tsx",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.1",
+    "@types/webpack-env": "^1.15.3",
+    "babel-loader": "^8.1.0",
+    "file-loader": "^6.0.0"
+  },
+  "dependencies": {
+    "@atlantis-lab/layout": "^0.3.0",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@sections/automatization": "^0.2.0",
+    "@sections/bullets": "^0.1.0",
+    "@sections/header": "^0.0.4",
+    "@sections/hero": "^0.0.4",
+    "@types/react": "^16.9.38",
+    "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.0",
+    "@types/styled-system": "^5.1.9",
+    "@ui/theme": "^0.1.0",
+    "emotion-theming": "^10.0.27",
+    "next": "^9.5.3",
+    "next-fonts": "^1.4.0",
+    "next-images": "^1.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-intl": "^5.0.2",
+    "react-text-mask": "^5.4.3",
+    "styled-components": "^5.1.1",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2",
+    "text-mask-addons": "^3.8.0"
+  }
+}

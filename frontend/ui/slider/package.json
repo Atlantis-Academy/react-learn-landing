@@ -1,0 +1,19 @@
+{
+  "name": "@ui/slider",
+  "version": "0.2.0",
+  "license": "MIT",
+  "main": "src/index.tsx",
+  "dependencies": {
+    "@atlantis-lab/layout": "^0.3.0",
+    "@emotion/styled": "^10.0.27",
+    "@ui/background": "^0.0.2",
+    "@ui/button": "^0.0.4",
+    "@ui/icons": "^0.1.0",
+    "@ui/text": "^0.0.4",
+    "@ui/theme": "^0.1.0",
+    "react": "^16.13.1",
+    "react-intl": "^5.0.2",
+    "styled-components": "^5.1.1",
+    "styled-tools": "^1.7.2"
+  }
+}

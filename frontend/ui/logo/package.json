@@ -1,0 +1,9 @@
+{
+  "name": "@ui/logo",
+  "version": "0.0.4",
+  "license": "MIT",
+  "main": "src/index.tsx",
+  "dependencies": {
+    "react": "^16.13.1"
+  }
+}
