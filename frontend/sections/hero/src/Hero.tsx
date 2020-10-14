@@ -3,8 +3,8 @@ import { Box, Column, Layout, Row }                    from '@atlantis-lab/layou
 import { injectIntl }                                  from 'react-intl'
 
 import { Background, BackgroundBottom, BackgroundTop } from '@ui/background'
-import { Divider }                                     from '@ui/divider'
 import { Form }                                        from '@ui/form'
+import { Divider }                                     from '@ui/divider'
 import { Text }                                        from '@ui/text'
 import { theme }                                       from '@ui/theme'
 
