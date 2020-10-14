@@ -4,7 +4,7 @@ import { Box, Column, Layout } from '@atlantis-lab/layout'
 import { createPortal }        from 'react-dom'
 import { injectIntl }          from 'react-intl'
 
-import { HeaderModalForm }     from '@fragments/header-modal-form'
+import { Form }                from '@ui/form'
 import { Text }                from '@ui/text'
 import { theme }               from '@ui/theme'
 
@@ -41,15 +41,19 @@ const Modal = ({ onClose, intl }: any) => {
       <Box width={510} height={700} bg={theme.colors.white} mx='auto'>
         <Column>
           <CloseModal onClose={onClose} />
-          <Layout flexBasis={390} mx='auto'>
+          <Box width={390} mx='auto'>
             <Column>
               <Text fontFamily={theme.fontFamily.title} fontSize={theme.fontSize.l}>
                 {intl.formatMessage(messages.title)}
               </Text>
               <Layout flexBasis={50} />
-              <HeaderModalForm onClose={onClose} />
+              <Form
+                textButton={intl.formatMessage(messages.button)}
+                context='modal'
+                onClose={onClose}
+              />
             </Column>
-          </Layout>
+          </Box>
         </Column>
       </Box>
     </StyledContainer>,

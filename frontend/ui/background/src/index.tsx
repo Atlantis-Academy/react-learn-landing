@@ -1,3 +1,4 @@
-import { Background, BackgroundBottom, BackgroundTop } from './Background'
+import { Background, Bottom, Top } from './Background'
+import { Pattern }                 from './Pattern'
 
-export { Background, BackgroundTop, BackgroundBottom }
+export { Background, Top, Bottom, Pattern }
