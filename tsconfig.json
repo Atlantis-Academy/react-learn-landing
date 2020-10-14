@@ -1,6 +1,6 @@
 {
   "extends": "@monstrs/tsconfig/tsconfig.base.json",
-  "include": ["frontend/landing/**/**/*"],
+  "include": ["frontend/**/**/*"],
   "compilerOptions": {
     "skipLibCheck": true,
     "esModuleInterop": true
