@@ -1,15 +1,15 @@
-import styled                  from '@emotion/styled'
-import React, { useRef }       from 'react'
+import styled from '@emotion/styled'
+import React, { useRef } from 'react'
 import { Box, Column, Layout } from '@atlantis-lab/layout'
-import { createPortal }        from 'react-dom'
-import { injectIntl }          from 'react-intl'
+import { createPortal } from 'react-dom'
+import { injectIntl } from 'react-intl'
 
-import { Form }     from '@ui/form'
-import { Text }                from '@ui/text'
-import { theme }               from '@ui/theme'
+import { Form } from '@ui/form'
+import { Text } from '@ui/text'
+import { theme } from '@ui/theme'
 
-import messages                from './Messages'
-import { CloseModal }          from './CloseModal'
+import messages from './Messages'
+import { CloseModal } from './CloseModal'
 
 const StyledContainer = styled.div({
   width: '100%',
@@ -27,7 +27,7 @@ const StyledContainer = styled.div({
   zIndex: 10,
 })
 
-const Modal = ({ onClose, intl }: any) => {
+const Modal = ({onClose, intl}: any) => {
   const node = useRef(null)
 
   const handleClick = event => {
@@ -37,13 +37,27 @@ const Modal = ({ onClose, intl }: any) => {
   }
 
   return createPortal(
-    <StyledContainer onClick={handleClick} ref={node}>
-      <Box width={510} height={700} bg={theme.colors.white} mx='auto'>
+    <StyledContainer
+      onClick={handleClick}
+      ref={node}
+    >
+      <Box
+        width={510}
+        height={700}
+        bg={theme.colors.white}
+        mx='auto'
+      >
         <Column>
           <CloseModal onClose={onClose} />
-          <Box width={390} mx='auto'>
+          <Box
+            width={390}
+            mx='auto'
+          >
             <Column>
-              <Text fontFamily={theme.fontFamily.title} fontSize={theme.fontSize.l}>
+              <Text
+                fontFamily={theme.fontFamily.title}
+                fontSize={theme.fontSize.l}
+              >
                 {intl.formatMessage(messages.title)}
               </Text>
               <Layout flexBasis={50} />

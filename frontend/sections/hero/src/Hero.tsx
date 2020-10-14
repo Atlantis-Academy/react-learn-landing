@@ -1,19 +1,25 @@
-import React                                           from 'react'
-import { Box, Column, Layout, Row }                    from '@atlantis-lab/layout'
-import { injectIntl }                                  from 'react-intl'
+import React from 'react'
+import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
+import { injectIntl } from 'react-intl'
 
-import { Form }                                        from '@ui/form'
+import { Form } from '@ui/form'
 import { Background, BackgroundBottom, BackgroundTop } from '@ui/background'
-import { Divider }                                     from '@ui/icons'
-import { Text }                                        from '@ui/text'
-import { theme }                                       from '@ui/theme'
+import { Divider } from '@ui/icons'
+import { Text } from '@ui/text'
+import { theme } from '@ui/theme'
 
-import messages                                        from './Messages'
+import messages from './Messages'
 
-const Hero = ({ intl }) => {
+const Hero = ({intl}) => {
   return (
-    <Box bg={theme.colors.darkBlue} justifyContent='center'>
-      <Row alignItems='center' justifyContent='center'>
+    <Box
+      bg={theme.colors.darkBlue}
+      justifyContent='center'
+    >
+      <Row
+        alignItems='center'
+        justifyContent='center'
+      >
         <Layout flexBasis='43%'>
           <Column>
             <Text
@@ -25,7 +31,10 @@ const Hero = ({ intl }) => {
             >
               {intl.formatMessage(messages.title)}
             </Text>
-            <Box maxWidth={464} width='100%'>
+            <Box
+              maxWidth={464}
+              width='100%'
+            >
               <Text
                 as='h2'
                 color={theme.colors.white}
@@ -38,7 +47,10 @@ const Hero = ({ intl }) => {
               </Text>
             </Box>
             <Layout flexBasis={36} />
-            <Divider width={80} height={10} />
+            <Divider
+              width={80}
+              height={10}
+            />
             <Layout flexBasis={19} />
             <Text
               color={theme.colors.white}
@@ -51,12 +63,22 @@ const Hero = ({ intl }) => {
           </Column>
         </Layout>
         <Layout flexBasis='43%'>
-          <Background width='100%' background={theme.colors.gradient}>
+          <Background
+            width='100%'
+            background={theme.colors.gradient}
+          >
             <BackgroundTop>
               <BackgroundBottom>
-                <Column justifyContent='center' alignItems='center'>
+                <Column
+                  justifyContent='center'
+                  alignItems='center'
+                >
                   <Layout flexBasis={100} />
-                  <Box width={390} bg={theme.colors.dark} borderRadius={theme.borderRadius.m}>
+                  <Box
+                    width={390}
+                    bg={theme.colors.dark}
+                    borderRadius={theme.borderRadius.m}
+                  >
                     <Column alignItems='center'>
                       <Layout flexBasis={36} />
                       <Text
@@ -67,7 +89,10 @@ const Hero = ({ intl }) => {
                         {intl.formatMessage(messages.formTitle)}
                       </Text>
                       <Layout flexBasis={19} />
-                      <Form context='hero' textButton={intl.formatMessage(messages.button)} />
+                      <Form
+                        context='hero'
+                        textButton={intl.formatMessage(messages.button)}
+                      />
                       <Layout flexBasis={40} />
                     </Column>
                   </Box>
