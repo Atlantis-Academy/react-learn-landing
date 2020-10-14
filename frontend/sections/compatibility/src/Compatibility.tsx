@@ -1,9 +1,9 @@
-import React                             from 'react'
-import { Box, Column, Layout, Row }      from '@atlantis-lab/layout'
-import { injectIntl }                    from 'react-intl'
+import React                        from 'react'
+import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
+import { injectIntl }               from 'react-intl'
 
-import { Background, BackgroundPattern } from '@ui/background'
-import { Divider }                       from '@ui/divider'
+import { Background, Pattern }      from '@ui/background'
+import { Divider }                  from '@ui/divider'
 import {
   AdobeIcon,
   AmoCrmIcon,
@@ -13,10 +13,10 @@ import {
   PowerPointIcon,
   WordIcon,
 } from '@ui/icons'
-import { Text }                          from '@ui/text'
-import { theme }                         from '@ui/theme'
+import { Text }                     from '@ui/text'
+import { theme }                    from '@ui/theme'
 
-import messages                          from './messages'
+import messages                     from './messages'
 
 const Compatibility = ({ intl }) => {
   return (
@@ -27,7 +27,7 @@ const Compatibility = ({ intl }) => {
         position='absolute'
         top='-8%'
         right='11%'
-        backgroundImage={`url("${BackgroundPattern}")`}
+        backgroundImage={`url("${Pattern}")`}
       />
       <Column>
         <Layout flexBasis={120} />
@@ -105,7 +105,7 @@ const Compatibility = ({ intl }) => {
         position='absolute'
         top='92%'
         left='8%'
-        backgroundImage={`url("${BackgroundPattern}")`}
+        backgroundImage={`url("${Pattern}")`}
       />
     </Box>
   )
