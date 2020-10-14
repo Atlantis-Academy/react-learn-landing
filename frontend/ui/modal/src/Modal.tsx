@@ -4,7 +4,7 @@ import { Box, Column, Layout } from '@atlantis-lab/layout'
 import { createPortal }        from 'react-dom'
 import { injectIntl }          from 'react-intl'
 
-import { Form }     from '@ui/form'
+import { Form }                from '@ui/form'
 import { Text }                from '@ui/text'
 import { theme }               from '@ui/theme'
 

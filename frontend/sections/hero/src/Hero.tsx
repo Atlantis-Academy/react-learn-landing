@@ -2,9 +2,9 @@ import React                                           from 'react'
 import { Box, Column, Layout, Row }                    from '@atlantis-lab/layout'
 import { injectIntl }                                  from 'react-intl'
 
-import { Form }                                        from '@ui/form'
 import { Background, BackgroundBottom, BackgroundTop } from '@ui/background'
-import { Divider }                                     from '@ui/icons'
+import { Divider }                                     from '@ui/divider'
+import { Form }                                        from '@ui/form'
 import { Text }                                        from '@ui/text'
 import { theme }                                       from '@ui/theme'
 

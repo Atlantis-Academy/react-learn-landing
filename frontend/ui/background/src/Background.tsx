@@ -1,7 +1,7 @@
 import styled                           from '@emotion/styled'
 import { background, layout, position } from 'styled-system'
 
-import { BackgroundPattern }            from '@ui/icons'
+import { BackgroundPattern }            from './BackgroundPattern'
 
 export const Background = styled.div(layout, background, position)
 
