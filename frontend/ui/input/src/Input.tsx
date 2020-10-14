@@ -1,6 +1,6 @@
 import React           from 'react'
 
-import { StyledInput } from './StyleInput'
+import { StyledInput } from './StyledInput'
 import { useMask }     from './hooks/useMask'
 
 export const Input = props => {

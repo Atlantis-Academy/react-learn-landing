@@ -13,16 +13,14 @@ export const StyledInput = styled.input(
     fontSize: theme.fontSize.xs,
     height: '55px',
   },
-  switchProp('theme', {
+  switchProp('context', {
     hero: {
       backgroundColor: theme.colors.dark,
       color: theme.colors.white,
       border: `${theme.border.s}px solid ${theme.colors.whiteBlue}`,
-      width: '310px',
     },
     modal: {
       border: `${theme.border.s}px solid ${theme.colors.borderInput}`,
-      width: '390px',
     },
   })
 )

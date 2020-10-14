@@ -2,6 +2,9 @@
   "name": "@landing/app",
   "version": "0.1.0",
   "main": "src/index.tsx",
+  "scripts": {
+    "dev": "next dev"
+  },
   "devDependencies": {
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
