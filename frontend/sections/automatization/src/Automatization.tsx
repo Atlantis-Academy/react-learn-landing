@@ -1,15 +1,15 @@
-import React, { useState }               from 'react'
-import { Box, Column, Layout, Row }      from '@atlantis-lab/layout'
-import { injectIntl }                    from 'react-intl'
+import React, { useState }             from 'react'
+import { Box, Column, Layout, Row }    from '@atlantis-lab/layout'
+import { injectIntl }                  from 'react-intl'
 
-import { Background, BackgroundPattern } from '@ui/background'
-import { Divider }                       from '@ui/divider'
-import { Modal }                         from '@ui/modal'
-import { Slider, SliderItems, slides }   from '@ui/slider'
-import { Text }                          from '@ui/text'
-import { theme }                         from '@ui/theme'
+import { Background, Pattern }         from '@ui/background'
+import { Divider }                     from '@ui/divider'
+import { Modal }                       from '@ui/modal'
+import { Slider, SliderItems, slides } from '@ui/slider'
+import { Text }                        from '@ui/text'
+import { theme }                       from '@ui/theme'
 
-import messages                          from './Messages'
+import messages                        from './Messages'
 
 const Automatization = ({ intl, length = 1050 }) => {
   const [visible, setVisible] = useState(false)
@@ -48,7 +48,7 @@ const Automatization = ({ intl, length = 1050 }) => {
       <Background
         width={285}
         height={118}
-        backgroundImage={`url("${BackgroundPattern}")`}
+        backgroundImage={`url("${Pattern}")`}
         position='absolute'
         left='5%'
         top='67%'
