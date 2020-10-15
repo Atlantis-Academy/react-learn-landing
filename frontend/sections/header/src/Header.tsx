@@ -2,13 +2,14 @@ import React, { useState }          from 'react'
 import { Box, Column, Layout, Row } from '@atlantis-lab/layout'
 import { injectIntl }               from 'react-intl'
 
+import { Button }                   from '@ui/button'
 import { Logo }                     from '@ui/logo'
 import { Modal }                    from '@ui/modal'
-import { theme }                    from '@ui/theme'
+import { Text }                     from '@ui/text'
 
-import ShowModal                    from './ShowModal'
+import messages                     from './Messages'
 
-const Header = () => {
+const Header = ({ intl }) => {
   const [visible, setVisible] = useState(false)
 
   const showModal = () => {
@@ -16,13 +17,17 @@ const Header = () => {
   }
 
   return (
-    <Box bg={theme.colors.darkBlue}>
+    <Box bg='darkBlue'>
       <Column>
         <Layout flexBasis={['8px', '8px', '40px']} />
         <Row justifyContent='center'>
           <Logo />
           <Layout flexBasis={['100px', '340px', '870px']} />
-          <ShowModal showModal={showModal} />
+          <Button onClick={showModal} bg='transparent' border='gray'>
+            <Text color='white' fontFamily='text' fontSize='xs' letterSpacing='0.05em'>
+              {intl.formatMessage(messages.headerButton)}
+            </Text>
+          </Button>
         </Row>
         {visible ? <Modal onClose={setVisible} /> : null}
       </Column>

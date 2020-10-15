@@ -16,11 +16,9 @@ const LabelBackground: any = styled.div(
   switchProp('context', {
     hero: {
       backgroundColor: theme.colors.dark,
-      color: theme.colors.white,
     },
     modal: {
       backgroundColor: theme.colors.white,
-      color: theme.colors.dark,
     },
   })
 )
@@ -28,7 +26,7 @@ const LabelBackground: any = styled.div(
 const LabelText = ({ text, context }) => {
   return (
     <LabelBackground context={context}>
-      <Text fontFamily={theme.fontFamily.text} fontSize={theme.fontSize.xs}>
+      <Text fontSize='xs' color={context === 'hero' ? 'white' : 'dark'}>
         {text}
       </Text>
     </LabelBackground>

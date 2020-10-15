@@ -26,13 +26,7 @@ const Automatization = ({ intl, length = 1050 }) => {
       <Row alignItems='center'>
         <Layout flexBasis={656} />
         <Layout flexBasis={390}>
-          <Text
-            as='h2'
-            color={theme.colors.dark}
-            fontFamily={theme.fontFamily.title}
-            fontSize={theme.fontSize.xl}
-            lineHeight={`${theme.lineHeight.l}px`}
-          >
+          <Text as='h2' fontFamily='title' fontSize='xl' lineHeight='l'>
             {intl.formatMessage(messages.title)}
           </Text>
         </Layout>

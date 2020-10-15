@@ -5,7 +5,7 @@ import { theme }                         from '@ui/theme'
 
 export const Button = styled('div')(
   {
-    borderRadius: theme.borderRadius.s,
+    borderRadius: theme.radii.s,
     width: '200px',
     height: '40px',
     display: 'flex',

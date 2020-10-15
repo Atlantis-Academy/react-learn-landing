@@ -12,26 +12,20 @@ import messages                     from './Messages'
 
 const Hero = ({ intl }) => {
   return (
-    <Box bg={theme.colors.darkBlue} justifyContent='center'>
+    <Box bg='darkBlue' justifyContent='center'>
       <Row alignItems='center' justifyContent='center'>
         <Layout flexBasis='43%'>
           <Column>
-            <Text
-              as='h1'
-              color={theme.colors.whiteBlue}
-              fontFamily={theme.fontFamily.title}
-              fontSize={theme.fontSize.xxl}
-              lineHeight={`${theme.lineHeight.xl}px`}
-            >
+            <Text as='h1' color='whiteBlue' fontFamily='title' fontSize='xxl' lineHeight='xl'>
               {intl.formatMessage(messages.title)}
             </Text>
             <Box maxWidth={464} width='100%'>
               <Text
                 as='h2'
                 color={theme.colors.white}
-                fontFamily={theme.fontFamily.title}
-                fontSize={theme.fontSize.l}
-                lineHeight={`${theme.lineHeight.l}px`}
+                fontFamily='title'
+                fontSize='l'
+                lineHeight='l'
                 letterSpacing={-1.5}
               >
                 {intl.formatMessage(messages.subTitle)}
@@ -40,12 +34,7 @@ const Hero = ({ intl }) => {
             <Layout flexBasis={36} />
             <Divider width={80} height={10} />
             <Layout flexBasis={19} />
-            <Text
-              color={theme.colors.white}
-              fontSize={theme.fontSize.m}
-              fontFamily={theme.fontFamily.text}
-              lineHeight={`${theme.lineHeight.s}px`}
-            >
+            <Text color='white' fontSize='m' fontFamily='text' lineHeight='s'>
               {intl.formatMessage(messages.text)}
             </Text>
           </Column>
@@ -56,14 +45,10 @@ const Hero = ({ intl }) => {
               <Bottom>
                 <Column justifyContent='center' alignItems='center'>
                   <Layout flexBasis={100} />
-                  <Box width={390} bg={theme.colors.dark} borderRadius={theme.borderRadius.m}>
+                  <Box width={390} bg='dark' borderRadius='m'>
                     <Column alignItems='center'>
                       <Layout flexBasis={36} />
-                      <Text
-                        fontFamily={theme.fontFamily.title}
-                        color={theme.colors.white}
-                        fontSize={theme.fontSize.ml}
-                      >
+                      <Text fontFamily='title' color='white' fontSize='ml'>
                         {intl.formatMessage(messages.formTitle)}
                       </Text>
                       <Layout flexBasis={19} />

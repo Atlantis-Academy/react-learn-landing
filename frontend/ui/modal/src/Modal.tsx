@@ -6,7 +6,6 @@ import { injectIntl }          from 'react-intl'
 
 import { Form }                from '@ui/form'
 import { Text }                from '@ui/text'
-import { theme }               from '@ui/theme'
 
 import messages                from './Messages'
 import { CloseModal }          from './CloseModal'
@@ -38,12 +37,12 @@ const Modal = ({ onClose, intl }: any) => {
 
   return createPortal(
     <StyledContainer onClick={handleClick} ref={node}>
-      <Box width={510} height={700} bg={theme.colors.white} mx='auto'>
+      <Box width={510} height={700} bg='white' mx='auto'>
         <Column>
           <CloseModal onClose={onClose} />
           <Box width={390} mx='auto'>
             <Column>
-              <Text fontFamily={theme.fontFamily.title} fontSize={theme.fontSize.l}>
+              <Text fontFamily='title' fontSize='l'>
                 {intl.formatMessage(messages.title)}
               </Text>
               <Layout flexBasis={50} />
