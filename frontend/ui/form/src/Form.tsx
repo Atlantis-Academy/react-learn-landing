@@ -5,7 +5,6 @@ import { injectIntl }                                       from 'react-intl'
 import { Button }                                           from '@ui/button'
 import { Input, LabelText, MaskEmail, MaskPhone, TextArea } from '@ui/input'
 import { Text }                                             from '@ui/text'
-import { theme }                                            from '@ui/theme'
 
 import messages                                             from './Messages'
 
@@ -58,11 +57,7 @@ const Form = ({ intl, context, textButton, onClose }: any) => {
   return (
     <Layout as='form' onKeyPress={handleKeyPress}>
       <Column>
-        <Text
-          fontSize={theme.fontSize.xs}
-          color={isSubmit ? theme.colors.whiteBlue : theme.colors.error}
-          fontFamily={theme.fontFamily.text}
-        >
+        <Text fontSize='xs' color={isSubmit ? 'whiteBlue' : 'error'} fontFamily='text'>
           {success}
         </Text>
         <LabelText context={context} text={intl.formatMessage(messages.name)} />
@@ -118,18 +113,8 @@ const Form = ({ intl, context, textButton, onClose }: any) => {
           </>
         )}
         <Layout flexBasis={20} />
-        <Button
-          width={310}
-          height={50}
-          border='none'
-          bg={theme.colors.whiteBlue}
-          onClick={handleForm}
-        >
-          <Text
-            color={theme.colors.white}
-            fontFamily={theme.fontFamily.text}
-            fontSize={theme.fontSize.xs}
-          >
+        <Button width={310} height={50} border='none' bg='whiteBlue' onClick={handleForm}>
+          <Text color='white' fontSize='xs'>
             {textButton}
           </Text>
         </Button>
