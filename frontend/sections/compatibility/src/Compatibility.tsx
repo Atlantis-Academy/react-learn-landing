@@ -20,7 +20,7 @@ import messages                     from './messages'
 
 const Compatibility = ({ intl }) => {
   return (
-    <Box position='relative' bg={theme.colors.beige}>
+    <Box position='relative' bg='beige'>
       <Background
         height={180}
         width={285}
@@ -36,31 +36,14 @@ const Compatibility = ({ intl }) => {
             <Column>
               <Divider width={80} height={10} stroke={theme.colors.dark} />
               <Layout flexBasis={30} />
-              <Text
-                color={theme.colors.dark}
-                fontSize={theme.fontSize.xl}
-                lineHeight={`${theme.lineHeight.l}px`}
-                fontFamily={theme.fontFamily.title}
-              >
+              <Text fontSize='semiBiggest' lineHeight='medium' fontFamily='title'>
                 {intl.formatMessage(messages.title)}
               </Text>
             </Column>
           </Box>
           <Layout flexBasis={30} />
-          <Box
-            justifyContent='center'
-            alignItems='center'
-            width={810}
-            height={410}
-            bg={theme.colors.white}
-          >
-            <Box
-              width={770}
-              height={370}
-              justifyContent='center'
-              alignItems='center'
-              bg={theme.colors.beige}
-            >
+          <Box justifyContent='center' alignItems='center' width={810} height={410} bg='white'>
+            <Box width={770} height={370} justifyContent='center' alignItems='center' bg='beige'>
               <Column>
                 <Row alignItems='center' justifyContent='center'>
                   <WordIcon width={64} height={64} />
@@ -87,12 +70,7 @@ const Compatibility = ({ intl }) => {
         <Row>
           <Layout flexBasis={525} />
           <Box width={495}>
-            <Text
-              color={theme.colors.dark}
-              fontSize={theme.fontSize.s}
-              lineHeight={`${theme.lineHeight.xs}px`}
-              fontFamily={theme.fontFamily.text}
-            >
+            <Text fontSize='extra' lineHeight='medium'>
               {intl.formatMessage(messages.description)}
             </Text>
           </Box>

@@ -1,26 +1,29 @@
-import styled         from '@emotion/styled'
-import { switchProp } from 'styled-tools'
+import styled                 from '@emotion/styled'
+import { layout, typography } from 'styled-system'
+import { switchProp }         from 'styled-tools'
 
-import { theme }      from '@ui/theme'
+import { theme }              from '@ui/theme'
 
 export const StyledInput = styled.input(
   {
     overflow: 'hidden',
     outline: 'none',
     width: '100%',
-    borderRadius: theme.borderRadius.s,
-    fontFamily: theme.fontFamily.text,
-    fontSize: theme.fontSize.xs,
+    borderRadius: theme.radii.small,
+    fontFamily: theme.fonts.text,
     height: '55px',
+    paddingLeft: '10px',
   },
   switchProp('context', {
     hero: {
       backgroundColor: theme.colors.dark,
       color: theme.colors.white,
-      border: `${theme.border.s}px solid ${theme.colors.whiteBlue}`,
+      border: theme.borders.gray,
     },
     modal: {
-      border: `${theme.border.s}px solid ${theme.colors.borderInput}`,
+      border: theme.borders.gray,
     },
-  })
+  }),
+  layout,
+  typography
 )
