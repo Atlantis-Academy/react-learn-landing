@@ -1,25 +1,30 @@
 export interface FontSize {
-  xs?: string
-  s?: string
-  m?: string
-  l?: string
-  xl?: string
-  xxl?: string
-  ml?: string
+  tiny: number
+  small: number
+  normal: number
+  extra: number
+  medium: number
+  large: number
+  giant: number
+  massive: number
+  semiBig: number
+  semiBiggest: number
+  biggest: number
+  extraLarge: number
 }
 
 export interface LineHeight {
-  xs?: string
-  s?: string
-  m?: string
-  l?: string
-  xl?: string
+  small: string
+  normal: string
+  extra: string
+  medium: string
+  large: string
 }
 
 export interface BorderRadius {
-  s?: string
-  m?: string
-  l?: string
+  small: number
+  medium: number
+  large: number
 }
 
 export interface Border {

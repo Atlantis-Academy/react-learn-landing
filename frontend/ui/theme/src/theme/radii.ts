@@ -1,7 +1,7 @@
 import { BorderRadius } from './Types'
 
 export const radii: BorderRadius = {
-  s: '5px',
-  m: '10px',
-  l: '20px',
+  small: 5,
+  medium: 10,
+  large: 20,
 }

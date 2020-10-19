@@ -26,7 +26,7 @@ const Automatization = ({ intl, length = 1050 }) => {
       <Row alignItems='center'>
         <Layout flexBasis={656} />
         <Layout flexBasis={390}>
-          <Text as='h2' fontFamily='title' fontSize='xl' lineHeight='l'>
+          <Text as='h2' fontFamily='title' fontSize='semiBiggest' lineHeight='medium'>
             {intl.formatMessage(messages.title)}
           </Text>
         </Layout>

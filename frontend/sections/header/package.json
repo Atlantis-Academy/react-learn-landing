@@ -6,6 +6,7 @@
   "dependencies": {
     "@atlantis-lab/layout": "^0.3.0",
     "@ui/button": "^0.0.4",
+    "@ui/background": "0.0.2",
     "@ui/logo": "^0.0.4",
     "@ui/modal": "^0.0.4",
     "@ui/text": "^0.0.4",

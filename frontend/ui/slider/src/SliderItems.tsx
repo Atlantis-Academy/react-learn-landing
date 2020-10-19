@@ -39,7 +39,7 @@ const SliderItems = ({ intl, slide, showModal }) => (
         </Text>
         <Layout flexBasis={71} />
         <Button onClick={showModal} width={210} height={50} border='none' bg='whiteBlue'>
-          <Text color='white' fontSize='xs' letterSpacing='0.05em'>
+          <Text color='white' fontSize='normal' letterSpacing='0.05em'>
             {intl.formatMessage(messages.button)}
           </Text>
         </Button>

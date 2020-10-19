@@ -36,7 +36,7 @@ const Compatibility = ({ intl }) => {
             <Column>
               <Divider width={80} height={10} stroke={theme.colors.dark} />
               <Layout flexBasis={30} />
-              <Text fontSize='xl' lineHeight='l' fontFamily='title'>
+              <Text fontSize='semiBiggest' lineHeight='medium' fontFamily='title'>
                 {intl.formatMessage(messages.title)}
               </Text>
             </Column>
@@ -70,7 +70,7 @@ const Compatibility = ({ intl }) => {
         <Row>
           <Layout flexBasis={525} />
           <Box width={495}>
-            <Text fontSize='s' lineHeight='l'>
+            <Text fontSize='extra' lineHeight='medium'>
               {intl.formatMessage(messages.description)}
             </Text>
           </Box>

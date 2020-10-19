@@ -12,17 +12,17 @@ import messages                            from './Messages'
 const Bullets = ({ intl }) => {
   return (
     <Column>
-      <Tabs heightTab={40} widthTab={200} tabRadius={theme.radii.l}>
+      <Tabs heightTab={40} widthTab={200} tabRadius={theme.radii.large}>
         <Row title={intl.formatMessage(messages.beginnersTab)} type='left' justifyContent='center'>
           <Box width={280}>
             <Column>
               <SpeedIcon width={110} height={110} />
               <Layout flexBasis={30} />
-              <Text fontFamily='title' fontSize='l'>
+              <Text fontFamily='title' fontSize='semiBig'>
                 {intl.formatMessage(messages.beginnersSpeedTitle)}
               </Text>
               <Layout flexBasis={20} />
-              <Text fontSize='s'>{intl.formatMessage(messages.beginnersSpeedText)}</Text>
+              <Text fontSize='extra'>{intl.formatMessage(messages.beginnersSpeedText)}</Text>
             </Column>
           </Box>
           <Layout flexBasis={140} />
@@ -30,11 +30,11 @@ const Bullets = ({ intl }) => {
             <Column>
               <PlusesIcon width={110} height={110} />
               <Layout flexBasis={30} />
-              <Text fontFamily='title' fontSize='l'>
+              <Text fontFamily='title' fontSize='semiBig'>
                 {intl.formatMessage(messages.beginnersPlusTitle)}
               </Text>
               <Layout flexBasis={20} />
-              <Text fontSize='s'>{intl.formatMessage(messages.beginnersPlusText)}</Text>
+              <Text fontSize='extra'>{intl.formatMessage(messages.beginnersPlusText)}</Text>
             </Column>
           </Box>
           <Layout flexBasis={140} />
@@ -42,11 +42,11 @@ const Bullets = ({ intl }) => {
             <Column>
               <CostIcon width={110} height={110} />
               <Layout flexBasis={30} />
-              <Text fontFamily='title' fontSize='l'>
+              <Text fontFamily='title' fontSize='semiBig'>
                 {intl.formatMessage(messages.beginnersCostTitle)}
               </Text>
               <Layout flexBasis={20} />
-              <Text fontSize='s'>{intl.formatMessage(messages.beginnersCostText)}</Text>
+              <Text fontSize='extra'>{intl.formatMessage(messages.beginnersCostText)}</Text>
             </Column>
           </Box>
         </Row>
@@ -55,11 +55,11 @@ const Bullets = ({ intl }) => {
             <Column>
               <PlusesIcon width={110} height={110} />
               <Layout flexBasis={30} />
-              <Text fontFamily='title' fontSize='l'>
+              <Text fontFamily='title' fontSize='semiBig'>
                 {intl.formatMessage(messages.beginnersPlusTitle)}
               </Text>
               <Layout flexBasis={20} />
-              <Text fontSize='s'>{intl.formatMessage(messages.beginnersPlusText)}</Text>
+              <Text fontSize='extra'>{intl.formatMessage(messages.beginnersPlusText)}</Text>
             </Column>
           </Box>
           <Layout flexBasis={140} />
@@ -71,7 +71,7 @@ const Bullets = ({ intl }) => {
                 {intl.formatMessage(messages.beginnersSpeedTitle)}
               </Text>
               <Layout flexBasis={20} />
-              <Text fontSize='s'>{intl.formatMessage(messages.beginnersSpeedText)}</Text>
+              <Text fontSize='extra'>{intl.formatMessage(messages.beginnersSpeedText)}</Text>
             </Column>
           </Box>
           <Layout flexBasis={140} />
@@ -79,11 +79,11 @@ const Bullets = ({ intl }) => {
             <Column>
               <CostIcon width={110} height={110} />
               <Layout flexBasis={30} />
-              <Text fontFamily='title' fontSize='l'>
+              <Text fontFamily='title' fontSize='semiBig'>
                 {intl.formatMessage(messages.beginnersCostTitle)}
               </Text>
               <Layout flexBasis={20} />
-              <Text fontSize='s'>{intl.formatMessage(messages.beginnersCostText)}</Text>
+              <Text fontSize='extra'>{intl.formatMessage(messages.beginnersCostText)}</Text>
             </Column>
           </Box>
         </Row>
@@ -96,11 +96,11 @@ const Bullets = ({ intl }) => {
             <Column>
               <CostIcon width={110} height={110} />
               <Layout flexBasis={30} />
-              <Text fontFamily='title' fontSize='l'>
+              <Text fontFamily='title' fontSize='semiBig'>
                 {intl.formatMessage(messages.beginnersCostTitle)}
               </Text>
               <Layout flexBasis={20} />
-              <Text fontSize='s'>{intl.formatMessage(messages.beginnersCostText)}</Text>
+              <Text fontSize='extra'>{intl.formatMessage(messages.beginnersCostText)}</Text>
             </Column>
           </Box>
           <Layout flexBasis={140} />
@@ -108,11 +108,11 @@ const Bullets = ({ intl }) => {
             <Column>
               <PlusesIcon width={110} height={110} />
               <Layout flexBasis={30} />
-              <Text fontFamily='title' fontSize='l'>
+              <Text fontFamily='title' fontSize='semiBig'>
                 {intl.formatMessage(messages.beginnersPlusTitle)}
               </Text>
               <Layout flexBasis={20} />
-              <Text fontSize='s'>{intl.formatMessage(messages.beginnersPlusText)}</Text>
+              <Text fontSize='extra'>{intl.formatMessage(messages.beginnersPlusText)}</Text>
             </Column>
           </Box>
           <Layout flexBasis={140} />
@@ -120,11 +120,11 @@ const Bullets = ({ intl }) => {
             <Column>
               <SpeedIcon width={110} height={110} />
               <Layout flexBasis={30} />
-              <Text fontFamily='title' fontSize='l'>
+              <Text fontFamily='title' fontSize='semiBig'>
                 {intl.formatMessage(messages.beginnersSpeedTitle)}
               </Text>
               <Layout flexBasis={20} />
-              <Text fontSize='s'>{intl.formatMessage(messages.beginnersSpeedText)}</Text>
+              <Text fontSize='extra'>{intl.formatMessage(messages.beginnersSpeedText)}</Text>
             </Column>
           </Box>
         </Row>

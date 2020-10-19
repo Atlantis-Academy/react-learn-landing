@@ -25,7 +25,7 @@ export const Tabs = ({ children, widthTab, heightTab, tabRadius }) => {
             }}
             key={tab + i.toString()}
           >
-            <Text fontSize='xs' color={activeTabIndex === i ? 'white' : 'dark'}>
+            <Text fontSize='normal' color={activeTabIndex === i ? 'white' : 'dark'}>
               {tab.props.title}
             </Text>
           </TabsStyle>
