@@ -11,6 +11,7 @@ export interface FontSize {
   semiBiggest: number
   biggest: number
   extraLarge: number
+  huge: number
 }
 
 export interface LineHeight {

@@ -1,5 +1,7 @@
 import styled                            from '@emotion/styled'
 import React, { useEffect, useState }    from 'react'
+import { Layout }                        from '@atlantis-lab/layout'
+import { position }                      from 'styled-system'
 
 import { ArrowLeftIcon, ArrowRightIcon } from '@ui/icons'
 
@@ -24,6 +26,13 @@ const StyledSlider = styled.div(({ transX }: any) => ({
   transform: `translateX(${transX}px)`,
   transition: '0.3s',
 }))
+
+const ButtonContainer = styled.div(
+  () => ({
+    position: 'absolute',
+  }),
+  position
+)
 
 const Slider = ({ children, slides, step }) => {
   const [transX, setTransX] = useState(0)
@@ -64,12 +73,17 @@ const Slider = ({ children, slides, step }) => {
 
   return (
     <SliderContainer show={children.length !== 0}>
-      <SliderButton left disabled={goLeft} onClick={() => handleClick('left')}>
-        <ArrowLeftIcon width={70} height={70} />
-      </SliderButton>
-      <SliderButton disabled={goRight} onClick={() => handleClick('right')}>
-        <ArrowRightIcon width={70} height={70} />
-      </SliderButton>
+      <ButtonContainer top={[-55, -100, -150]} left={[245, 30, 105]}>
+        <SliderButton disabled={goLeft} left onClick={() => handleClick('left')}>
+          <ArrowLeftIcon width={[50, 50, 70]} height={[50, 50, 70]} />
+        </SliderButton>
+      </ButtonContainer>
+      <ButtonContainer top={[-55, -100, -150]} left={[305, 90, 188]}>
+        <SliderButton disabled={goRight} onClick={() => handleClick('right')}>
+          <ArrowRightIcon width={[50, 50, 70]} height={[50, 50, 70]} />
+        </SliderButton>
+      </ButtonContainer>
+      <Layout flexBasis={['30%', 0, 0]} />
       <Container>
         <StyledSlider transX={transX}>{children}</StyledSlider>
       </Container>
