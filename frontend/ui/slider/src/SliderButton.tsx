@@ -9,14 +9,10 @@ interface Props {
 }
 
 const StyledButton = styled.div`
-  width: 70px;
-  height: 70px;
   position: absolute;
   z-index: 9;
   cursor: pointer;
-  top: -150px;
   opacity: ${ifProp('disabled', '1', '0.5')};
-  left: ${ifProp('left', '105px', '188px')};
 `
 
 export const SliderButton: FC<Props> = ({ children, onClick, disabled, left }) => (

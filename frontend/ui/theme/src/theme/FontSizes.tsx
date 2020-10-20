@@ -7,6 +7,7 @@ export const fontSizes: FontSize = {
   extra: 18,
   medium: 20,
   large: 22,
+  huge: 25,
   giant: 28,
   massive: 32,
   semiBig: 40,

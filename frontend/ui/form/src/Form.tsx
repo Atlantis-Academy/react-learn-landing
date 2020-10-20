@@ -68,7 +68,7 @@ const Form = ({ intl, context, textButton, onClose }: any) => {
         context={context}
         height={[28, 28, 55]}
         fontSize={['tiny', 'tiny', 'normal']}
-        autoComplete='name name'
+        autoComplete='name'
       />
       {context === 'modal' ? null : (
         <>
@@ -81,7 +81,7 @@ const Form = ({ intl, context, textButton, onClose }: any) => {
             context={context}
             height={[28, 28, 55]}
             fontSize={['tiny', 'tiny', 'normal']}
-            autoComplete='job organization'
+            autoComplete='organization'
           />
         </>
       )}
@@ -111,7 +111,7 @@ const Form = ({ intl, context, textButton, onClose }: any) => {
         context={context}
         height={[28, 28, 55]}
         fontSize={['tiny', 'tiny', 'normal']}
-        autoComplete='email email'
+        autoComplete='email'
       />
       {context === 'hero' ? null : (
         <>

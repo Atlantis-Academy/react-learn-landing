@@ -4,6 +4,8 @@
   "main": "src/index.tsx",
   "license": "MIT",
   "dependencies": {
-    "react": "^16.13.1"
+    "react": "^16.13.1",
+    "styled-system": "^5.1.5",
+    "@emotion/styled": "^10.0.27"
   }
 }
