@@ -10,7 +10,7 @@ export default class App extends NextApp {
     const { Component, pageProps } = this.props
     return (
       <>
-        <IntlProvider locale='ru'>
+        <IntlProvider locale='en'>
           <ThemeProvider theme={theme}>
             <Component {...pageProps} />
           </ThemeProvider>

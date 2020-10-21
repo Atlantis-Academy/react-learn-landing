@@ -15,17 +15,3 @@ export const fontSizes: FontSize = {
   biggest: 48,
   extraLarge: 64,
 }
-/*
-  z: '12px',
-  x: '14px',
-  xs: '16px',
-  s: '18px',
-  m: '22px',
-  ms: '20px',
-  ml: '28px',
-  ls: '32px',
-  l: '40px',
-  xl: '45px',
-  xx: '48px',
-  xxl: '64px',
-*/
