@@ -20,7 +20,7 @@ const Automatization = ({ intl, length = 1050 }) => {
 
   return (
     <Box bg={['white', 'beige', 'white']} justifyContent='center'>
-      <Layout maxWidth={[375, 768, 1440]} width='100%' mx='auto'>
+      <Box maxWidth={[375, 768, 1440]} width='100%' mx='auto'>
         <Column alignItems='center' position='relative'>
           <Layout flexBasis={[30, 80, 96]} />
           <Row justifyContent={['start', 'center', 'center']}>
@@ -61,7 +61,7 @@ const Automatization = ({ intl, length = 1050 }) => {
           <Layout flexBasis={[0, 58, 234]} />
           {visible ? <Modal onClose={setVisible} /> : null}
         </Column>
-      </Layout>
+      </Box>
     </Box>
   )
 }

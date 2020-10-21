@@ -7,10 +7,3 @@ export const lineHeights: LineHeight = {
   medium: '45px',
   large: '70px',
 }
-/*
-xs: '25px',
-  s: '30px',
-  m: '40px',
-  l: '45px',
-  xl: '70px',
-  */
