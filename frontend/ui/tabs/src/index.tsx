@@ -1,3 +1,4 @@
-import { Tabs } from './Tabs'
+import { Tabs }         from './Tabs'
+import { TabContainer } from './TabsStyle'
 
-export { Tabs }
+export { Tabs, TabContainer }
