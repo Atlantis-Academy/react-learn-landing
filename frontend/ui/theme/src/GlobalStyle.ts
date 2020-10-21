@@ -3,7 +3,7 @@
 /* eslint-disable no-empty */
 import { injectGlobal } from 'emotion'
 
-import { fontFaces }    from './FontFaces'
+import { fontFaces }    from './theme'
 
 const fontFace = (family, type, weight, style = 'normal') => ({
   '@font-face': {
@@ -19,7 +19,7 @@ fontFaces.map(({ family, type, weight }) => {
   return injectGlobal(fontFace(family, type, weight))
 })
 
-export default injectGlobal(`
+export const globalStyle = injectGlobal(`
   * {box-sizing: border-box;}
   button, input, textarea {outline: none;}
   body, h1, h2, p{margin: 0} 

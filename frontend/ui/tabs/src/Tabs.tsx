@@ -31,7 +31,7 @@ export const Tabs = ({ children, widthTab, heightTab, tabRadius }) => {
           </TabsStyle>
         ))}
       </Row>
-      <Layout flexBasis={80} />
+      <Layout flexBasis={[32, 50, 80]} />
       {children[activeTabIndex]}
     </>
   )
