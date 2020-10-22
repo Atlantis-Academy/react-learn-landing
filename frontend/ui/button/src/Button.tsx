@@ -1,11 +1,11 @@
-import styled                            from '@emotion/styled'
-import { borders, color, layout, space } from 'styled-system'
+import styled                                      from '@emotion/styled'
+import { borders, color, layout, position, space } from 'styled-system'
 
-import { theme }                         from '@ui/theme'
+import { theme }                                   from '@ui/theme'
 
 export const Button = styled('div')(
   {
-    borderRadius: theme.borderRadius.s,
+    borderRadius: theme.radii.small,
     width: '200px',
     height: '40px',
     display: 'flex',
@@ -20,5 +20,6 @@ export const Button = styled('div')(
   space,
   color,
   borders,
-  layout
+  layout,
+  position
 )

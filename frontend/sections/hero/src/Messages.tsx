@@ -24,4 +24,8 @@ export default defineMessages({
     id: `${scope}.button`,
     defaultMessage: 'отправить',
   },
+  buttonMobile: {
+    id: `${scope}.buttonMobile`,
+    defaultMessage: 'отправить заявку',
+  },
 })

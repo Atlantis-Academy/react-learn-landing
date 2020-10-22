@@ -5,7 +5,6 @@ import { injectIntl }                                       from 'react-intl'
 import { Button }                                           from '@ui/button'
 import { Input, LabelText, MaskEmail, MaskPhone, TextArea } from '@ui/input'
 import { Text }                                             from '@ui/text'
-import { theme }                                            from '@ui/theme'
 
 import messages                                             from './Messages'
 
@@ -56,85 +55,88 @@ const Form = ({ intl, context, textButton, onClose }: any) => {
   }, [success, setSuccess, onClose])
 
   return (
-    <Layout as='form' onKeyPress={handleKeyPress}>
-      <Column>
-        <Text
-          fontSize={theme.fontSize.xs}
-          color={isSubmit ? theme.colors.whiteBlue : theme.colors.error}
-          fontFamily={theme.fontFamily.text}
-        >
-          {success}
+    <Column as='form' onKeyPress={handleKeyPress}>
+      <Text fontSize='normal' color={isSubmit ? 'whiteBlue' : 'error'} fontFamily='text'>
+        {success}
+      </Text>
+      <LabelText context={context} text={intl.formatMessage(messages.name)} />
+      <Input
+        type='text'
+        name='name'
+        onChange={event => setName(event.target.value)}
+        value={name}
+        context={context}
+        height={[28, 28, 55]}
+        fontSize={['tiny', 'tiny', 'normal']}
+        autoComplete='name'
+      />
+      {context === 'modal' ? null : (
+        <>
+          <LabelText context={context} text={intl.formatMessage(messages.job)} />
+          <Input
+            type='text'
+            name='job'
+            onChange={event => setJob(event.target.value)}
+            value={job}
+            context={context}
+            height={[28, 28, 55]}
+            fontSize={['tiny', 'tiny', 'normal']}
+            autoComplete='organization'
+          />
+        </>
+      )}
+      {context === 'modal' ? null : (
+        <>
+          <LabelText context={context} text={intl.formatMessage(messages.phone)} />
+          <Input
+            type='phone'
+            mask={MaskPhone}
+            name='phone'
+            onChange={event => setPhone(event.target.value)}
+            value={phone}
+            context={context}
+            height={[28, 28, 55]}
+            fontSize={['tiny', 'tiny', 'normal']}
+            autoComplete='phone mobile'
+          />
+        </>
+      )}
+      <LabelText context={context} text={intl.formatMessage(messages.email)} />
+      <Input
+        type='text'
+        name='email'
+        onChange={event => setEmail(event.target.value)}
+        value={email}
+        mask={MaskEmail}
+        context={context}
+        height={[28, 28, 55]}
+        fontSize={['tiny', 'tiny', 'normal']}
+        autoComplete='email'
+      />
+      {context === 'hero' ? null : (
+        <>
+          <LabelText context={context} text={intl.formatMessage(messages.message)} />
+          <TextArea
+            name='message'
+            onChange={event => setMessage(event.target.value)}
+            value={message}
+            height={[70, 110, 130]}
+          />
+        </>
+      )}
+      <Layout flexBasis={[10, 10, 20]} />
+      <Button
+        width={[165, 165, 310]}
+        height={[26, 26, 50]}
+        border='none'
+        bg='whiteBlue'
+        onClick={handleForm}
+      >
+        <Text color='white' fontSize={['small', 'small', 'normal']} fontWeight={600}>
+          {textButton}
         </Text>
-        <LabelText context={context} text={intl.formatMessage(messages.name)} />
-        <Input
-          type='text'
-          name='name'
-          onChange={event => setName(event.target.value)}
-          value={name}
-          context={context}
-        />
-        {context === 'modal' ? null : (
-          <>
-            <LabelText context={context} text={intl.formatMessage(messages.job)} />
-            <Input
-              type='text'
-              name='job'
-              onChange={event => setJob(event.target.value)}
-              value={job}
-              context={context}
-            />
-          </>
-        )}
-        {context === 'modal' ? null : (
-          <>
-            <LabelText context={context} text={intl.formatMessage(messages.phone)} />
-            <Input
-              type='text'
-              mask={MaskPhone}
-              name='phone'
-              onChange={event => setPhone(event.target.value)}
-              value={phone}
-              context={context}
-            />
-          </>
-        )}
-        <LabelText context={context} text={intl.formatMessage(messages.email)} />
-        <Input
-          type='text'
-          name='email'
-          onChange={event => setEmail(event.target.value)}
-          value={email}
-          mask={MaskEmail}
-          context={context}
-        />
-        {context === 'hero' ? null : (
-          <>
-            <LabelText context={context} text={intl.formatMessage(messages.message)} />
-            <TextArea
-              name='message'
-              onChange={event => setMessage(event.target.value)}
-              value={message}
-            />
-          </>
-        )}
-        <Layout flexBasis={20} />
-        <Button
-          width={310}
-          height={50}
-          border='none'
-          bg={theme.colors.whiteBlue}
-          onClick={handleForm}
-        >
-          <Text
-            color={theme.colors.white}
-            fontFamily={theme.fontFamily.text}
-            fontSize={theme.fontSize.xs}
-          >
-            {textButton}
-          </Text>
-        </Button>
-      </Column>
-    </Layout>
+      </Button>
+    </Column>
   )
 }
 

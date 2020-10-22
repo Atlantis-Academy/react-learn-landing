@@ -5,11 +5,10 @@ import { createPortal }        from 'react-dom'
 import { injectIntl }          from 'react-intl'
 
 import { Form }                from '@ui/form'
+import { CloseIcon }           from '@ui/icons'
 import { Text }                from '@ui/text'
-import { theme }               from '@ui/theme'
 
 import messages                from './Messages'
-import { CloseModal }          from './CloseModal'
 
 const StyledContainer = styled.div({
   width: '100%',
@@ -36,17 +35,26 @@ const Modal = ({ onClose, intl }: any) => {
     }
   }
 
+  const handleClickButton = () => {
+    onClose()
+  }
+
   return createPortal(
     <StyledContainer onClick={handleClick} ref={node}>
-      <Box width={510} height={700} bg={theme.colors.white} mx='auto'>
+      <Box width={[250, 310, 510]} height={[316, 400, 700]} bg='white' mx='auto'>
         <Column>
-          <CloseModal onClose={onClose} />
-          <Box width={390} mx='auto'>
+          <Layout flexBasis={[40, 45, 60]} alignItems='center' justifyContent='flex-end'>
+            <Box width={23} height={23} onClick={handleClickButton}>
+              <CloseIcon />
+            </Box>
+            <Layout flexBasis={20} />
+          </Layout>
+          <Box width={[200, 250, 390]} mx='auto'>
             <Column>
-              <Text fontFamily={theme.fontFamily.title} fontSize={theme.fontSize.l}>
+              <Text fontFamily='title' fontSize={['giant', 'massive', 'semiBig']}>
                 {intl.formatMessage(messages.title)}
               </Text>
-              <Layout flexBasis={50} />
+              <Layout flexBasis={[10, 15, 50]} />
               <Form
                 textButton={intl.formatMessage(messages.button)}
                 context='modal'
